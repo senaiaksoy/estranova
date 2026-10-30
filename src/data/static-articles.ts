@@ -550,7 +550,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/',
     title: 'Omega-3 Menopozda Ne İşe Yarar?',
     description:
-      'Balık yağı trigliseridi düşürüyor; sıcak basması, ruh hali, eklem ve kuru gözde ise büyük çalışmalar fark bulmadı. Ritim bozukluğu riski doza bağlı artıyor.',
+      'Omega-3 trigliseridi düşürebilir; menopoz belirtilerindeki yararı belirsizdir. Takviyelerin ritim ve kanama riskleri ürüne ve doza göre değerlendirilir.',
     publishedDate: '30 Ekim 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Vitaminler',

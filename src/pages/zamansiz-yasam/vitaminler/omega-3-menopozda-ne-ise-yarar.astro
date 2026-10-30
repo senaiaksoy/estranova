@@ -40,7 +40,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Omega-3 Menopozda Ne İşe Yarar?';
 const articleImage = '/images/library/editorial/zy-omega-3-menopoz.webp';
 const articleDescription =
-  'Balık yağı trigliseridi düşürüyor; sıcak basması, ruh hali, eklem ve kuru gözde ise büyük çalışmalar fark bulmadı. Ritim bozukluğu riski doza bağlı artıyor.';
+  'Omega-3 trigliseridi düşürebilir; menopoz belirtilerindeki yararı belirsizdir. Takviyelerin ritim ve kanama riskleri ürüne ve doza göre değerlendirilir.';
 const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -116,7 +116,7 @@ const articleSchemas = buildArticleSchemas({
           plasebodan farklı değişmedi <sup><a href="#kaynak-4">[4]</a></sup>. En önemli güvenlik notu: kalp çalışmalarında
           atriyal fibrilasyon (bir ritim bozukluğu) riski arttı ve artış günde 1 g’ın üzerindeki dozlarda daha belirgindi
           <sup><a href="#kaynak-5">[5]</a></sup>. Ritim bozukluğunuz varsa, kan sulandırıcı kullanıyorsanız ya da ameliyat
-          planınız varsa kapsülü hekiminize sormadan başlamayın.
+          planınız varsa kapsülü kullanmaya hekiminize sormadan başlamayın.
         </p>
       </ArticleSummary>
 
@@ -196,8 +196,7 @@ const articleSchemas = buildArticleSchemas({
           <sup><a href="#kaynak-11">[11]</a></sup>. Ürün, karşılaştırılan yağ ve hasta grubu farklıydı.
         </p>
         <p>
-          Kısacası trigliserit yüksekse ve kalp riskiniz belirginse bu bir tedavi konusu; reçeteli ilaçla, hekim
-          izleminde. Market kapsülüyle “kalbimi korurum” beklentisi büyük çalışmalarda karşılık bulmadı.
+          Trigliserit yüksekliğinde karar, değere ve kalp-damar riskine göre verilir; çok yüksek değerler pankreatit riski için ayrıca değerlendirilir <sup><a href="#kaynak-27">[27]</a></sup>. Market kapsülüyle “kalbimi korurum” beklentisi büyük çalışmalarda karşılık bulmadı.
         </p>
 
         <h2 id="menopoz-vaatleri">Menopoz Vaatleri: Sıcak Basmasından Eklem Ağrısına</h2>
@@ -224,8 +223,8 @@ const articleSchemas = buildArticleSchemas({
           <strong>Ruh hali.</strong> Aynı orta yaşlı kadın grubunda tüm katılımcılara bakıldığında fark çıkmadı; majör
           depresyonu olmayan alt grupta ruhsal sıkıntı skorları EPA ile daha fazla düzeldi
           <sup><a href="#kaynak-15">[15]</a></sup>. Depresyon tanısı alan yetişkinlerle yapılan çalışmaları toplayan derleme
-          plaseboya göre küçük bir etki buldu. Bu etki klinik olarak anlamlı sayılacak büyüklükte değildi ve kanıtın
-          kesinliği düşüktü <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />. Önleme sorusunda sonuç
+          plaseboya göre küçük bir etki buldu. Ortalama etki klinik açıdan anlamlı sayılan eşiğin altındaydı; ancak sonuçlar anlamlı bir yararı da dışlamıyordu ve kanıtın
+          kesinliği çok düşüktü <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />. Önleme sorusunda sonuç
           şaşırtıcıydı. 50 yaş üzeri 18.353 yetişkinde beş yıl günde 1 g balık yağı depresyonu önlemedi. Depresyon ya da
           belirgin depresif belirti riski balık yağı grubunda biraz daha yüksekti; ruh hali skorlarında fark yoktu
           <sup><a href="#kaynak-17">[17]</a></sup>.
@@ -265,51 +264,10 @@ const articleSchemas = buildArticleSchemas({
           sorusu değildi ve aynı çalışmada gerçek sağlık sonuçlarında fark çıkmamıştı
           <sup><a href="#kaynak-21">[21]</a></sup>.
         </p>
-        <p>
-          Aşağıdaki tablo kanıtın hangi basamağa kadar çıktığını gösteriyor. En altta mekanizma, en üstte ömür ve
-          hastalık gibi sert sonuçlar var. Üst basamağa çıkamamış bir iddia için doğru söz “henüz gösterilmedi”dir.
-        </p>
-        <div class="my-8 overflow-x-auto">
-          <table class="w-full text-left border-collapse text-sm">
-            <thead>
-              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
-                <th class="p-3 font-semibold">Basamak</th>
-                <th class="p-3 font-semibold">Omega-3 için bugün bilinen</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-primary/10">
-              <tr>
-                <td class="p-3 font-medium">1. Mekanizma</td>
-                <td class="p-3">EPA ve DHA kana geçiyor; düzeyi kan testiyle ölçülebiliyor <sup><a href="#kaynak-23">[23]</a></sup>. İnflamasyonla ilgili yolaklar inceleniyor; bu, klinik yarar göstermiyor</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">2. Hayvanda ömür</td>
-                <td class="p-3">Bu yazı için hayvanda ömür verisi taramadık; insan verisi zaten daha üst basamaklarda</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">3. İnsanda biyobelirteç</td>
-                <td class="p-3">Trigliserit düşüyor <sup><a href="#kaynak-1">[1]</a></sup>. 70 yaş üzeri 777 kişide üç yılda epigenetik “yaşlanma saatlerinde” birkaç aylık yavaşlama görüldü (sonradan yapılmış analiz) <sup><a href="#kaynak-24">[24]</a></sup></td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">4. İnsanda işlev</td>
-                <td class="p-3">Sıcak basması, uyku, ruh hali, bellek, fiziksel performans, eklem ağrısı ve kuru gözde randomize çalışmalarda plasebodan fark yok <sup><a href="#kaynak-4">[4]</a>, <a href="#kaynak-18">[18]</a>, <a href="#kaynak-20">[20]</a>, <a href="#kaynak-21">[21]</a>, <a href="#kaynak-22">[22]</a></sup></td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">5. İnsanda güvenlik</td>
-                <td class="p-3">On binlerce kişide beş yıla kadar veri var; kanama artışı görülmedi, ritim bozukluğu riski doza bağlı arttı <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-5">[5]</a></sup></td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">6. Sert sonuç</td>
-                <td class="p-3">Genel toplumda kalp-damar olayı ve toplam ölümde fark yok <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-3">[3]</a></sup>. Kanında omega-3 düzeyi yüksek olanlarda ölüm daha düşük, ama bu gözlemsel bir ilişki <sup><a href="#kaynak-23">[23]</a></sup>. Ömrü uzattığı insanda gösterilmedi</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
         <h3>Dolaşımdaki iddialar ve kanıttaki yerleri</h3>
         <div class="my-8 overflow-x-auto">
           <table class="w-full text-left border-collapse text-sm">
-            <thead>
+            <thead class="hidden md:table-header-group">
               <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
                 <th class="p-3 font-semibold">İddia</th>
                 <th class="p-3 font-semibold">Durum</th>
@@ -317,114 +275,76 @@ const articleSchemas = buildArticleSchemas({
               </tr>
             </thead>
             <tbody class="divide-y divide-primary/10">
-              <tr>
-                <td class="p-3 font-medium">Trigliseridi düşürür</td>
-                <td class="p-3">Test edildi, desteklendi</td>
-                <td class="p-3">Doza bağlı düşüş; çok yüksek trigliseritte reçeteli dozla daha belirgin <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-2">[2]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Trigliseridi düşürür</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklendi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Doza bağlı düşüş; çok yüksek trigliseritte reçeteli dozla daha belirgin <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-2">[2]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Yüksek riskli hastada kalp olaylarını azaltır</td>
-                <td class="p-3">Test edildi, ürüne göre değişti</td>
-                <td class="p-3">Reçeteli saf EPA ile azaldı; EPA+DHA ilacıyla azalmadı <sup><a href="#kaynak-10">[10]</a>, <a href="#kaynak-11">[11]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Yüksek riskli hastada kalp olaylarını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, ürüne göre değişti</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Reçeteli saf EPA ile azaldı; EPA+DHA ilacıyla azalmadı <sup><a href="#kaynak-10">[10]</a>, <a href="#kaynak-11">[11]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Sağlıklı kişide kalp krizi ve inmeyi önler</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">Ana sonuçta fark yok <sup><a href="#kaynak-3">[3]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Sağlıklı kişide kalp krizi ve inmeyi önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Kalp krizi, inme ve kalp kaynaklı ölümün birleşik ana sonucunda fark yok; ikincil kalp krizi bulgusu ayrıca doğrulanmalı <sup><a href="#kaynak-3">[3]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Sıcak basmasını azaltır</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">Büyük çalışmada ve derlemelerde fark yok; tek küçük olumlu bulgu doğrulanmadı <sup><a href="#kaynak-4">[4]</a>, <a href="#kaynak-12">[12]</a>, <a href="#kaynak-14">[14]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Sıcak basmasını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Büyük çalışmada ve derlemelerde fark yok; tek küçük olumlu bulgu doğrulanmadı <sup><a href="#kaynak-4">[4]</a>, <a href="#kaynak-12">[12]</a>, <a href="#kaynak-14">[14]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Depresyonu önler</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">Önlemedi; risk balık yağı grubunda biraz daha yüksekti <sup><a href="#kaynak-17">[17]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Depresyonu önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Önlemedi; risk balık yağı grubunda biraz daha yüksekti <sup><a href="#kaynak-17">[17]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Depresif belirtileri hafifletir</td>
-                <td class="p-3">Test edildi, sonuç belirsiz</td>
-                <td class="p-3">Küçük etki olabilir, kesinlik düşük <sup><a href="#kaynak-15">[15]</a>, <a href="#kaynak-16">[16]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Depresif belirtileri hafifletir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, sonuç belirsiz</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Küçük etki olabilir, kesinlik düşük <sup><a href="#kaynak-15">[15]</a>, <a href="#kaynak-16">[16]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Unutkanlığı önler, “beyin sisini” açar</td>
-                <td class="p-3">Yaşlılarda desteklenmedi; perimenopozda test ediliyor</td>
-                <td class="p-3">Sağlıklı yaşlılarda fark yok; perimenopoz çalışmasının sonucu bekleniyor <sup><a href="#kaynak-18">[18]</a>, <a href="#kaynak-19">[19]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Unutkanlığı önler, “beyin sisini” açar</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Yaşlılarda desteklenmedi; perimenopozda test ediliyor</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Sağlıklı yaşlılarda fark yok; perimenopoz çalışmasının sonucu bekleniyor <sup><a href="#kaynak-18">[18]</a>, <a href="#kaynak-19">[19]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Eklem ağrısını azaltır</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">Aromataz inhibitörüne bağlı eklem ağrısında iki grupta da belirgin düzelme, gruplar arasında fark yok <sup><a href="#kaynak-20">[20]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Eklem ağrısını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Aromataz inhibitörüne bağlı eklem ağrısında iki grupta da belirgin düzelme, gruplar arasında fark yok <sup><a href="#kaynak-20">[20]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Kemiği korur, kırığı önler</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">70 yaş üzerinde üç yılda kırık sıklığında fark yok <sup><a href="#kaynak-21">[21]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Kemiği korur, kırığı önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">70 yaş üzerinde üç yılda kırık sıklığında fark yok <sup><a href="#kaynak-21">[21]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Kuru gözü düzeltir</td>
-                <td class="p-3">Test edildi, desteklenmedi</td>
-                <td class="p-3">Bir yılda zeytinyağlı plasebodan fark yok <sup><a href="#kaynak-22">[22]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Kuru gözü düzeltir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Bir yılda zeytinyağlı plasebodan fark yok <sup><a href="#kaynak-22">[22]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Biyolojik yaşlanmayı yavaşlatır</td>
-                <td class="p-3">Henüz test edilmedi, test edilebilir</td>
-                <td class="p-3">Yalnızca epigenetik saatte küçük fark; klinik sonuç ölçülmedi <sup><a href="#kaynak-24">[24]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Biyolojik yaşlanmayı yavaşlatır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Biyobelirteçte incelendi; klinik karşılığı belirsiz</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Yalnızca epigenetik saatte küçük fark; klinik sonuç ölçülmedi <sup><a href="#kaynak-24">[24]</a></sup></td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Menopozda cildi nemlendirir, gençleştirir</td>
-                <td class="p-3">Henüz test edilmedi</td>
-                <td class="p-3">Menopozdaki kadınlarda cilt sonucunu ölçen randomize çalışmaya ulaşamadık</td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Menopozda cildi nemlendirir, gençleştirir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Henüz test edilmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Menopozdaki kadınlarda cilt sonucunu ölçen randomize çalışmaya ulaşamadık</td>
               </tr>
-              <tr>
-                <td class="p-3 font-medium">Ömrü uzatır</td>
-                <td class="p-3">Bu haliyle test edilemez</td>
-                <td class="p-3">Ömür için yıllarca süren çalışma gerekir; gözlemsel ilişki var, randomize çalışmada ölüm farkı yok <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-23">[23]</a></sup></td>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Ömrü uzatır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi; yaşam süresini uzattığı gösterilmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Ömür için yıllarca süren çalışma gerekir; gözlemsel ilişki var, randomize çalışmada ölüm farkı yok <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-23">[23]</a></sup></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3>Beş eksende omega-3 takviyesi</h3>
-        <div class="my-8 overflow-x-auto">
-          <table class="w-full text-left border-collapse text-sm">
-            <thead>
-              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
-                <th class="p-3 font-semibold">Eksen</th>
-                <th class="p-3 font-semibold">Değerlendirme</th>
-                <th class="p-3 font-semibold">Gerekçe</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-primary/10">
-              <tr>
-                <td class="p-3 font-medium">Etkinlik kanıtı</td>
-                <td class="p-3">Trigliseritte güçlü; menopoz belirtilerinde zayıf</td>
-                <td class="p-3">Trigliserit düşüşü yüksek kesinlikte <sup><a href="#kaynak-1">[1]</a></sup>; sıcak basması, ruh hali, eklem ve göz çalışmalarında fark yok</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">Güvenlik kanıtı</td>
-                <td class="p-3">Güçlü</td>
-                <td class="p-3">On binlerce kişide beş yıla kadar izlem; doza bağlı ritim bozukluğu sinyali bilinen tek önemli risk <sup><a href="#kaynak-5">[5]</a></sup></td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">Mekanizma inandırıcılığı</td>
-                <td class="p-3">Orta</td>
-                <td class="p-3">Kana ve hücre zarına geçtiği ölçülebiliyor; kan yağlarındaki etki dışında bu, tutarlı klinik sonuca dönüşmedi</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">Ürün ve düzenleyici durum</td>
-                <td class="p-3">Orta</td>
-                <td class="p-3">Takviye olarak üst sınırı tanımlı <sup><a href="#kaynak-8">[8]</a></sup>; reçeteli ilaçları ayrı <sup><a href="#kaynak-9">[9]</a></sup>; etiket-içerik uyumsuzluğu ve bozulma bir ülkede belgelendi <sup><a href="#kaynak-7">[7]</a></sup></td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">Geri dönüşebilirlik</td>
-                <td class="p-3">Yüksek</td>
-                <td class="p-3">Bırakmanın kalıcı zarar bıraktığını gösteren veri bulmadık; ritim bozukluğu gelişirse ayrıca değerlendirilmesi gerekir</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p>Takviyeyi bırakmak mümkündür; gelişmiş bir yan etkinin geri dönüp dönmeyeceği ise kişiye ve etkiye göre değerlendirilir.</p>
 
         <h2 id="guvenlik">Ritim, Kanama ve İlaç Etkileşimi</h2>
         <p>
@@ -490,7 +410,7 @@ const articleSchemas = buildArticleSchemas({
           </li>
           <li>
             Meme kanseri riski yüksek kadınlarda yüksek doz omega-3 ile düşük doz tamoksifenin birlikte kullanımı: faz 2
-            çalışma hasta alıyor, ana sonuç 2027’de bekleniyor <sup><a href="#kaynak-26">[26]</a></sup>.
+            çalışma hasta alıyor, birincil sonuç ölçümünün tamamlanması 2027 için öngörülüyor <sup><a href="#kaynak-26">[26]</a></sup>.
           </li>
           <li>
             Epigenetik saatlerdeki küçük yavaşlamanın kırık, hastalık ya da işlev gibi gerçek sonuçlara yansıyıp yansımadığı
@@ -504,9 +424,7 @@ const articleSchemas = buildArticleSchemas({
           Kapsül soran birine ilk sorum şu olur: Neyi düzeltmek istiyorsunuz?
         </p>
         <p>
-          Yanıt “trigliseridim yüksek çıktı” ise bu bir kan yağı sorusu. Tahlilde o satırın kırmızı yazılması insanı
-          korkutur; anlaşılır bir korku. Önce nedenine bakılır: beslenme, alkol, şeker, tiroid, ilaçlar. Değer yüksek
-          kalıyor ve kalp riskiniz belirginse reçeteli tedavi seçenekleri hekiminizle konuşulur.
+          Yanıt “trigliseridim yüksek çıktı” ise önce değerin ne kadar yüksek olduğuna ve olası nedenlerine bakılır: beslenme, alkol, kan şekeri, tiroid ve ilaçlar. Kalp-damar riski tedavi kararını etkiler. Trigliserit çok yüksekse pankreatit riski nedeniyle kalp riskinden bağımsız olarak da daha hızlı değerlendirme gerekir <sup><a href="#kaynak-27">[27]</a></sup>.
         </p>
         <p>
           Yanıt “sıcak basmam geçsin” ise omega-3 için beklemeyin. Büyük çalışmada fark çıkmadı
@@ -561,6 +479,8 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-24">Bischoff-Ferrari HA, Gängler S, Wieczorek M ve ark. <em>Individual and additive effects of vitamin D, omega-3 and exercise on DNA methylation clocks of biological aging in older adults from the DO-HEALTH trial.</em> Nat Aging. 2025;5(3):376-385. doi:10.1038/s43587-024-00793-y. <a href="https://pubmed.ncbi.nlm.nih.gov/39900648/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-25">Javaid M, Kadhim K, Bawamia B ve ark. <em>Bleeding risk in patients receiving omega-3 polyunsaturated fatty acids: a systematic review and meta-analysis of randomized clinical trials.</em> J Am Heart Assoc. 2024;13(10):e032390. doi:10.1161/JAHA.123.032390. <a href="https://pubmed.ncbi.nlm.nih.gov/38742535/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-26">ClinicalTrials.gov. <em>Phase 2 study of low dose tamoxifen +/- high dose omega-3 fatty acids in overweight postmenopausal women at increased risk for breast cancer.</em> NCT06195306. Durum: hasta alıyor; ana sonuç tahmini 1 Ocak 2027; erişim 30 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT06195306" rel="noopener noreferrer">Kayıt</a>.</li>
+          <li id="kaynak-27">Virani SS ve ark. <em>2021 ACC Expert Consensus Decision Pathway on persistent hypertriglyceridemia.</em> J Am Coll Cardiol. 2021. <a href="https://www.jacc.org/doi/10.1016/j.jacc.2021.06.011" rel="noopener noreferrer">Kılavuz</a>.</li>
+          <li id="kaynak-28">Doma M ve ark. <em>Efficacy of oral versus transdermal estrogen therapy on cardiovascular and lipid parameters among postmenopausal women.</em> Menopause. 2026;33:242–250. <a href="https://pubmed.ncbi.nlm.nih.gov/41186572/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 
@@ -571,6 +491,8 @@ const articleSchemas = buildArticleSchemas({
         intro="Doç. Dr. Senai Aksoy, balık yemek ile kapsül arasındaki farkı, trigliserit yüksekliğini, kan sulandırıcıyla ve hormon tedavisiyle birlikte kullanımı, balık yemeyenler için bitkisel ve alg kaynaklı seçenekleri yanıtlıyor."
         class="mt-10"
       />
+
+      <p class="mt-4 text-sm text-ink/70">SSS’deki hormon tedavisinin uygulama yolu ve trigliserit ilişkisi için: <a class="underline" href="#kaynak-28">Kaynak 28</a>. Çok yüksek trigliserit ve pankreatit değerlendirmesi için: <a class="underline" href="#kaynak-27">Kaynak 27</a>.</p>
 
       <RelatedReadings
         class="mt-14"
