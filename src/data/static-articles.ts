@@ -570,7 +570,7 @@ export const staticArticles: StaticArticleEntry[] = [
     path: '/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/',
     title: 'Omega-3 Menopozda Ne İşe Yarar?',
     description:
-      'Omega-3 trigliseridi düşürebilir; menopoz belirtilerindeki yararı belirsizdir. Takviyelerin ritim ve kanama riskleri ürüne ve doza göre değerlendirilir.',
+      'Omega-3 trigliseridi düşürür; sıcak basmasında plasebodan fark çıkmadı. Ritim bozukluğu riski doza, kanama riski ürüne ve doza göre değişir.',
     publishedDate: '30 Ekim 2026',
     writerSlug: 'senai-aksoy',
     section: 'Zamansız Yaşam · Vitaminler',
