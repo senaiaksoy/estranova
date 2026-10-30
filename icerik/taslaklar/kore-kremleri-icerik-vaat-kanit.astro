@@ -1,0 +1,543 @@
+---
+/*
+  TASLAK — canlı rota ağacında DEĞİL (CLAUDE.md §6: onaysız makale src/pages/ altında durmaz).
+  Brief: icerik/taslaklar/kore-kremleri-icerik-vaat-kanit-brief.md
+  Yayın rotası (onay sonrası taşınacak): src/pages/beden-yakinlik/cilt-gorunum/kore-kremleri-icerik-vaat-kanit.astro
+  Taşırken importlardaki '../../src/' → '../../../' olur.
+  Durum: yazar (Çağrı Sade) onayı ve tıbbi inceleme (Senai Aksoy) KC'ye sorulmadı; byline görselleri yok.
+*/
+import SiteLayout from '../../src/layouts/SiteLayout.astro';
+import SiteNavbar from '../../src/components/site/SiteNavbar.astro';
+import SiteFooter from '../../src/components/site/SiteFooter.astro';
+import SubmenuHero from '../../src/components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../src/components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../src/components/site/ArticleAuthorBlock.astro';
+import ArticleTOC from '../../src/components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../src/components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../src/components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../src/components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../src/components/site/ArticleSummary.astro';
+import RelatedReadings from '../../src/components/site/RelatedReadings.astro';
+import Evidence from '../../src/components/site/Evidence.astro';
+import RedFlagBox from '../../src/components/site/RedFlagBox.astro';
+import { submenuHeroByRoute } from '../../src/data/submenu-heroes';
+import { buildArticleSchemas } from '../../src/utils/article-schema';
+import { resolveSiteUrl } from '../../src/utils/seo';
+
+const pathname = '/beden-yakinlik/cilt-gorunum/kore-kremleri-icerik-vaat-kanit/';
+// CLAUDE.md §6 — makale üst hero görseli daima parent hub'dan gelir.
+const hero = submenuHeroByRoute['/beden-yakinlik/cilt-gorunum/']!;
+
+const articleTitle = 'Kore Kremlerinin Kavanozunda Ne Var? İçerik, Vaat ve Kanıt';
+const seoTitle = 'Kore Kremleri: İçerik, Vaat ve Kanıt';
+const articleDescription =
+  "Op. Dr. Çağrı Sade, Kore kremlerindeki içerikleri vaatleri ve insanlarda ölçülen sonuçlarıyla birlikte okuyor; menopozda cilt için etiketten neyi okuyabileceğinizi anlatıyor.";
+
+const tocEntries = [
+  { id: 'kavanozun-arkasi', label: 'Kavanozun Arka Yüzünü Çevirdiğinizde' },
+  { id: 'katman', label: 'Bir Krem Yüzün Hangi Katmanına Ulaşır?' },
+  { id: 'menopozda-cilt', label: 'Menopozda Cilt Ne Yaşıyor' },
+  { id: 'kore-etiketi', label: 'Kore Kremi, Sarkma ve Ülke Etiketi' },
+  { id: 'icerik-haritasi', label: 'İçerik Haritası: Vaat ve Kanıt' },
+  { id: 'seramid', label: 'Seramid Yazıyor Diye İş Bitmez' },
+  { id: 'etiket-sorulari', label: 'Etikette Beş Soru' },
+  { id: 'sade-rutin', label: 'Menopozda Daha Az Ürün' },
+  { id: 'islem-oncesi-sonrasi', label: 'Bir İşlem Planlıyorsanız' },
+  { id: 'turkiye', label: "Türkiye'de Kozmetik, İlaç Sayılmaz" },
+  { id: 'sonuc', label: 'Etikete Son Bir Bakış' },
+  { id: 'kaynaklar', label: 'Kaynaklar ve İleri Okuma' },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'cagri-sade',
+  articleType: 'clinical-guide',
+  publishedDate: '30 Ekim 2026', // yayın gününde güncellenir
+  pathname,
+  articleSection: 'Beden & Yakınlık',
+  sectionPath: '/beden-yakinlik/',
+  keywords: [
+    'Kore kremleri',
+    'Kore cilt bakımı',
+    'menopozda cilt bakımı',
+    'cilt bakımı içerikleri',
+    'seramid',
+    'niasinamid',
+    'retinol',
+    'krem etiketi nasıl okunur',
+  ],
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${seoTitle} - Estranova`}
+  description={articleDescription}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/beden-yakinlik/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Beden & Yakınlık · Cilt & Görünüm"
+      title={articleTitle}
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      {/* TODO(görsel): byline 4:5 ve kart 2.4:1 görselleri editörden istenecek; verilene kadar hero yedeği kullanılır. */}
+      <ArticleAuthorBlock
+        authorSlug="cagri-sade"
+        articleType="clinical-guide"
+        publishedDate="30 Ekim 2026"
+        readingMinutes={10}
+      />
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Bir kremin Kore'de üretilmiş olması, içeriğinden çok daha az şey söyler. Güneş koruyucu,
+          retinoidler ve niasinamid için insanlarda yapılmış kontrollü çalışmalar var. Hyalüronik asit,
+          seramid ve centella nem ve bariyer için makul görünüyor. Salyangoz, adenozin ve PDRN gibi
+          içeriklerin dayandığı çalışmalar küçük ya da krem formunu doğrudan sınamıyor. Krem cildin
+          yüzeyine çalışır; yağ dokusundaki hacim kaybını ve sarkmayı düzeltmez. Menopozda daha çok ürün
+          yerine daha sade bir rutin çoğu zaman daha iyi sonuç verir.<sup><a href="#kaynak-1">[1]</a><a href="#kaynak-2">[2]</a><a href="#kaynak-4">[4]</a><a href="#kaynak-17">[17]</a></sup>
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="kavanozun-arkasi">Kavanozun Arka Yüzünü Çevirdiğinizde</h2>
+        <p>
+          Kremin ön yüzü vaatle doludur, arka yüzü içerik listesiyle. Bu yazı o ikinci yüzü okumak için.
+        </p>
+        <p>
+          Raftaki Kore kremlerinin ön yüzü bir roman gibi yazılmıştır: ışıltı, dolgunluk, "cam gibi" bir
+          cilt. Arka yüzü ise zabıt tutanağı. İkisinin aynı kavanozdan çıktığına inanmak bazen zor.
+        </p>
+        <p>
+          Çoğumuz ön yüzü okuyup sepete atarız. Arka yüzü çevirdiğimizde karşımıza Latince ve İngilizce
+          adlardan oluşan, ilk beşinin ne iş yaptığı belli olmayan bir liste çıkar.
+        </p>
+        <p>
+          Bu yazıda o listeyi birlikte okuyacağız. Hangi madde ne vaat ediyor, bu vaadin arkasında
+          insanlarda ne ölçülmüş, ölçülmemişse ne eksik.
+        </p>
+        <p>
+          Önce bir şey söyleyeyim: Kore kremi kullanıyorsanız ve memnunsanız, bu yazı sizi vazgeçirmek
+          için yazılmadı.
+        </p>
+
+        <h2 id="katman">Bir Krem Yüzün Hangi Katmanına Ulaşır?</h2>
+        <p>
+          <em>"Kremlerim neden işe yaramadı?"</em> diye sorulduğunda cevabım hep bir karşı soruyla
+          başlar.
+        </p>
+        <p>
+          Önce hastama kremlerden tam olarak ne beklediğini sorarım. Cildindeki kuruluk mu geçmedi, ince
+          kırışıklıkları mı azalmadı, yoksa yüzünün eskisi kadar sıkı görünmemesinden mi şikâyetçi?
+        </p>
+        <p>Çünkü bunlar aynı sorun değil.</p>
+        <p>
+          Kuruluk, matlık, cilt dokusundaki düzensizlikler ve bazı ince kırışıklıklar uygun bakımla
+          iyileşebilir. Ancak yıllar içinde yüzümüzde yalnızca cilt değişmiyor. Cilt altındaki yağ dokusu
+          azalabiliyor, yüzün bazı bölgelerinde hacim kaybı oluşuyor ve dokular aşağı doğru yer
+          değiştirebiliyor.
+        </p>
+        {/* DOĞRULA: yüz katmanlarının (cilt, yağ, kemik, kas) yaşlanması için doğrulanmış bir derleme eklenecek; yazardan değil kaynaktan atıf gerekiyor. */}
+        <p>
+          Bir kremden yanaklardaki hacim kaybını düzeltmesini veya sarkmış çene hattını eski yerine
+          getirmesini bekleyemeyiz. Ürün ne kadar pahalı olursa olsun bu değişmiyor.
+        </p>
+        <p>
+          Bazen hastanın kullandığı ürün aslında işe yarıyor ama kendisi ondan yapamayacağı bir şey
+          bekliyor.
+        </p>
+        <p>
+          Ben bu nedenle önce sorunun cildin yüzeyinde mi, yoksa daha derindeki yapısal değişikliklerde
+          mi olduğunu ayırmaya çalışıyorum. Cilt bakımıyla iyileştirebileceğimiz bir durum varsa uygun
+          bir rutin planlanabilir. Belirgin hacim kaybı veya sarkma söz konusuysa farklı dermatolojik ya
+          da estetik seçenekleri değerlendirmek gerekebilir.
+        </p>
+        <p>
+          <strong>
+            Hastalarıma söylediğim şu: Kreminizin işe yaramamış olması mutlaka kötü bir ürün
+            kullandığınız anlamına gelmiyor. Belki de kremden çözmesini beklediğiniz sorun, kremlerin
+            düzeltebileceği bir sorun değil.
+          </strong>
+        </p>
+        <p>
+          Bu yazı cildin yüzeyine bakıyor. Hacim kaybı ve sarkma için
+          seçenekler ayrı bir yazının konusu; ilgili okumalarda onlara ulaşabilirsiniz.
+        </p>
+
+        <h2 id="menopozda-cilt">Menopozda Cilt Ne Yaşıyor</h2>
+        <p>
+          Menopozda östrojenin çekilmesi cildin nem ve kolajen dengesini kaydırır.
+        </p>
+        <p>
+          Östrojen azaldığında cildin nem tutma kapasitesi, kolajen miktarı ve esnekliği değişebiliyor.
+          Cilt daha kuru, ince ve hassas hâle gelebiliyor. Cilt kolajeni ile östrojen eksikliği arasında
+          güçlü bir ilişki olduğu bir derlemede belirtilmiş
+          <Evidence level={3} /><sup><a href="#kaynak-11">[11]</a></sup>.
+        </p>
+        <p>
+          Sayı vermem gerekirse: 1987 tarihli bir çalışmada, menopozdan sonra cilt kolajen içeriği ve
+          cilt kalınlığının yılda yaklaşık yüzde 1-2 azaldığı bildirildi. Bu eski bir çalışma ve herkes
+          için aynı hızı göstermez <Evidence level={2} /><sup><a href="#kaynak-10">[10]</a></sup>.
+        </p>
+        <p>
+          Bir şey daha var. Kadınlardan alınan cilt örneklerinde, cildin kendi yağ tabakasını oluşturan
+          lipitlerin, özellikle seramidlerin yaşla azaldığı ve kışın belirgin biçimde düştüğü
+          görülmüştü <Evidence level={2} /><sup><a href="#kaynak-12">[12]</a></sup>. Yakın tarihli bir
+          çalışmada tablo bu kadar tek yönlü çıkmadı; bazı seramid sınıfları azalmak yerine arttı,
+          zincir uzunlukları değişti <Evidence level={2} /><sup><a href="#kaynak-13">[13]</a></sup>.
+        </p>
+        <p>
+          Kısaca: cildin yağ tabakası yaşla ve mevsimle değişiyor, ama nasıl değiştiği henüz tam
+          oturmuş bir hikâye değil. Kışın kuruluğun derinleşmesi bu verilerle uyumlu.
+        </p>
+
+        <h2 id="kore-etiketi">Kore Kremi, Sarkma ve Ülke Etiketi</h2>
+        <p>
+          Bir kremin hangi ülkeden geldiği, içeriğinden çok daha az şey söyler.
+        </p>
+        <p>
+          Kore kozmetik ürünleri arasında oldukça başarılı nemlendiriciler ve cilt bakım ürünleri var.
+          Ancak bir kremin Kore'de üretilmiş olması, sarkmış cildi toparlayabileceği anlamına gelmiyor.
+          İyi bir krem cildi nemlendirip daha dolgun ve pürüzsüz gösterebilir, bazı ince kırışıklıkları
+          azaltabilir. Fakat belirgin yüz sarkmasını veya hacim kaybını ortadan kaldıramaz.
+        </p>
+        <p>
+          <strong>
+            Ben hastalarıma ürünün hangi ülkeden geldiğine değil, içeriğine ve gerçekten neyi
+            düzeltebileceğine bakmalarını öneriyorum.
+          </strong>
+        </p>
+        {/* DOĞRULA: Kore'de kırışıklık/beyazlatma/UV iddiası taşıyan ürünlerin "fonksiyonel kozmetik" ayrı sınıfta olduğu yalnızca danışmanlık sitelerinden; MFDS metni okunmadı. Kategori sayısı 9/11 diye çelişiyor, sayı yazılmadı. */}
+        <p>
+          Kore'de kırışıklık, beyazlatma ya da güneş koruma gibi iddialar taşıyan ürünlerin ayrı bir
+          düzenleme sınıfında olduğu bildiriliyor. Bu, o ürünlerin vaadinin sizin cildiniz için
+          doğrulandığı anlamına gelmez; yalnızca iddianın bir kuruma bildirildiğini gösterir.
+        </p>
+        <p>
+          "Cam cilt" güzel bir slogan ama bir ölçü birimi değil. Nemi cihazla ölçebiliriz, camı ölçemeyiz.
+          Çalışmalarda gerçekte ölçülen şey cildin su tutması, yüzey pürüzlülüğü ve kırışıklık
+          derinliğidir.
+        </p>
+
+        <h2 id="icerik-haritasi">İçerik Haritası: Vaat ve Kanıt</h2>
+        <p>
+          Aşağıdaki tablo etikette en sık gördüğümüz maddeleri, vaatleriyle ve insanlarda ölçülmüş
+          olanla yan yana koyuyor. Kanıt düzeyi maddenin genel gücünü değil, buraya aldığımız
+          çalışmaların gücünü gösterir.
+        </p>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İçerik</th>
+                <th class="p-3 font-semibold">Sık görülen vaat</th>
+                <th class="p-3 font-semibold">İnsanlarda ölçülen</th>
+                <th class="p-3 font-semibold">Kanıt</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr>
+                <td class="p-3 font-medium">Güneş koruyucu</td>
+                <td class="p-3">Yaşlanmayı geciktirir</td>
+                <td class="p-3">Günlük kullanan 55 yaş altı 903 yetişkinde 4,5 yılda deri yaşlanması yaklaşık dörtte bir daha az <sup><a href="#kaynak-1" class="text-primary hover:underline">[1]</a></sup></td>
+                <td class="p-3"><Evidence level={4} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Retinol ve retinoidler</td>
+                <td class="p-3">Kırışıklığı azaltır</td>
+                <td class="p-3">%0,075 retinol kremi, 26 hafta, orta yaşlı Japon kadınlar: ince kırışıklıkta iyileşme %50, taşıyıcıda %24. Reçeteli tretinoinde düşük ve yüksek doz benzer iyileşme verdi, tahriş farklıydı <sup><a href="#kaynak-2" class="text-primary hover:underline">[2]</a><a href="#kaynak-3" class="text-primary hover:underline">[3]</a></sup></td>
+                <td class="p-3"><Evidence from={3} to={4} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Niasinamid</td>
+                <td class="p-3">Leke, çizgi, ton</td>
+                <td class="p-3">%5, 12 hafta, 50 kadın, yüzün iki yarısı: çizgi, leke, kızarıklık, sararma ve elastikiyette iyileşme <sup><a href="#kaynak-4" class="text-primary hover:underline">[4]</a></sup></td>
+                <td class="p-3"><Evidence from={2} to={3} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Hyalüronik asit</td>
+                <td class="p-3">Dolgunluk, nem</td>
+                <td class="p-3">60 günde 76 kadında göz çevresinde nem ve elastikiyet arttı; kırışıklık derinliği yalnızca düşük moleküler ağırlıklı formlarda azaldı. Yaşlılarda bacak derisinde 4 haftada nem arttı <sup><a href="#kaynak-5" class="text-primary hover:underline">[5]</a><a href="#kaynak-6" class="text-primary hover:underline">[6]</a></sup></td>
+                <td class="p-3"><Evidence level={3} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Seramid</td>
+                <td class="p-3">Bariyeri onarır</td>
+                <td class="p-3">Yaşla ve kışla azalma verisi var. Seramidli bakımın olgun ciltte kuruluğu ve kaşıntıyı azalttığı bir uzman paneli uzlaşısı. Seramidli ve seramidsiz ürünün doğrudan karşılaştırması bulunamadı <sup><a href="#kaynak-12" class="text-primary hover:underline">[12]</a><a href="#kaynak-16" class="text-primary hover:underline">[16]</a></sup></td>
+                <td class="p-3"><Evidence level={2} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Centella</td>
+                <td class="p-3">Yatıştırır, onarır</td>
+                <td class="p-3">5 çift kör çalışmanın derlemesi, 172 kadın: göz çevresi ve dudak kırışıklığında iyileşme. Ürünler standart değil <sup><a href="#kaynak-7" class="text-primary hover:underline">[7]</a></sup></td>
+                <td class="p-3"><Evidence level={2} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Salyangoz salgısı</td>
+                <td class="p-3">Onarır, sıkılaştırır</td>
+                <td class="p-3">25 kişi, 12 hafta: göz çevresi kırışıklığında iyileşme; katılımcılar cilt kalitesinde fark bildirmedi <sup><a href="#kaynak-8" class="text-primary hover:underline">[8]</a></sup></td>
+                <td class="p-3"><Evidence from={1} to={2} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Adenozin</td>
+                <td class="p-3">Kırışıklığı azaltır</td>
+                <td class="p-3">Çalışma krem değil, eriyen film formunda; 8 haftada yüzey pürüzlülüğünde azalma <sup><a href="#kaynak-9" class="text-primary hover:underline">[9]</a></sup></td>
+                <td class="p-3"><Evidence level={1} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">PDRN</td>
+                <td class="p-3">Yeniler, toparlar</td>
+                <td class="p-3">7 randomize çalışmanın derlemesi, 183 katılımcı: en tutarlı yarar yara iyileşmesinde; çalışmaların çoğu enjeksiyon ve klinik uygulama. Krem etkisi bu derlemeden çıkarılamıyor <sup><a href="#kaynak-17" class="text-primary hover:underline">[17]</a></sup></td>
+                <td class="p-3"><Evidence level={1} /></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Ginseng</td>
+                <td class="p-3">Canlandırır</td>
+                <td class="p-3">Taramamızda kontrollü insan çalışması bulunamadı; veri hücre ve fare düzeyinde <sup><a href="#kaynak-18" class="text-primary hover:underline">[18]</a></sup></td>
+                <td class="p-3">Kanıt yok</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Güneş koruyucuyla başlayalım, çünkü tablodaki en sıkıcı satır aynı zamanda en güçlü satır.
+          Sıkıcıdır, çünkü ön yüzde şiir yazmaz; kanıtı vardır.
+        </p>
+        <p>
+          Retinoidlerde de akılda tutulacak bir ayrım var. Etkisi olan bir madde tahriş de yapabilir,
+          ama tahriş etkinin kanıtı değildir. Reçeteli tretinoinin iki dozu benzer iyileşme verirken
+          tahriş farklı çıktı <sup><a href="#kaynak-3">[3]</a></sup>.
+        </p>
+        <p>
+          Tablonun alt satırları için "işe yaramaz" demiyorum. "Henüz bilmiyoruz" ya da "bu çalışma sizin
+          aldığınız kremi sınamamış" diyorum. Çalışmaların birkaçında kimin finanse ettiği özetten
+          anlaşılmıyor; okurken bunu da akılda tutmak gerekir.
+        </p>
+
+        <h2 id="seramid">Seramid Yazıyor Diye İş Bitmez</h2>
+        <p>
+          Seramid, etiketin en güvenli görünen kelimelerinden biri. Haklı bir nedenle: cildin kendi yağ
+          tabakasının ana maddelerinden biri.
+        </p>
+        <p>
+          Ama laboratuvardaki deneylerde seramid, kolesterol ve serbest yağ asidinden yalnızca birini ya
+          da ikisini cilde sürmek bariyer onarımını geciktirdi. Üçü eşit oranda verilince onarım normale
+          döndü <Evidence from={1} to={2} /><sup><a href="#kaynak-14">[14]</a></sup>. Bu çalışmalar
+          ağırlıkla farede ve akut bariyer hasarı üzerinde yapıldı.
+        </p>
+        <p>
+          Yaşlı ciltte ilginç bir bulgu çıktı. Kolesterolün baskın olduğu bir karışım, yaşlı farelerde ve
+          80 yaş civarındaki insan derisinde bariyer onarımını daha hızlı kıldı. İnsan kolunda yalnızca
+          6 kişi vardı, tek uygulama yapıldı ve ölçüm 6. saatte alındı <Evidence level={1} /><sup><a href="#kaynak-15">[15]</a></sup>.
+        </p>
+        <p>
+          Bu yüzden elimde bir kural yok, bir soru var: <em>"Listede seramidin yanında kolesterol ve bir
+          yağ asidi de var mı?"</em> Cevabın hayır olması ürünü mahkûm etmez; "seramid" kelimesinin tek başına yeterli güvence
+          olmadığını hatırlatır.
+        </p>
+        <p>
+          Etikette "NP", "AP", "EOP" gibi harfli adlar da görürsünüz. Bunlar seramidlerin eski numaralı
+          adlarının yerini alan yeni adlandırma sisteminin parçası <sup><a href="#kaynak-19">[19]</a></sup>.
+          Harfler molekülün yapısını anlatır; ürünün kalitesi hakkında bir şey söylemez. Hangi harfin cildinizde ne kadar
+          fark yarattığını gösteren karşılaştırmalı bir çalışmaya rastlamadık.
+        </p>
+
+        <h2 id="etiket-sorulari">Etikette Beş Soru</h2>
+        <p>
+          Kavanozun arkasını okurken beş soru çoğu zaman yeter.
+        </p>
+        <ul>
+          <li><strong>Aktif madde hangisi.</strong> Ön yüzdeki vaat hangi maddeye dayanıyor?</li>
+          <li><strong>Sırası nerede.</strong> Etiketlerde maddeler genellikle miktarına göre büyükten küçüğe sıralanır; çok düşük oranda olan maddelerin sırası serbest olabilir.</li>
+          <li><strong>Vaat neyi ölçüyor.</strong> Nem mi, çizgi derinliği mi, yoksa ölçülemeyen bir "ışıltı" mı?</li>
+          <li><strong>Çalışma kimde, ne kadar sürmüş.</strong> Kaç kişi, kaç hafta, kimin finanse ettiği.</li>
+          <li><strong>Parfüm ve alerjen var mı.</strong> Hassaslaşmış ciltte tahrişe yol açabilir.</li>
+        </ul>
+        {/* DOĞRULA: etiket sıralaması kuralı (miktara göre azalan, %1 altı serbest) Türkiye Kozmetik Ürünler Yönetmeliği etiket maddesinden doğrulanacak. */}
+        <p>
+          Bu sorulara cevap bulamıyorsanız, üretici sorunuzu yanıtlamıyor demektir. Bu da başlı başına
+          bir bilgidir.
+        </p>
+
+        <h2 id="sade-rutin">Menopozda Daha Az Ürün</h2>
+        <p>
+          Bence en sık yapılan hatalardan biri, cilt eski canlılığını kaybettikçe daha fazla ve daha
+          güçlü ürün kullanmaya çalışmak.
+        </p>
+        <p>
+          Menopozdan sonra östrojenin azalmasıyla cildin nem tutma kapasitesi, kolajen miktarı ve
+          esnekliği değişebiliyor. Cilt daha kuru, ince ve hassas hâle gelebiliyor.
+        </p>
+        <p>
+          Ama bazı kadınlar bunu düzeltmek için aynı anda asitler, peeling ürünleri, retinoidler ve
+          farklı serumlar kullanmaya başlıyor. Sonuçta cilt daha iyi olmak yerine kızarıyor, yanıyor ve
+          daha fazla kuruyor.
+        </p>
+        <p>Oysa bu dönemde bazen yapılacak en iyi şey bakım rutinini sadeleştirmek.</p>
+        <p>
+          Nazik bir temizleyici, cildin ihtiyacına uygun nemlendirme ve düzenli güneş koruması benim
+          için temel adımlar. Retinoidler gibi etkili içerikler de kullanılabilir ama cildin toleransına
+          göre, yavaş yavaş başlamak gerekiyor.
+        </p>
+        <p>
+          Bir de güneş korumasını ihmal etmemek önemli. Çünkü menopozdaki hormonal değişikliklere yıllar
+          boyunca biriken güneş hasarı da ekleniyor.
+        </p>
+        <p>
+          <strong>
+            Benim yaklaşımım, daha fazla ürün kullanmak değil, cildin gerçekten neye ihtiyacı olduğunu
+            anlamak.
+          </strong>
+          Özellikle incelmiş ve hassaslaşmış bir ciltte bazen daha az ürünle daha iyi sonuç alabiliyoruz.
+        </p>
+        <p>
+          Bu üç adım, yukarıdaki tablonun en sağlam satırlarıyla örtüşüyor: güneşten korunmak, nemi ve
+          bariyeri gözetmek, etkili bir maddeyi tolerans izin verdiği hızda eklemek
+          <sup><a href="#kaynak-1">[1]</a><a href="#kaynak-16">[16]</a></sup>.
+        </p>
+
+        <h2 id="islem-oncesi-sonrasi">Bir İşlem Planlıyorsanız</h2>
+        <p>
+          İşlem öncesi ve sonrasındaki bakım, her işlem için aynı değildir.
+        </p>
+        <p>
+          Öncelikle yapılacak işlemi bilmek isterim. Çünkü bir enjeksiyon uygulamasıyla lazer veya
+          kimyasal peeling sonrasında cildin ihtiyaçları aynı değil.
+        </p>
+        <p>
+          İşlem öncesinde benim için en önemli konu, cildin mümkün olduğunca sağlıklı ve tahriş olmamış
+          durumda olması. Özellikle cildi kızarmış, soyulan veya aktif enfeksiyonu bulunan bir hastada
+          önce bu sorunu çözmek gerekebilir.
+        </p>
+        <p>
+          Kullanılan retinoidleri, asitleri ve diğer aktif ürünleri de işlem yapacak hekimle gözden
+          geçirmek gerekiyor. Bazı uygulamalardan önce bunlara ara verilmesi istenebilir, ama bütün
+          işlemler için geçerli tek bir kural yok.
+        </p>
+        <p>
+          İşlemden sonra ise genellikle daha sade bir bakım öneriyorum. Cildi nazikçe temizlemek, uygun
+          nemlendiricilerle korumak ve güneşten kaçınmak önemli. Özellikle cilt yüzeyini etkileyen
+          işlemlerden sonra erken dönemde peeling veya tahriş edici ürünlere dönmek doğru değil.
+        </p>
+        <p>
+          Kabuklanma oluşmuşsa koparmamak gerekiyor. Bazı işlemlerden sonra özel yara bakımı da
+          gerekebilir. Bu nedenle uygulamayı yapan hekimin önerileri, genel bakım tavsiyelerinden her
+          zaman daha önemli.
+        </p>
+        <RedFlagBox
+          title="İşlem sonrasında normal sayılmayacak belirtiler"
+          intro="Bir de hastalarıma kızarıklığın giderek artması, belirgin ağrı, iltihaplı akıntı veya ateş gelişmesi durumunda bunu normal iyileşme süreci olarak kabul etmemelerini söylüyorum."
+          markers={[
+            'Giderek artan kızarıklık',
+            'Belirgin ağrı',
+            'İltihaplı akıntı',
+            'Ateş',
+          ]}
+          footnote="Bu belirtiler her işlemden sonra beklenen bir iyileşme bulgusu değildir; uygulamayı yapan ekiple iletişime geçin."
+        />
+        <p>
+          <strong>
+            Benim için iyi bir işlem sonrası bakım, mümkün olduğunca çok ürün kullanmak değil, cildin
+            iyileşmesine fırsat vermek.
+          </strong>
+          Bazen en iyi bakım rutini, birkaç gün boyunca cildi rahat bırakmaktır.
+        </p>
+
+        <h2 id="turkiye">Türkiye'de Kozmetik, İlaç Sayılmaz</h2>
+        <p>
+          Kavanozun üzerinde ne yazarsa yazsın, bir kozmetik ürün hastalığı tedavi edemez.
+        </p>
+        {/* DOĞRULA (resmî metin): Kozmetik Kanunu (5324, RG 30.03.2005, S. 25771) künyesi mevzuat.gov.tr'den doğrulandı; geri kalan satırlar (bildirim sistemi, kozmetik tanımı, iddia yasağı, Türkçe etiket) yalnızca ikincil kaynaktan (hukuk bürosu rehberi). Kozmetik Ürünler Yönetmeliği: RG 8 Mayıs 2023, S. 32184 (1. mükerrer) ve madde numaraları resmî metinle karşılaştırılacak. Ceza tutarı ve madde numarası yazıya girmez. */}
+        <p>
+          Türkiye'de kozmetik ürünler bir ruhsatla değil, piyasaya sürülmeden önce yapılan bildirimle
+          satışa girer. Kozmetik tanımı hastalığı önlemeyi ya da tedavi etmeyi kapsamaz; tedavi iddiasıyla
+          satılan bir ürün kozmetik sayılmaz.<sup><a href="#kaynak-20">[20]</a></sup> Bu yüzden "kırışıklığı
+          tedavi eder" gibi cümleler gördüğünüzde bir adım geri durun.
+        </p>
+        <p>
+          Yurt dışından getirilen ürünlerde Türkçe etiketin bulunması beklenir. Satıcısı belirsiz ya da
+          etiketi okunamayan bir üründe içerik listesini doğrulamak zorlaşır. Etiket okuma sorularınız
+          orada daha da önem kazanır.
+        </p>
+
+        <h2 id="sonuc">Etikete Son Bir Bakış</h2>
+        <p>
+          Kremler cildin yüzeyine çalışır. Yüzeyin işi de küçük değildir.
+        </p>
+        <p>
+          Güneşten korunan, nemi ve bariyeri gözeten, bir seferde yalnızca bir etkili madde deneyen bir
+          rutin çoğu kadına yeter.
+        </p>
+        <p>
+          Kavanozun adı, ülkesi ve fiyatı bunun yerine geçmez. Bir sonraki sefer ön yüzü okuduktan sonra
+          arka yüzü de çevirin.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar ve İleri Okuma</h2>
+        <p>Kaynaklar, metindeki numaralı atıflarla eşleşir. Kanıt etiketi bir kişide elde edilecek sonucun garantisi değildir.</p>
+        <ol>
+          <li id="kaynak-1">Hughes MCB ve ark. Güneş koruyucu ve cilt yaşlanmasının önlenmesi: randomize çalışma. 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23732711/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-2">Kikuchi K ve ark. Orta yaşlı Japon kadınlarda fotoyaşlanmış yüz cildinin topikal retinolle iyileşmesi: taşıyıcı kontrollü, çift kör çalışma. 2009. <a href="https://pubmed.ncbi.nlm.nih.gov/20078381/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-3">Griffiths CE ve ark. İki farklı tretinoin konsantrasyonu fotoyaşlanmada benzer iyileşme, farklı tahriş verir. 1995. <a href="https://pubmed.ncbi.nlm.nih.gov/7544967/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-4">Bissett DL ve ark. Niasinamid: yaşlanan yüz cildinin görünümünü iyileştiren bir B vitamini. 2005. <a href="https://pubmed.ncbi.nlm.nih.gov/16029679/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-5">Pavicic T ve ark. Farklı moleküler ağırlıklı hyalüronik asit kremlerinin kırışıklık karşıtı etkililiği. 2011. <a href="https://pubmed.ncbi.nlm.nih.gov/22052267/" target="_blank" rel="noopener noreferrer">Randomize çalışma</a>.</li>
+          <li id="kaynak-6">Muhammad P ve ark. Yaşlılarda kuru ciltte farklı moleküler ağırlıklı topikal hyalüronik asit: çift kör randomize çalışma. 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38829483/" target="_blank" rel="noopener noreferrer">Randomize çalışma</a>.</li>
+          <li id="kaynak-7">Kongkaew C ve ark. Centella asiatica'nın kırışıklıklar üzerindeki etkililik ve güvenliği: sistematik derleme ve ağ meta-analizi. 2020. <a href="https://pubmed.ncbi.nlm.nih.gov/33413787/" target="_blank" rel="noopener noreferrer">Sistematik derleme</a>.</li>
+          <li id="kaynak-8">Fabi SG ve ark. Cryptomphalus aspersa salgısı filtratının fotoyaşlanmış cilde etkisi. 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23652894/" target="_blank" rel="noopener noreferrer">Kontrollü çalışma</a>.</li>
+          <li id="kaynak-9">Legendre JY ve ark. Yerel kırışıklık karşıtı etki için adenozin içeren eriyen filmin formülasyonu ve etkililiği. 2007. <a href="https://pubmed.ncbi.nlm.nih.gov/17520154/" target="_blank" rel="noopener noreferrer">Randomize çalışma</a>.</li>
+          <li id="kaynak-10">Brincat M ve ark. Menopoz sonrası kadında cilt kolajen içeriği, cilt kalınlığı ve kemik kütlesindeki azalma üzerine bir çalışma. 1987. <a href="https://pubmed.ncbi.nlm.nih.gov/3120067/" target="_blank" rel="noopener noreferrer">Klinik çalışma</a>.</li>
+          <li id="kaynak-11">Calleja-Agius J, Brincat M. Menopozun cilt ve diğer bağ dokuları üzerine etkisi. 2011. <a href="https://pubmed.ncbi.nlm.nih.gov/21970508/" target="_blank" rel="noopener noreferrer">Derleme</a>.</li>
+          <li id="kaynak-12">Rogers J ve ark. Stratum korneum lipitleri: yaşlanmanın ve mevsimlerin etkisi. 1996. <a href="https://pubmed.ncbi.nlm.nih.gov/8950457/" target="_blank" rel="noopener noreferrer">Klinik çalışma</a>.</li>
+          <li id="kaynak-13">Williams ve ark. Atopik dermatite yatkın yetişkinlerde yaşın stratum korneum lipidomik profiline etkisi. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/41408887/" target="_blank" rel="noopener noreferrer">Gözlemsel çalışma</a>.</li>
+          <li id="kaynak-14">Man MQ ve ark. Bariyer onarımı için fizyolojik lipit karışımlarının optimizasyonu. 1996. <a href="https://pubmed.ncbi.nlm.nih.gov/8618046/" target="_blank" rel="noopener noreferrer">Deneysel çalışma</a>.</li>
+          <li id="kaynak-15">Zettersten EM ve ark. Stratum korneum lipitlerinin optimal oranları kronolojik olarak yaşlanmış ciltte bariyer onarımını iyileştirir. 1997. <a href="https://pubmed.ncbi.nlm.nih.gov/9308554/" target="_blank" rel="noopener noreferrer">Deneysel çalışma</a>.</li>
+          <li id="kaynak-16">Gold M ve ark. Olgun cilt kserozunda cilt bakımıyla sağlıklı bir cilt bariyerinin desteklenmesi. 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38206142/" target="_blank" rel="noopener noreferrer">Uzman paneli uzlaşısı</a>.</li>
+          <li id="kaynak-17">Alhussain AM ve ark. Cilt gençleştirme, skar önleme ve yara iyileşmesi için polinükleotid ve PDRN: randomize çalışmaların sistematik derlemesi. 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42572627/" target="_blank" rel="noopener noreferrer">Sistematik derleme</a>.</li>
+          <li id="kaynak-18">Chen J ve ark. Panax ginseng ekstresi UVB kaynaklı cilt hasarını önler (hücre ve fare modeli). 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/39232284/" target="_blank" rel="noopener noreferrer">Deneysel çalışma</a>.</li>
+          <li id="kaynak-19">Rawlings AV. Stratum korneum araştırmasında eğilimler ve kuru cilt yönetimi. 2003. <a href="https://pubmed.ncbi.nlm.nih.gov/18494884/" target="_blank" rel="noopener noreferrer">Derleme</a>.</li>
+          <li id="kaynak-20">5324 sayılı Kozmetik Kanunu, Resmî Gazete 30.03.2005, S. 25771; Kozmetik Ürünler Yönetmeliği, Resmî Gazete 8 Mayıs 2023, S. 32184 (1. mükerrer). Metin yayından önce resmî kaynaktan doğrulanacak.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <RelatedReadings
+        class="mt-10"
+        paths={[
+          '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/',
+          '/zamansiz-yasam/non-invaziv/non-invaziv-cihazlar-hifu-rf-mikroakim/',
+          '/zamansiz-yasam/deneysel/ghk-cu-menopoz-cilt/',
+        ]}
+      />
+
+      <ArticleEditorNote class="mt-10">
+        <p>
+          Bu yazıdaki kanıt düzeyleri, buraya alınan çalışmaların gücünü gösterir; bir içeriğin genel
+          etkinliği hakkında hüküm vermez. Cilt bakımı çalışmalarının birçoğu küçük, kısa ve üretici
+          bağlantılıdır; finansman bilgisi özetlerde her zaman yer almaz.
+        </p>
+        <p>
+          Kozmetik mevzuatına ilişkin satırlar genel bilgi verir; ayrıntı için resmî metinlere
+          bakılmalıdır. Yeni, değişen ya da geçmeyen cilt bulgusu için dermatoloji değerlendirmesi
+          gerekir.
+        </p>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu yazı genel bilgilendirme içindir; kişisel muayene, tanı veya tedavi önerisinin yerini tutmaz.
+        Cilt bakımı veya bir işlem konusunda karar verirken size özgü durumunuzu yetkili bir hekimle değerlendirin.</p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
