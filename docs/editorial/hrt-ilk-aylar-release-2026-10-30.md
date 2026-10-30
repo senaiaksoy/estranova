@@ -31,18 +31,18 @@ Kaynaklar bu sohbetin geniş audit aşamasında kontrol edildi. Modelin kaynak k
 - Uygulama içi tarayıcı bağlantısı ve DevTools profil bağlantısı çalışmadı. Ayrı Playwright oturumunda yerel 1440×1000 masaüstü ve 390×844 mobil önizleme kontrol edildi; iki görsel yüklendi, mobilde scrollWidth=390 (taşma yok), dolu tıbbi not doğrulandı.
 - Son HTML: tek H1, doğru yazar ve tarihler, Article/BreadcrumbList; FAQPage ve MedicalWebPage yok.
 - Hedef makale arşivi güncellendi. Export sırasında filtre yazımından doğan diğer arşiv değişiklikleri tamamen geri alındı; yalnız hedef arşiv kapsamda.
-- Commit/push/deploy ve canlı doğrulama durumu işlem sonunda kaydedilecek.
+- Yayın: 2bfc70bd main'e push edildi ve canlıya yansıdı. Canlı sayfa `?nc=` ile kontrol edildi: 200 yanıt, yeni acil belirti ve kanama metni yayında, dateModified 2026-10-30.
 
 ## İkinci düzeltme (30 Ekim 2026, onaylandı)
 
 - Canlı doğrulama: ilk yayın sonrası canlı sayfa `?nc=` ile kontrol edildi; 200 yanıt, tek H1, dateModified 2026-10-30, yeni acil belirti ve kanama metni yayında. `og:image` ve breadcrumb sorunları bu kontrolde görüldü.
 - Düzeltilen: `og:image` artık makale görseli; kart görseli `articleCardImageByRoute` içinde, alt metinde yapay zekâ notu var; Article şemasında `articleSection` ve `sectionPath` Menopoz bölümüne bağlandı.
 - Gövde: yaşıt bağları ve kapanışlar çeşitlendi, uyarı cümleleri anlatı sesine çevrildi. Tıbbi bilgi notu bilerek değişmedi; kısaltma önerisi hekim kararına bırakıldı.
-- KC yazar onayının (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi; commit istendi. Push, deploy ve canlı doğrulama henüz yapılmadı.
+- KC yazar onayının (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi. Yayın: c1ce8c01 main'e push edildi ve canlıya yansıdı. Canlı doğrulama (30 Ekim 2026, `?nc=`): og:image makale görseli, breadcrumb Hormonal Geçiş · Menopoz, yeni gövde yayında.
 
 ## Üçüncü düzeltme (30 Ekim 2026, onaylandı)
 
 - Cümle ritmi: on üç yerde kısa cümleler birleştirildi; kısa vurgu cümleleri korundu. Olgu ve güvenlik sınırları aynı.
 - Geri bağlantı: `hrt-yan-etkileri-ve-izleme` ve `dokuz-yillik-menopoz-sonunda-hrt-karari` ilgili okumalarına bu yazı eklendi. Bu iki yazının gövdesi ve tarihleri değişmedi.
 - Eklenmeyen: `menopozda-hrt-avantajlari` (yazıda önceki sürüme ait not var; ayrı güncelleme bekliyor).
-- KC yazar (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi; commit istendi. Push, deploy ve canlı doğrulama henüz yapılmadı.
+- KC yazar (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi. Yayın: 019a4471 main'e push edildi ve canlıya yansıdı. Canlı doğrulama (30 Ekim 2026, `?nc=`): yeni ritim yayında; hrt-yan-etkileri-ve-izleme ve dokuz-yillik-menopoz-sonunda-hrt-karari sayfalarında bu yazıya bağlantı var.
