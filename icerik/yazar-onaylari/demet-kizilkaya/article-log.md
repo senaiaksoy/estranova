@@ -43,3 +43,11 @@ Geniş audit sonrası KC “Evet, düzelt” dedi. Teknik kısım: sosyal payla�
 ## 30 Ekim 2026 — Üçüncü düzeltme: cümle ritmi (onaylandı)
 
 İkinci geniş audit cümle bandını dar buldu (ortalama 9,7 kelime, 15+ kelimelik yalnız 8 cümle). KC “Ritim + geri bağlantı” dedi. Gövdede on üç yerde kısa cümleler birleştirildi, kısa vurgu cümleleri korundu (“İlk net rahatlama buydu.”, “Üç kuşak, üç ayrı ton.” vb.). Olgu, güvenlik sınırı ve *ma* paragrafı değişmedi. KC bu sohbette Demet’in yazar onayının ve tıbbi onayın tamam olduğunu sözlü bildirdi ve commit istedi. Gezinti: hrt-yan-etkileri-ve-izleme ve dokuz-yillik-menopoz-sonunda-hrt-karari yazılarına bu yazıya bağlantı eklendi; üçüncü aday menopozda-hrt-avantajlari 30 Ekim 2026'da KC talimatıyla eklendi (yalnızca gezinti; yazının metni, tarihleri ve onaylı Bilimsel Editör Notu değişmedi). Push/deploy talimatı yok.
+
+## 30 Ekim 2026 — Dördüncü düzeltme: tıbbi nota başlama yaşı cümlesi (KC kararı)
+
+İkinci geniş auditte özetteki “58 yaşında başladım” ifadesi için tıbbi notta yaş ve menopozdan geçen süre uyarısı eksik bulundu. KC bu sohbette “Evet, ekle” dedi. Nota genel bir cümle eklendi; Demet’in kendi durumu hakkında bilgi vermiyor, rakam içermiyor. Anlatı metni değişmedi. Aynı bilgi menopozda-hrt-avantajlari yazısında ESE 2025’e dayandırılmış olarak duruyor; bu turda kılavuz yeniden kontrol edilmedi. Commit/push yok.
+
+## 30 Ekim 2026 — Beşinci düzeltme: baş ağrısı anlatısı (Demet bilgisi KC aracılığıyla)
+
+İkinci geniş auditte ikinci haftadaki baş ağrısının hekime söylenip söylenmediği anlatıdan anlaşılmıyordu; tıbbi not ise yeni veya değişen baş ağrısının hekimle görüşülmesini söylüyor. Demet’e tek soru soruldu; KC, Demet’in “söyledim” dediğini bildirdi. Anlatıya “Hekimime de söyledim.” cümlesi eklendi. Hekimin yanıtı, zamanı veya muayene ayrıntısı yazılmadı (Çift Rol). Commit/push yok.

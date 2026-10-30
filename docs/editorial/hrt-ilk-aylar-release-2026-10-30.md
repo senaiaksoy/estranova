@@ -46,3 +46,14 @@ Kaynaklar bu sohbetin geniş audit aşamasında kontrol edildi. Modelin kaynak k
 - Geri bağlantı: `hrt-yan-etkileri-ve-izleme` ve `dokuz-yillik-menopoz-sonunda-hrt-karari` ilgili okumalarına bu yazı eklendi. Bu iki yazının gövdesi ve tarihleri değişmedi.
 - `menopozda-hrt-avantajlari` ilgili okumalarına bu yazı sonradan eklendi (30 Ekim 2026, KC talimatı; yalnızca gezinti, o yazının metni ve tarihleri değişmedi).
 - KC yazar (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi. Yayın: 019a4471 main'e push edildi ve canlıya yansıdı. Canlı doğrulama (30 Ekim 2026, `?nc=`): yeni ritim yayında; hrt-yan-etkileri-ve-izleme ve dokuz-yillik-menopoz-sonunda-hrt-karari sayfalarında bu yazıya bağlantı var.
+
+## Dördüncü düzeltme (30 Ekim 2026, KC kararı)
+
+- Tıbbi bilgi notuna başlama yaşı ve menopozdan bu yana geçen süre cümlesi eklendi. Anlatı, Evidence, kanama ve acil belirti metni değişmedi.
+- Kaynak izi: menopozda-hrt-avantajlari yazısındaki ESE 2025 ifadesi. Kılavuz bu turda yeniden kontrol edilmedi.
+- Commit/push yok.
+
+## Beşinci düzeltme (30 Ekim 2026, Demet bilgisi KC aracılığıyla)
+
+- İkinci haftadaki baş ağrısı anlatısına “Hekimime de söyledim.” cümlesi eklendi. Demet’in bu olguyu söylediğini KC bildirdi (sözlü). Hekim yanıtı veya zamanı yazılmadı.
+- Commit/push yok.
