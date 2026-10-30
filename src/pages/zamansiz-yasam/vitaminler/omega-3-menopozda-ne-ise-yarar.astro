@@ -1,0 +1,539 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SiteNavbar from '../../../components/site/SiteNavbar.astro';
+import SiteFooter from '../../../components/site/SiteFooter.astro';
+import SubmenuHero from '../../../components/site/SubmenuHero.astro';
+import SubmenuArticleBody from '../../../components/site/SubmenuArticleBody.astro';
+import ArticleAuthorBlock from '../../../components/site/ArticleAuthorBlock.astro';
+import SaveForLaterButton from '../../../components/site/SaveForLaterButton.astro';
+import ReadingControls from '../../../components/site/ReadingControls.astro';
+import RedFlagBox from '../../../components/site/RedFlagBox.astro';
+import ArticleTOC from '../../../components/site/ArticleTOC.astro';
+import ArticleProsePanel from '../../../components/site/ArticleProsePanel.astro';
+import ArticleDisclaimer from '../../../components/site/ArticleDisclaimer.astro';
+import ArticleEditorNote from '../../../components/site/ArticleEditorNote.astro';
+import ArticleSummary from '../../../components/site/ArticleSummary.astro';
+import { submenuHeroByRoute } from '../../../data/submenu-heroes';
+import Evidence from '../../../components/site/Evidence.astro';
+import RelatedReadings from '../../../components/site/RelatedReadings.astro';
+import ArticleFAQ from '../../../components/site/ArticleFAQ.astro';
+import { articleFaqs } from '../../../data/article-faqs';
+import { buildArticleSchemas } from '../../../utils/article-schema';
+import { resolveSiteUrl } from '../../../utils/seo';
+
+const hero = submenuHeroByRoute['/zamansiz-yasam/vitaminler/']!;
+
+const tocEntries = [
+  { id: 'hamsi-tezgahi', label: 'Hamsi Tezgâhı' },
+  { id: 'kapsulde-ne-var', label: 'Kapsülde Ne Var' },
+  { id: 'trigliserit-ve-kalp', label: 'Trigliserit ve Kalp' },
+  { id: 'menopoz-vaatleri', label: 'Menopoz Vaatleri' },
+  { id: 'kanit-merdiveni', label: 'Kanıt Merdiveni ve İddialar' },
+  { id: 'guvenlik', label: 'Ritim, Kanama, Etkileşim' },
+  { id: 'bilinmeyenler', label: 'Kadınlar ve Bilinmeyenler' },
+  { id: 'karar-olcutleri', label: 'Karar Ölçütleri' },
+  { id: 'kaynaklar', label: 'Kaynaklar' },
+  { id: 'sik-sorulanlar', label: "Dr. Aksoy'a sorular" },
+];
+
+const siteUrl = resolveSiteUrl(Astro.site);
+const articleTitle = 'Omega-3 Menopozda Ne İşe Yarar?';
+const articleImage = '/images/library/editorial/zy-omega-3-menopoz.webp';
+const articleDescription =
+  'Omega-3 trigliseridi düşürebilir; menopoz belirtilerindeki yararı belirsizdir. Takviyelerin ritim ve kanama riskleri ürüne ve doza göre değerlendirilir.';
+const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/'] ?? [];
+const articleSchemas = buildArticleSchemas({
+  title: articleTitle,
+  description: articleDescription,
+  writerSlug: 'senai-aksoy',
+  articleType: 'clinical-guide',
+  publishedDate: '30 Ekim 2026',
+  image: articleImage,
+  medicalReviewer: 'Dr. Alper Mumcu',
+  pathname: '/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/',
+  articleSection: 'Zamansız Yaşam · Vitaminler',
+  sectionPath: '/zamansiz-yasam/',
+  keywords: [
+    'omega-3',
+    'balık yağı',
+    'menopoz',
+    'trigliserit',
+    'sıcak basması',
+    'EPA',
+    'DHA',
+    'atriyal fibrilasyon',
+    'takviye güvenliği',
+  ],
+  faqItems,
+  siteUrl,
+});
+---
+
+<SiteLayout
+  title={`${articleTitle} - Estranova`}
+  description={articleDescription}
+  image={articleImage}
+  ogType="article"
+  jsonLd={articleSchemas}
+>
+  <SiteNavbar currentPath="/zamansiz-yasam/" />
+
+  <main id="main-content" class="text-ink">
+    <SubmenuHero
+      eyebrow="Zamansız Yaşam · Vitaminler"
+      title="Omega-3 Menopozda Ne İşe Yarar?"
+      imageSrc={hero.src}
+      imageAlt={hero.alt}
+      compact
+    />
+    <SubmenuArticleBody>
+      <ArticleTOC slot="toc" entries={tocEntries} />
+      <ArticleAuthorBlock
+        authorSlug="senai-aksoy"
+        articleType="clinical-guide"
+        medicalReviewer="Dr. Alper Mumcu"
+        publishedDate="30 Ekim 2026"
+        readingMinutes={12}
+        imageSrc="/images/library/editorial/zy-omega-3-menopoz-byline.webp"
+        imageAlt="Boğaz kıyısındaki bir balık tezgâhında, buz üstündeki hamsiyi gösterip gülen, deve tüyü paltolu kadın; yapay zekâ ile üretilmiş temsili görsel"
+        imagePosition="50% 20%"
+      />
+
+      <div class="flex flex-wrap items-center justify-end gap-3">
+        <ReadingControls />
+        <SaveForLaterButton
+          slug="/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/"
+          title={articleTitle}
+        />
+      </div>
+
+      <ArticleSummary title="Kısa Klinik Yanıt">
+        <p>
+          Omega-3 yağ asitlerinin insanda en sağlam gösterilen etkisi trigliseridi düşürmesi
+          <sup><a href="#kaynak-1">[1]</a></sup> <sup><a href="#kaynak-2">[2]</a></sup>. Kalp hastalığı olmayan 25.871 orta yaş ve
+          üzeri yetişkinde günde 1 g balık yağı beş yılda kalp krizi, inme ve kalp kaynaklı ölümden oluşan birleşik sonucu azaltmadı
+          <sup><a href="#kaynak-3">[3]</a></sup>. Menopozdaki 355 kadınla yapılan çalışmada sıcak basması, uyku ve ruh hali
+          plasebodan farklı değişmedi <sup><a href="#kaynak-4">[4]</a></sup>. En önemli güvenlik notu: kalp çalışmalarında
+          atriyal fibrilasyon (bir ritim bozukluğu) riski arttı ve artış günde 1 g’ın üzerindeki dozlarda daha belirgindi
+          <sup><a href="#kaynak-5">[5]</a></sup>. Ritim bozukluğunuz varsa, kan sulandırıcı kullanıyorsanız ya da ameliyat
+          planınız varsa kapsülü kullanmaya hekiminize sormadan başlamayın.
+        </p>
+      </ArticleSummary>
+
+      <ArticleProsePanel>
+        <h2 id="hamsi-tezgahi">Hamsi Tezgâhı ile Kapsül Şişesi</h2>
+        <p>
+          Ekim sonunda balıkçı tezgâhları gümüş rengine döner. Hamsi buz üstünde parlar, satıcı “taze, bugün geldi”
+          diye seslenir.
+        </p>
+        <p>
+          Ben de bu mevsimde o tezgâhın önünden geçerken adımlarını yavaşlatanlardanım. Evde ise çoğu mutfakta başka bir
+          omega-3 kaynağı durur: buzdolabının kapağında yarısı içilmiş bir balık yağı şişesi ya da tezgâhta kapsül
+          kutusu.
+        </p>
+        <p>
+          Kırk yaşından sonra bu kutunun alınma nedeni değişir. Kimi kalbini korumak ister, kimi gece uyandıran sıcak
+          basmasından, eklem sızısından ya da unutkanlıktan kurtulmak. Bir kutudan bu kadar çok şey beklenir.
+        </p>
+        <p>
+          Merak etmeyin diye baştan yazayım: Haftada bir iki kez balık yemek iyi bir alışkanlık ve kalp sağlığı için
+          önerilen bir düzen <sup><a href="#kaynak-6">[6]</a></sup>. Bu yazının sorusu tabaktaki balık değil, her gün yutulan
+          kapsül. Onun karnesi daha karışık.
+        </p>
+
+        <h2 id="kapsulde-ne-var">Kapsülün İçinde Ne Var, Etiket Ne Söylüyor?</h2>
+        <p>
+          “Omega-3” tek bir madde sanılır. Oysa üç ayrı yağ asidinin ortak adı ve araştırmaların çoğu yalnızca ikisine
+          bakıyor.
+        </p>
+        <p>
+          EPA ve DHA balıkta ve balık yağında bulunur. ALA ise keten tohumu, ceviz ve bazı bitkisel yağlarda vardır. Kalp
+          çalışmalarının büyük kısmı EPA ve DHA kapsülleriyle yapıldı; ALA ayrı incelendi ve sonuçları ayrı yorumlanıyor
+          <sup><a href="#kaynak-1">[1]</a></sup>.
+        </p>
+        <p>
+          Kutunun ön yüzünde “1000 mg balık yağı” yazması, içinde 1000 mg omega-3 olduğu demek değil. Asıl sayı arka
+          yüzdeki EPA ve DHA miktarıdır. Ön yüz pazarlama, arka yüz bilgi verir.
+        </p>
+        <p>
+          Etiket ile içerik de her zaman örtüşmüyor. Yeni Zelanda’da satılan 32 balık yağı ürünü incelendiğinde yalnızca
+          üçünde etikette yazan kadar EPA ve DHA bulundu; ürünlerin çoğu önerilen bozulma (oksidasyon) sınırlarını aştı.
+          Son kullanma tarihi, fiyat ve menşe kaliteyi öngörmedi <sup><a href="#kaynak-7">[7]</a></sup>. Bu tek ülkenin
+          verisi; Türkiye piyasası için benzer bir analize ulaşamadık.
+        </p>
+        <p>
+          Türkiye’de balık yağı takviye edici gıda olarak satılıyor. Tarım ve Orman Bakanlığı’nın 21 Ekim 2026 tarihli
+          listesi 11 yaş ve üzeri için bir sınır koyuyor: takviyede günlük EPA ve DHA toplamı en fazla 5.000 mg
+          <sup><a href="#kaynak-8">[8]</a></sup>. Bu sayı yasal üst sınır; kimse için hedef miktar sayılmaz. Ayrıca yüksek trigliserit
+          tedavisinde kullanılan omega-3 içerikli reçeteli ilaçlar da ruhsatlı; bunlardan biri yalnızca saf EPA
+          (ikosapent etil) içeriyor <sup><a href="#kaynak-9">[9]</a></sup>. Reçeteli ürün ile marketteki kapsül aynı
+          araştırmanın konusu değil; sonuçları birbirine taşınmamalı.
+        </p>
+
+        <h2 id="trigliserit-ve-kalp">Trigliserit ve Kalp: Kanıtın En Sağlam Olduğu Yer</h2>
+        <p>
+          Omega-3’ün kesin konuşabildiğimiz tek alanı kan yağları. Kalp krizine giden yolda ise tablo daha karışık.
+        </p>
+        <p>
+          86 randomize çalışmayı (162.796 kişi) toplayan derlemede balık kökenli omega-3 trigliseridi yaklaşık yüzde 15
+          düşürdü ve etki doza bağlıydı <sup><a href="#kaynak-1">[1]</a></sup> <Evidence level={5} />. Trigliseridi çok
+          yüksek olan kişilerde günde 4 g reçeteli omega-3 bu değeri yüzde 30’dan fazla düşürebiliyor
+          <sup><a href="#kaynak-2">[2]</a></sup>. Aynı derlemede toplam ölüm üzerinde belirgin bir etki görülmedi; kalp
+          kaynaklı ölüm ve koroner olaylarda küçük bir azalma işareti vardı <sup><a href="#kaynak-1">[1]</a></sup>.
+        </p>
+        <p>
+          Kalp hastalığı olmayan kişilerde soruyu en net yanıtlayan çalışma 50 yaş üzeri erkekler ve 55 yaş üzeri
+          kadınlarla yapıldı. 25.871 kişi beş yıl boyunca günde 1 g balık yağı ya da plasebo aldı. Kalp krizi, inme ve kalp
+          kaynaklı ölümden oluşan ana sonuçta fark çıkmadı; kanser sıklığı da değişmedi <sup><a href="#kaynak-3">[3]</a></sup>
+          <Evidence level={4} />. İkincil bir analizde kalp krizi sayısı daha düşüktü; ana sonuç anlamlı olmadığı için bu
+          bulgu doğrulanması gereken bir işaret olarak okunuyor.
+        </p>
+        <p>
+          Yüksek riskli hastalarda iki büyük çalışma farklı sonuç verdi. Statin kullanan, trigliseridi yüksek 8.179 kişide
+          günde 4 g reçeteli saf EPA, kalp-damar olaylarını yaklaşık dörtte bir azalttı
+          <sup><a href="#kaynak-10">[10]</a></sup>. Benzer 13.078 kişide EPA ile DHA karışımı içeren başka bir ilaç ise mısır
+          yağıyla karşılaştırıldığında fark yaratmadı; üstelik sindirim yakınmaları daha sıktı
+          <sup><a href="#kaynak-11">[11]</a></sup>. Ürün, karşılaştırılan yağ ve hasta grubu farklıydı.
+        </p>
+        <p>
+          Trigliserit yüksekliğinde karar, değere ve kalp-damar riskine göre verilir; çok yüksek değerler pankreatit riski için ayrıca değerlendirilir <sup><a href="#kaynak-27">[27]</a></sup>. Market kapsülüyle “kalbimi korurum” beklentisi büyük çalışmalarda karşılık bulmadı.
+        </p>
+
+        <h2 id="menopoz-vaatleri">Menopoz Vaatleri: Sıcak Basmasından Eklem Ağrısına</h2>
+        <p>
+          Sıcak basması için soru açıkça sorulmuş ve büyük bir çalışmada yanıt olumsuz çıkmış. Sonuç: fark yok.
+        </p>
+        <p>
+          Menopoz geçişindeki ya da sonrasındaki 355 kadın 12 hafta boyunca günde 1,8 g omega-3 ya da plasebo aldı.
+          Başlangıçta günde ortalama 7,6 sıcak basması vardı. İki grupta da azaldı ve azalma aynı ölçüdeydi; uyku,
+          uykusuzluk, depresif belirti ve kaygı ölçümlerinde de fark görülmedi <sup><a href="#kaynak-4">[4]</a></sup>
+          <Evidence level={3} />. 2023’te dokuz randomize çalışmayı inceleyen derleme de omega-3’ün sıcak basması, uyku
+          ve depresyon üzerinde etkili olduğunu gösteren yeterli kanıt bulamadı <sup><a href="#kaynak-12">[12]</a></sup>.
+          Omega-3’ün tek başına kullanıldığı çalışmaları birleştiren başka bir analizde de sıcak basması sıklığı ve
+          şiddeti plasebodan farklı değildi <sup><a href="#kaynak-13">[13]</a></sup>.
+        </p>
+        <p>
+          Olumlu sonuç veren bir çalışma da var, ama sınırlarıyla birlikte okunmalı. Ruhsal sıkıntısı olan orta yaşlı
+          kadınlarla sekiz haftalık bir çalışma yapıldı. İkincil analizde, sıcak basması olan 91 kadında EPA alanlarda
+          sıklık daha fazla azaldı <sup><a href="#kaynak-14">[14]</a></sup>. Yazarlar da bulgunun sıcak basması için
+          tasarlanmış bir çalışmada doğrulanması gerektiğini yazdı; daha büyük çalışma ise bunu doğrulamadı
+          <sup><a href="#kaynak-4">[4]</a></sup>.
+        </p>
+        <p>
+          <strong>Ruh hali.</strong> Aynı orta yaşlı kadın grubunda tüm katılımcılara bakıldığında fark çıkmadı; majör
+          depresyonu olmayan alt grupta ruhsal sıkıntı skorları EPA ile daha fazla düzeldi
+          <sup><a href="#kaynak-15">[15]</a></sup>. Depresyon tanısı alan yetişkinlerle yapılan çalışmaları toplayan derleme
+          plaseboya göre küçük bir etki buldu. Ortalama etki klinik açıdan anlamlı sayılan eşiğin altındaydı; ancak sonuçlar anlamlı bir yararı da dışlamıyordu ve kanıtın
+          kesinliği çok düşüktü <sup><a href="#kaynak-16">[16]</a></sup> <Evidence level={2} />. Önleme sorusunda sonuç
+          şaşırtıcıydı. 50 yaş üzeri 18.353 yetişkinde beş yıl günde 1 g balık yağı depresyonu önlemedi. Depresyon ya da
+          belirgin depresif belirti riski balık yağı grubunda biraz daha yüksekti; ruh hali skorlarında fark yoktu
+          <sup><a href="#kaynak-17">[17]</a></sup>.
+        </p>
+        <p>
+          Haftalarca süren isteksizlik, uyku ve iştah değişikliği ya da umutsuzluk hissi varsa bunu bir kapsülle
+          beklemeyin. Bu, değerlendirilmesi gereken bir durum.
+        </p>
+        <p>
+          <strong>Zihin ve unutkanlık.</strong> Bilişsel sorunu olmayan yaşlı kişilerde yapılan yüksek kaliteli çalışmalar,
+          omega-3 takviyesinin bellek ve düşünme testlerinde yarar sağlamadığını gösterdi
+          <sup><a href="#kaynak-18">[18]</a></sup>. Perimenopozdaki “beyin sisi” için ayrı bir çalışma ise yeni: 42 kadınla
+          yürütülen bir randomize çalışmanın sonuçları henüz yayımlanmadı <sup><a href="#kaynak-19">[19]</a></sup>.
+        </p>
+        <p>
+          <strong>Eklem, kemik ve göz.</strong> Aromataz inhibitörü, meme kanseri tedavisinde kullanılan ve eklem ağrısı
+          yapabilen bir ilaç. Bu ağrıyı yaşayan, menopoz sonrası 249 kadın 24 hafta günde 3,3 g omega-3 ya da plasebo aldı. İki grupta da
+          ağrı yarıdan fazla azaldı; gruplar arasında anlamlı fark yoktu <sup><a href="#kaynak-20">[20]</a></sup>. 70 yaş
+          üzeri 2.157 kişiyle yapılan üç yıllık çalışmada günde 1 g omega-3 kırık, kan basıncı, fiziksel performans ve
+          bilişsel testlerde fark yaratmadı <sup><a href="#kaynak-21">[21]</a></sup>. Orta-ağır kuru gözde bir yıl günde
+          3 g omega-3, zeytinyağlı plasebodan daha iyi sonuç vermedi <sup><a href="#kaynak-22">[22]</a></sup>.
+        </p>
+
+        <h2 id="kanit-merdiveni">Kanıt Merdiveni ve Dolaşımdaki İddialar</h2>
+        <p>
+          Omega-3, yaşlanma karşıtı listelerde de sık geçiyor. Bu iddiaların her biri bilimde farklı bir basamakta duruyor.
+        </p>
+        <p>
+          Kanında omega-3 düzeyi yüksek kişileri 16 yıl izleyen 17 çalışmanın birleşik analizinde, en yüksek beşte birlik
+          dilimde ölüm riski yüzde 15-18 daha düşüktü <sup><a href="#kaynak-23">[23]</a></sup>. Bu kişiler daha çok balık
+          yiyor, belki daha çok yürüyor, belki daha az sigara içiyor olabilir. Gözlemsel çalışma kapsülün ömrü uzattığını
+          gösteremez; randomize çalışmada ise toplam ölümde fark çıkmadı <sup><a href="#kaynak-3">[3]</a></sup>.
+        </p>
+        <p>
+          70 yaş üzeri 777 kişide üç yıl sonra epigenetik “yaşlanma saatlerinde” birkaç aylık bir yavaşlama görüldü
+          <sup><a href="#kaynak-24">[24]</a></sup> <Evidence level={2} />. Bulgu ilginç ama erken: analiz çalışmanın ana
+          sorusu değildi ve aynı çalışmada gerçek sağlık sonuçlarında fark çıkmamıştı
+          <sup><a href="#kaynak-21">[21]</a></sup>.
+        </p>
+        <h3>Dolaşımdaki iddialar ve kanıttaki yerleri</h3>
+        <div class="my-8 overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead class="hidden md:table-header-group">
+              <tr class="border-b border-primary/20 bg-primary/5 text-ink font-serif">
+                <th class="p-3 font-semibold">İddia</th>
+                <th class="p-3 font-semibold">Durum</th>
+                <th class="p-3 font-semibold">Ne bulundu</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-primary/10">
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Trigliseridi düşürür</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklendi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Doza bağlı düşüş; çok yüksek trigliseritte reçeteli dozla daha belirgin <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-2">[2]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Yüksek riskli hastada kalp olaylarını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, ürüne göre değişti</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Reçeteli saf EPA ile azaldı; EPA+DHA ilacıyla azalmadı <sup><a href="#kaynak-10">[10]</a>, <a href="#kaynak-11">[11]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Sağlıklı kişide kalp krizi ve inmeyi önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Kalp krizi, inme ve kalp kaynaklı ölümün birleşik ana sonucunda fark yok; ikincil kalp krizi bulgusu ayrıca doğrulanmalı <sup><a href="#kaynak-3">[3]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Sıcak basmasını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Büyük çalışmada ve derlemelerde fark yok; tek küçük olumlu bulgu doğrulanmadı <sup><a href="#kaynak-4">[4]</a>, <a href="#kaynak-12">[12]</a>, <a href="#kaynak-14">[14]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Depresyonu önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Önlemedi; risk balık yağı grubunda biraz daha yüksekti <sup><a href="#kaynak-17">[17]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Depresif belirtileri hafifletir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, sonuç belirsiz</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Küçük etki olabilir, kesinlik düşük <sup><a href="#kaynak-15">[15]</a>, <a href="#kaynak-16">[16]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Unutkanlığı önler, “beyin sisini” açar</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Yaşlılarda desteklenmedi; perimenopozda test ediliyor</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Sağlıklı yaşlılarda fark yok; perimenopoz çalışmasının sonucu bekleniyor <sup><a href="#kaynak-18">[18]</a>, <a href="#kaynak-19">[19]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Eklem ağrısını azaltır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Aromataz inhibitörüne bağlı eklem ağrısında iki grupta da belirgin düzelme, gruplar arasında fark yok <sup><a href="#kaynak-20">[20]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Kemiği korur, kırığı önler</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">70 yaş üzerinde üç yılda kırık sıklığında fark yok <sup><a href="#kaynak-21">[21]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Kuru gözü düzeltir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi, desteklenmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Bir yılda zeytinyağlı plasebodan fark yok <sup><a href="#kaynak-22">[22]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Biyolojik yaşlanmayı yavaşlatır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Biyobelirteçte incelendi; klinik karşılığı belirsiz</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Yalnızca epigenetik saatte küçük fark; klinik sonuç ölçülmedi <sup><a href="#kaynak-24">[24]</a></sup></td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Menopozda cildi nemlendirir, gençleştirir</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Henüz test edilmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Menopozdaki kadınlarda cilt sonucunu ölçen randomize çalışmaya ulaşamadık</td>
+              </tr>
+              <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
+                <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Ömrü uzatır</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi; yaşam süresini uzattığı gösterilmedi</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Ömür için yıllarca süren çalışma gerekir; gözlemsel ilişki var, randomize çalışmada ölüm farkı yok <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-23">[23]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Takviyeyi bırakmak mümkündür; gelişmiş bir yan etkinin geri dönüp dönmeyeceği ise kişiye ve etkiye göre değerlendirilir.</p>
+
+        <h2 id="guvenlik">Ritim, Kanama ve İlaç Etkileşimi</h2>
+        <p>
+          Omega-3 güvenli bilinir ve büyük ölçüde öyle. Yine de bir yan etkisi kalp çalışmalarında tekrar tekrar çıktı.
+        </p>
+        <p>
+          <strong>Ritim bozukluğu.</strong> Kalp sonuçlarını izleyen yedi randomize çalışmada (81.210 kişi, yüzde 39’u kadın)
+          omega-3 takviyesi atriyal fibrilasyon riskini yüzde 25 artırdı. Artış günde 1 g’ın üzerindeki dozlarda yüzde 49,
+          1 g ve altında yüzde 12’ydi <sup><a href="#kaynak-5">[5]</a></sup> <Evidence level={4} />. Reçeteli saf EPA
+          çalışmasında da ritim bozukluğu nedeniyle hastaneye yatış daha sıktı (yüzde 3,1’e karşı 2,1)
+          <sup><a href="#kaynak-10">[10]</a></sup>. Çarpıntı, düzensiz nabız ya da nefes darlığı başlarsa kapsülü bırakıp
+          değerlendirilmeniz gerekir.
+        </p>
+        <p>
+          <strong>Kanama.</strong> 11 randomize çalışmayı (120.643 kişi) birleştiren analizde omega-3 genel kanama riskini
+          artırmadı; beyin içi ve mide-bağırsak kanamaları da benzerdi. Yüksek doz saf EPA alanlarda göreli risk yüzde 50
+          artarken mutlak artış yüzde 0,6’da kaldı <sup><a href="#kaynak-25">[25]</a></sup>. Günde 1 g balık yağıyla
+          yapılan büyük çalışmada da kanama artışı görülmedi <sup><a href="#kaynak-3">[3]</a></sup>. Yine de kan
+          sulandırıcı kullanıyorsanız ya da ameliyat planınız varsa hekiminiz bilmeli.
+        </p>
+        <p>
+          <strong>Sık bildirilen istenmeyen etkiler.</strong> En sık yakınma sindirimle ilgili: geğirme, balık tadı, mide
+          rahatsızlığı. Bir çalışmada sindirim yakınmaları omega-3 grubunda yüzde 24,7, mısır yağı grubunda yüzde 14,7 idi
+          <sup><a href="#kaynak-11">[11]</a></sup>. Kullanıcıların “daha enerjik hissettim” gibi bildirimleri ise kanıt
+          değeri taşımaz; aynı dönemde değişen alışkanlıklar ve beklenti bu hissi etkiler. Tekrarlayan yan etki
+          bildirimleri ise ciddiye alınması gereken sinyallerdir.
+        </p>
+        <RedFlagBox
+          title="Omega-3 Kapsülüne Başlamadan Önce Hekiminizle Konuşun"
+          intro="Balık yemek ile her gün yüksek doz kapsül kullanmak aynı güvenlik sorusu değildir. Aşağıdakilerden biri varsa kararı tek başınıza vermeyin."
+          markers={[
+            'Atriyal fibrilasyon, çarpıntı veya başka bir ritim bozukluğu öykünüz varsa',
+            'Kan sulandırıcı ya da antiagregan (pıhtı önleyici) ilaç kullanıyorsanız',
+            'Ameliyat, diş çekimi veya girişimsel işlem planınız varsa',
+            'Trigliseridiniz çok yüksekse ya da kalp hastalığınız varsa (bu bir tedavi konusudur)',
+            'Balık veya deniz ürünü alerjiniz varsa',
+            'Meme kanseri tedavisi görüyorsanız ya da tedavi sonrası düzenli ilaç kullanıyorsanız',
+          ]}
+          footnote="Görüşmeye kullandığınız ilaç, takviye ve bitkisel ürünlerin listesini ve kapsülün arka etiketini götürün."
+        />
+
+        <h2 id="bilinmeyenler">Kadınlar, Menopoz ve Henüz Bilmediklerimiz</h2>
+        <p>
+          Menopoz için en net veri sıcak basması çalışmasından geliyor; geri kalanının çoğu karışık yetişkin gruplarından.
+        </p>
+        <p>
+          Büyük kalp ve ritim çalışmalarında kadınlar vardı, ama azınlıktaydı: ritim analizinde kadın oranı yüzde 39,
+          yüksek doz EPA+DHA çalışmasında yüzde 35 <sup><a href="#kaynak-5">[5]</a></sup> <sup><a href="#kaynak-11">[11]</a></sup>.
+          Kırık ve fiziksel performansın ölçüldüğü üç yıllık çalışmada katılımcıların yüzde 61,7’si kadındı, ama hepsi 70
+          yaşın üzerindeydi <sup><a href="#kaynak-21">[21]</a></sup>. Perimenopozdaki kadınlarda uzun süreli kullanım
+          verisi sınırlı.
+        </p>
+        <p>
+          Hormon tedavisiyle birlikte omega-3 kullanımının sonuçlarını özel olarak inceleyen bir randomize çalışmaya
+          ulaşamadık. Aromataz inhibitörü kullanan, menopoz sonrası meme kanseri tedavisi gören kadınlarda ise eklem
+          ağrısı için yapılan çalışmada omega-3 plasebodan iyi değildi <sup><a href="#kaynak-20">[20]</a></sup>.
+        </p>
+        <p>Açık sorular ve onları yanıtlayabilecek çalışmalar:</p>
+        <ul>
+          <li>
+            Perimenopozdaki bellek ve dikkat yakınmaları: 42 kadınla yürütülen, alg kaynaklı omega-3 çalışmasının
+            sonuçları bekleniyor <sup><a href="#kaynak-19">[19]</a></sup>.
+          </li>
+          <li>
+            Meme kanseri riski yüksek kadınlarda yüksek doz omega-3 ile düşük doz tamoksifenin birlikte kullanımı: faz 2
+            çalışma hasta alıyor, birincil sonuç ölçümünün tamamlanması 2027 için öngörülüyor <sup><a href="#kaynak-26">[26]</a></sup>.
+          </li>
+          <li>
+            Epigenetik saatlerdeki küçük yavaşlamanın kırık, hastalık ya da işlev gibi gerçek sonuçlara yansıyıp yansımadığı
+            henüz bilinmiyor <sup><a href="#kaynak-24">[24]</a></sup>.
+          </li>
+        </ul>
+        <p>Bu çalışmalar sonuçlandığında yazı güncellenecek.</p>
+
+        <h2 id="karar-olcutleri">Kararı Değiştiren Ölçütler</h2>
+        <p>
+          Kapsül soran birine ilk sorum şu olur: Neyi düzeltmek istiyorsunuz?
+        </p>
+        <p>
+          Yanıt “trigliseridim yüksek çıktı” ise önce değerin ne kadar yüksek olduğuna ve olası nedenlerine bakılır: beslenme, alkol, kan şekeri, tiroid ve ilaçlar. Kalp-damar riski tedavi kararını etkiler. Trigliserit çok yüksekse pankreatit riski nedeniyle kalp riskinden bağımsız olarak da daha hızlı değerlendirme gerekir <sup><a href="#kaynak-27">[27]</a></sup>.
+        </p>
+        <p>
+          Yanıt “sıcak basmam geçsin” ise omega-3 için beklemeyin. Büyük çalışmada fark çıkmadı
+          <sup><a href="#kaynak-4">[4]</a></sup>; uykunuzu ve gününüzü bozan sıcak basmasının daha etkili tedavileri var.
+        </p>
+        <p>
+          Yanıt “genel olarak sağlıklı kalmak” ise tabak kapsülden önce gelir. Haftada bir iki öğün balık, kalp sağlığı için
+          önerilen düzenle uyumlu <sup><a href="#kaynak-6">[6]</a></sup>. Balık yemiyorsanız ve kapsül kullanmak
+          istiyorsanız arka etiketteki EPA ve DHA miktarına bakın, ön yüzdeki vaate değil.
+        </p>
+        <p>
+          Ritim bozukluğu öyküsü olan ya da kan sulandırıcı kullanan birinde yüksek doz kapsüle hekimine danışmadan
+          başlanmasını istemem.
+        </p>
+        <p>Görüşmeye üç soru götürmeniz yeter:</p>
+        <ol>
+          <li>Trigliserit ve kalp riskime göre omega-3 benim için bir tedavi konusu mu, yoksa beslenme konusu mu?</li>
+          <li>Kullandığım ilaçlarla, özellikle kan sulandırıcı ya da kalp ilacıyla birlikte sakıncası var mı?</li>
+          <li>Kullanırsam hangi belirtide bırakmalı ve hangi tahlille kontrol etmeliyiz?</li>
+        </ol>
+        <p>
+          Hamsi tezgâhı yine kurulacak, kapsül şişesi de buzdolabının kapağında beklemeye devam edecek. Tabaktaki balığın
+          yeri sağlam. Şişeden ise beklentinizi küçültün: kan yağlarında işe yarıyor; sıcak basması, eklem ve hafıza için
+          bugünkü kanıt bir şey vaat etmiyor.
+        </p>
+
+        <h2 id="kaynaklar">Kaynaklar</h2>
+        <ol>
+          <li id="kaynak-1">Abdelhamid AS, Brown TJ, Brainard JS ve ark. <em>Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease.</em> Cochrane Database Syst Rev. 2020;3(3):CD003177. doi:10.1002/14651858.CD003177.pub5. <a href="https://pubmed.ncbi.nlm.nih.gov/32114706/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-2">Skulas-Ray AC, Wilson PWF, Harris WS ve ark. <em>Omega-3 fatty acids for the management of hypertriglyceridemia: a science advisory from the American Heart Association.</em> Circulation. 2019;140(12):e673-e691. doi:10.1161/CIR.0000000000000709. <a href="https://pubmed.ncbi.nlm.nih.gov/31422671/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-3">Manson JE, Cook NR, Lee IM ve ark. <em>Marine n-3 fatty acids and prevention of cardiovascular disease and cancer.</em> N Engl J Med. 2019;380(1):23-32. doi:10.1056/NEJMoa1811403. <a href="https://pubmed.ncbi.nlm.nih.gov/30415637/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-4">Cohen LS, Joffe H, Guthrie KA ve ark. <em>Efficacy of omega-3 for vasomotor symptoms treatment: a randomized controlled trial.</em> Menopause. 2014;21(4):347-354. doi:10.1097/GME.0b013e31829e40b8. <a href="https://pubmed.ncbi.nlm.nih.gov/23982113/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-5">Gencer B, Djousse L, Al-Ramady OT ve ark. <em>Effect of long-term marine ω-3 fatty acids supplementation on the risk of atrial fibrillation in randomized controlled trials of cardiovascular outcomes: a systematic review and meta-analysis.</em> Circulation. 2021;144(25):1981-1990. doi:10.1161/CIRCULATIONAHA.121.055654. <a href="https://pubmed.ncbi.nlm.nih.gov/34612056/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-6">Rimm EB, Appel LJ, Chiuve SE ve ark. <em>Seafood long-chain n-3 polyunsaturated fatty acids and cardiovascular disease: a science advisory from the American Heart Association.</em> Circulation. 2018;138(1):e35-e47. doi:10.1161/CIR.0000000000000574. <a href="https://pubmed.ncbi.nlm.nih.gov/29773586/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-7">Albert BB, Derraik JGB, Cameron-Smith D ve ark. <em>Fish oil supplements in New Zealand are highly oxidised and do not meet label content of n-3 PUFA.</em> Sci Rep. 2015;5:7928. doi:10.1038/srep07928. <a href="https://pubmed.ncbi.nlm.nih.gov/25604397/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-8">T.C. Tarım ve Orman Bakanlığı. <em>Takviye Edici Gıdalar Kısıtlı Maddeler Listesi.</em> Son güncelleme 21 Ekim 2026 (balık yağı satırı: 11 yaş ve üzeri, EPA+DHA en fazla 5.000 mg/gün). <a href="https://www.tarimorman.gov.tr/GKGM/Belgeler/DB_Gida_Yem_Mevzuat/Takviye_Edici_Gidalar_Kisitli_Maddeler_Listesi.pdf" rel="noopener noreferrer">Liste</a>.</li>
+          <li id="kaynak-9">Türkiye İlaç ve Tıbbi Cihaz Kurumu. <em>Ruhsatlı Beşeri Tıbbi Ürünler Listesi.</em> 16 Ekim 2026 (ATC C10AX06 omega-3 trigliseritleri; ikosapent etil, ruhsat 14 Kasım 2025). <a href="https://www.titck.gov.tr/dinamikmodul/85" rel="noopener noreferrer">Kurum sayfası</a>.</li>
+          <li id="kaynak-10">Bhatt DL, Steg PG, Miller M ve ark. <em>Cardiovascular risk reduction with icosapent ethyl for hypertriglyceridemia.</em> N Engl J Med. 2019;380(1):11-22. doi:10.1056/NEJMoa1812792. <a href="https://pubmed.ncbi.nlm.nih.gov/30415628/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-11">Nicholls SJ, Lincoff AM, Garcia M ve ark. <em>Effect of high-dose omega-3 fatty acids vs corn oil on major adverse cardiovascular events in patients at high cardiovascular risk: the STRENGTH randomized clinical trial.</em> JAMA. 2020;324(22):2268-2280. doi:10.1001/jama.2020.22258. <a href="https://pubmed.ncbi.nlm.nih.gov/33190147/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-12">Iqbal AZ, Wu SK, Zailani H ve ark. <em>Effects of omega-3 polyunsaturated fatty acids intake on vasomotor symptoms, sleep quality and depression in postmenopausal women: a systematic review.</em> Nutrients. 2023;15(19):4231. doi:10.3390/nu15194231. <a href="https://pubmed.ncbi.nlm.nih.gov/37836515/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-13">Maghalian M, Hasanzadeh R, Mirghafourvand M. <em>The effect of oral vitamin E and omega-3 alone and in combination on menopausal hot flushes: a systematic review and meta-analysis.</em> Post Reprod Health. 2022;28(2):93-106. doi:10.1177/20533691221083196. <a href="https://pubmed.ncbi.nlm.nih.gov/35445622/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-14">Lucas M, Asselin G, Mérette C ve ark. <em>Effects of ethyl-eicosapentaenoic acid omega-3 fatty acid supplementation on hot flashes and quality of life among middle-aged women: a double-blind, placebo-controlled, randomized clinical trial.</em> Menopause. 2009;16(2):357-366. doi:10.1097/gme.0b013e3181865386. <a href="https://pubmed.ncbi.nlm.nih.gov/19034052/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-15">Lucas M, Asselin G, Mérette C ve ark. <em>Ethyl-eicosapentaenoic acid for the treatment of psychological distress and depressive symptoms in middle-aged women: a double-blind, placebo-controlled, randomized clinical trial.</em> Am J Clin Nutr. 2009;89(2):641-651. doi:10.3945/ajcn.2008.26749. <a href="https://pubmed.ncbi.nlm.nih.gov/19116322/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-16">Appleton KM, Voyias PD, Sallis HM ve ark. <em>Omega-3 fatty acids for depression in adults.</em> Cochrane Database Syst Rev. 2021;11(11):CD004692. doi:10.1002/14651858.CD004692.pub5. <a href="https://pubmed.ncbi.nlm.nih.gov/34817851/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-17">Okereke OI, Vyas CM, Mischoulon D ve ark. <em>Effect of long-term supplementation with marine omega-3 fatty acids vs placebo on risk of depression or clinically relevant depressive symptoms and on change in mood scores: a randomized clinical trial.</em> JAMA. 2021;326(23):2385-2394. doi:10.1001/jama.2021.21187. <a href="https://pubmed.ncbi.nlm.nih.gov/34932079/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-18">Sydenham E, Dangour AD, Lim WS. <em>Omega 3 fatty acid for the prevention of cognitive decline and dementia.</em> Cochrane Database Syst Rev. 2012;(6):CD005379. doi:10.1002/14651858.CD005379.pub3. <a href="https://pubmed.ncbi.nlm.nih.gov/22696350/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-19">ClinicalTrials.gov. <em>A randomised, double-blind, placebo-controlled trial investigating the effects of omega-3 fatty acids on memory and cognition in perimenopausal and menopausal women.</em> NCT07814300. Durum: aktif, hasta alımı kapalı; erişim 30 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT07814300" rel="noopener noreferrer">Kayıt</a>.</li>
+          <li id="kaynak-20">Hershman DL, Unger JM, Crew KD ve ark. <em>Randomized multicenter placebo-controlled trial of omega-3 fatty acids for the control of aromatase inhibitor-induced musculoskeletal pain: SWOG S0927.</em> J Clin Oncol. 2015;33(17):1910-1917. doi:10.1200/JCO.2014.59.5595. <a href="https://pubmed.ncbi.nlm.nih.gov/25940724/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-21">Bischoff-Ferrari HA, Vellas B, Rizzoli R ve ark. <em>Effect of vitamin D supplementation, omega-3 fatty acid supplementation, or a strength-training exercise program on clinical outcomes in older adults: the DO-HEALTH randomized clinical trial.</em> JAMA. 2020;324(18):1855-1868. doi:10.1001/jama.2020.16909. <a href="https://pubmed.ncbi.nlm.nih.gov/33170239/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-22">DREAM Study Research Group; Asbell PA, Maguire MG ve ark. <em>n-3 fatty acid supplementation for the treatment of dry eye disease.</em> N Engl J Med. 2018;378(18):1681-1690. doi:10.1056/NEJMoa1709691. <a href="https://pubmed.ncbi.nlm.nih.gov/29652551/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-23">Harris WS, Tintle NL, Imamura F ve ark. <em>Blood n-3 fatty acid levels and total and cause-specific mortality from 17 prospective studies.</em> Nat Commun. 2021;12(1):2329. doi:10.1038/s41467-021-22370-2. <a href="https://pubmed.ncbi.nlm.nih.gov/33888689/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-24">Bischoff-Ferrari HA, Gängler S, Wieczorek M ve ark. <em>Individual and additive effects of vitamin D, omega-3 and exercise on DNA methylation clocks of biological aging in older adults from the DO-HEALTH trial.</em> Nat Aging. 2025;5(3):376-385. doi:10.1038/s43587-024-00793-y. <a href="https://pubmed.ncbi.nlm.nih.gov/39900648/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-25">Javaid M, Kadhim K, Bawamia B ve ark. <em>Bleeding risk in patients receiving omega-3 polyunsaturated fatty acids: a systematic review and meta-analysis of randomized clinical trials.</em> J Am Heart Assoc. 2024;13(10):e032390. doi:10.1161/JAHA.123.032390. <a href="https://pubmed.ncbi.nlm.nih.gov/38742535/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-26">ClinicalTrials.gov. <em>Phase 2 study of low dose tamoxifen +/- high dose omega-3 fatty acids in overweight postmenopausal women at increased risk for breast cancer.</em> NCT06195306. Durum: hasta alıyor; ana sonuç tahmini 1 Ocak 2027; erişim 30 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT06195306" rel="noopener noreferrer">Kayıt</a>.</li>
+          <li id="kaynak-27">Virani SS ve ark. <em>2021 ACC Expert Consensus Decision Pathway on persistent hypertriglyceridemia.</em> J Am Coll Cardiol. 2021. <a href="https://www.jacc.org/doi/10.1016/j.jacc.2021.06.011" rel="noopener noreferrer">Kılavuz</a>.</li>
+          <li id="kaynak-28">Doma M ve ark. <em>Efficacy of oral versus transdermal estrogen therapy on cardiovascular and lipid parameters among postmenopausal women.</em> Menopause. 2026;33:242–250. <a href="https://pubmed.ncbi.nlm.nih.gov/41186572/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+        </ol>
+      </ArticleProsePanel>
+
+      <ArticleFAQ
+        id="sik-sorulanlar"
+        items={faqItems}
+        title="Dr. Aksoy'a sorular"
+        intro="Doç. Dr. Senai Aksoy, balık yemek ile kapsül arasındaki farkı, trigliserit yüksekliğini, kan sulandırıcıyla ve hormon tedavisiyle birlikte kullanımı, balık yemeyenler için bitkisel ve alg kaynaklı seçenekleri yanıtlıyor."
+        class="mt-10"
+      />
+
+      <p class="mt-4 text-sm text-ink/70">SSS’deki hormon tedavisinin uygulama yolu ve trigliserit ilişkisi için: <a class="underline" href="#kaynak-28">Kaynak 28</a>. Çok yüksek trigliserit ve pankreatit değerlendirmesi için: <a class="underline" href="#kaynak-27">Kaynak 27</a>.</p>
+
+      <RelatedReadings
+        class="mt-14"
+        paths={[
+          '/hormonal-gecis/menopoz/sicak-basmasi-gece-terlemesi/',
+          '/zihin-denge/bilissel-saglik/perimenopozda-zihinsel-bulaniklik/',
+          '/zamansiz-yasam/beslenme-yaslanma/',
+          '/zamansiz-yasam/vitaminler/fitoestrojenler-menopozda-ne-ise-yarar/',
+        ]}
+      />
+
+      <ArticleEditorNote title="Bağımsız Tıbbi İnceleme">
+        <div class="space-y-3 leading-relaxed text-ink/80">
+          <p class="italic">
+            Omega-3 hakkındaki temel karışıklık, trigliserit için güçlü olan kanıtın menopoz belirtilerine taşınmasıdır. Bu
+            yazı kan yağları, kalp olayları ve menopoz belirtilerini ayrı sorular olarak ele alıyor.
+          </p>
+          <p>
+            <strong class="text-primary">Klinik not:</strong> Sıcak basması, uyku ve ruh hali için yapılan en büyük
+            randomize çalışmada omega-3 plasebodan farklı bulunmamıştır. Reçeteli yüksek doz ürünler ile takviyelerin
+            sonuçları birbirine taşınmamalıdır.
+          </p>
+          <p>
+            <strong class="text-primary">Güvenlik notu:</strong> Kalp çalışmalarında atriyal fibrilasyon riski doza bağlı
+            artmıştır. Genel kanama riski artmamıştır; kan sulandırıcı kullananlarda ve ameliyat öncesinde hekim
+            bilgilendirilmelidir.
+          </p>
+          <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 30 Ekim 2026
+          </p>
+        </div>
+      </ArticleEditorNote>
+
+      <ArticleDisclaimer>
+        <p>
+          Bu içerik genel bilgi amaçlıdır ve bireysel tıbbi değerlendirme yerine geçmez. Tanı ve tedavi kararları için
+          sağlık profesyoneline başvurunuz.
+        </p>
+      </ArticleDisclaimer>
+    </SubmenuArticleBody>
+  </main>
+
+  <SiteFooter />
+</SiteLayout>
