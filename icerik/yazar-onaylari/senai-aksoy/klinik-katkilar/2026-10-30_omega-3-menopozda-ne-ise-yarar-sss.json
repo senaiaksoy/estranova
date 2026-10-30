@@ -41,6 +41,6 @@
       "mappingNote": "Yanıt birebir aktarıldı; yalnızca kalın (**) işaretleri kaldırıldı."
     }
   ],
-  "status": "Yanıtlar 2026-10-30'da alındı ve article-faqs.ts'e işlendi. Makale henüz yayında değil (taslak: article-drafts/omega-3-menopozda-ne-ise-yarar/).",
+  "status": "Yanıtlar 2026-10-30'da alındı ve article-faqs.ts'e işlendi. Makale src/pages altına alındı (yerelde commit edildi, push/deploy yetkisi verilmedi); yayın kararı KC'dedir.",
   "publicationStatus": "Commit, push veya deploy talimatı yok."
 }

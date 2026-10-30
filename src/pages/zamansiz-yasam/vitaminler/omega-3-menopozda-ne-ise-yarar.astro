@@ -40,7 +40,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Omega-3 Menopozda Ne İşe Yarar?';
 const articleImage = '/images/library/editorial/zy-omega-3-menopoz.webp';
 const articleDescription =
-  'Omega-3 trigliseridi düşürebilir; menopoz belirtilerindeki yararı belirsizdir. Takviyelerin ritim ve kanama riskleri ürüne ve doza göre değerlendirilir.';
+  'Omega-3 trigliseridi düşürür; sıcak basmasında plasebodan fark çıkmadı. Ritim bozukluğu riski doza, kanama riski ürüne ve doza göre değişir.';
 const faqItems = articleFaqs['/zamansiz-yasam/vitaminler/omega-3-menopozda-ne-ise-yarar/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -236,8 +236,9 @@ const articleSchemas = buildArticleSchemas({
         <p>
           <strong>Zihin ve unutkanlık.</strong> Bilişsel sorunu olmayan yaşlı kişilerde yapılan yüksek kaliteli çalışmalar,
           omega-3 takviyesinin bellek ve düşünme testlerinde yarar sağlamadığını gösterdi
-          <sup><a href="#kaynak-18">[18]</a></sup>. Perimenopozdaki “beyin sisi” için ayrı bir çalışma ise yeni: 42 kadınla
-          yürütülen bir randomize çalışmanın sonuçları henüz yayımlanmadı <sup><a href="#kaynak-19">[19]</a></sup>.
+          <sup><a href="#kaynak-18">[18]</a></sup>. Peri ve menopozdaki “beyin sisi” için ayrı bir çalışma ise yeni: 40-60 yaş arası
+          42 kadında alg kaynaklı omega-3’ü plaseboyla karşılaştıran randomize çalışmanın sonuçları henüz yayımlanmadı
+          <sup><a href="#kaynak-19">[19]</a></sup>.
         </p>
         <p>
           <strong>Eklem, kemik ve göz.</strong> Aromataz inhibitörü, meme kanseri tedavisinde kullanılan ve eklem ağrısı
@@ -250,8 +251,44 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="kanit-merdiveni">Kanıt Merdiveni ve Dolaşımdaki İddialar</h2>
         <p>
-          Omega-3, yaşlanma karşıtı listelerde de sık geçiyor. Bu iddiaların her biri bilimde farklı bir basamakta duruyor.
+          Yaşlanma karşıtı listelerde omega-3 de sık geçiyor. Bu iddiaların her biri bilimde farklı bir basamakta duruyor.
         </p>
+        <p>
+          Arkadaş sohbetinde ya da bir sağlık sayfasında “ömrü uzatıyor” cümlesini duyduğunuzda tek soru yeter: hangi
+          basamaktan söz ediliyor? Aşağıdaki altı basamak, en alttaki mekanizmadan en üstteki sert sonuca kadar
+          omega-3’ün bugünkü durumunu özetliyor.
+        </p>
+        <ol>
+          <li>
+            <strong>Mekanizma.</strong> EPA ve DHA kana geçiyor ve düzeyleri kan testiyle ölçülebiliyor
+            <sup><a href="#kaynak-23">[23]</a></sup>. Bu, tek başına klinik yarar anlamına gelmiyor.
+          </li>
+          <li>
+            <strong>Hayvanda ömür.</strong> Bu yazı için hayvanda ömür verisini taramadık; bu basamak hakkında bir şey
+            söylemiyoruz.
+          </li>
+          <li>
+            <strong>İnsanda biyobelirteç.</strong> Trigliserit düşüyor <sup><a href="#kaynak-1">[1]</a></sup>. 70 yaş
+            üzeri 777 kişide epigenetik “yaşlanma saatlerinde” birkaç aylık yavaşlama görüldü
+            <sup><a href="#kaynak-24">[24]</a></sup>.
+          </li>
+          <li>
+            <strong>İnsanda işlev.</strong> Sıcak basması, uyku, bellek, fiziksel performans, eklem ağrısı ve kuru gözde
+            randomize çalışmalarda plasebodan belirgin fark çıkmadı
+            <sup><a href="#kaynak-4">[4]</a>, <a href="#kaynak-18">[18]</a>, <a href="#kaynak-20">[20]</a>, <a href="#kaynak-21">[21]</a>, <a href="#kaynak-22">[22]</a></sup>.
+            Depresif belirtilerde küçük bir etki işareti var ama kesinliği çok düşük
+            <sup><a href="#kaynak-16">[16]</a></sup>.
+          </li>
+          <li>
+            <strong>İnsanda güvenlik.</strong> On binlerce kişide beş yıla kadar veri var. Genel kanama riski artmadı
+            <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-25">[25]</a></sup>; atriyal fibrilasyon riski doza bağlı
+            arttı <sup><a href="#kaynak-5">[5]</a></sup>.
+          </li>
+          <li>
+            <strong>Sert sonuç.</strong> Genel toplumda kalp-damar olayı ve toplam ölümde fark çıkmadı
+            <sup><a href="#kaynak-1">[1]</a>, <a href="#kaynak-3">[3]</a></sup>. Ömrü uzattığı insanda gösterilmedi.
+          </li>
+        </ol>
         <p>
           Kanında omega-3 düzeyi yüksek kişileri 16 yıl izleyen 17 çalışmanın birleşik analizinde, en yüksek beşte birlik
           dilimde ölüm riski yüzde 15-18 daha düşüktü <sup><a href="#kaynak-23">[23]</a></sup>. Bu kişiler daha çok balık
@@ -307,8 +344,8 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
                 <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Unutkanlığı önler, “beyin sisini” açar</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Yaşlılarda desteklenmedi; perimenopozda test ediliyor</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Sağlıklı yaşlılarda fark yok; perimenopoz çalışmasının sonucu bekleniyor <sup><a href="#kaynak-18">[18]</a>, <a href="#kaynak-19">[19]</a></sup></td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Yaşlılarda desteklenmedi; peri ve menopozda test ediliyor</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Sağlıklı yaşlılarda fark yok; peri ve menopoz çalışmasının sonucu bekleniyor <sup><a href="#kaynak-18">[18]</a>, <a href="#kaynak-19">[19]</a></sup></td>
               </tr>
               <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
                 <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Eklem ağrısını azaltır</td>
@@ -327,8 +364,8 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
                 <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Biyolojik yaşlanmayı yavaşlatır</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Biyobelirteçte incelendi; klinik karşılığı belirsiz</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Yalnızca epigenetik saatte küçük fark; klinik sonuç ölçülmedi <sup><a href="#kaynak-24">[24]</a></sup></td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi; biyobelirteçte küçük fark, klinik sonuçta fark yok</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Epigenetik saatte birkaç aylık yavaşlama; aynı çalışmanın kırık ve işlev sonuçlarında fark yok, saatin klinik karşılığı bilinmiyor <sup><a href="#kaynak-21">[21]</a>, <a href="#kaynak-24">[24]</a></sup></td>
               </tr>
               <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
                 <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Menopozda cildi nemlendirir, gençleştirir</td>
@@ -337,18 +374,16 @@ const articleSchemas = buildArticleSchemas({
               </tr>
               <tr class="block border-b border-primary/10 py-3 md:table-row md:py-0">
                 <td class="block px-3 py-1 font-medium md:table-cell md:p-3">Ömrü uzatır</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Test edildi; yaşam süresini uzattığı gösterilmedi</td>
-                <td class="block px-3 py-1 md:table-cell md:p-3">Ömür için yıllarca süren çalışma gerekir; gözlemsel ilişki var, randomize çalışmada ölüm farkı yok <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-23">[23]</a></sup></td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Bu haliyle test edilemez</td>
+                <td class="block px-3 py-1 md:table-cell md:p-3">Ömür süresi doğrudan ölçülemiyor; gözlemsel ilişki var, randomize çalışmada toplam ölümde fark yok <sup><a href="#kaynak-3">[3]</a>, <a href="#kaynak-23">[23]</a></sup></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>Takviyeyi bırakmak mümkündür; gelişmiş bir yan etkinin geri dönüp dönmeyeceği ise kişiye ve etkiye göre değerlendirilir.</p>
-
         <h2 id="guvenlik">Ritim, Kanama ve İlaç Etkileşimi</h2>
         <p>
-          Omega-3 güvenli bilinir ve büyük ölçüde öyle. Yine de bir yan etkisi kalp çalışmalarında tekrar tekrar çıktı.
+          Güvenlik sicili büyük ölçüde iyi. Yine de bir yan etkisi kalp çalışmalarında tekrar tekrar çıktı.
         </p>
         <p>
           <strong>Ritim bozukluğu.</strong> Kalp sonuçlarını izleyen yedi randomize çalışmada (81.210 kişi, yüzde 39’u kadın)
@@ -394,8 +429,8 @@ const articleSchemas = buildArticleSchemas({
           Büyük kalp ve ritim çalışmalarında kadınlar vardı, ama azınlıktaydı: ritim analizinde kadın oranı yüzde 39,
           yüksek doz EPA+DHA çalışmasında yüzde 35 <sup><a href="#kaynak-5">[5]</a></sup> <sup><a href="#kaynak-11">[11]</a></sup>.
           Kırık ve fiziksel performansın ölçüldüğü üç yıllık çalışmada katılımcıların yüzde 61,7’si kadındı, ama hepsi 70
-          yaşın üzerindeydi <sup><a href="#kaynak-21">[21]</a></sup>. Perimenopozdaki kadınlarda uzun süreli kullanım
-          verisi sınırlı.
+          yaşın üzerindeydi <sup><a href="#kaynak-21">[21]</a></sup>. Perimenopozdaysanız bunun anlamı şu: uzun süreli
+          kullanım verisi sınırlı.
         </p>
         <p>
           Hormon tedavisiyle birlikte omega-3 kullanımının sonuçlarını özel olarak inceleyen bir randomize çalışmaya
@@ -405,12 +440,14 @@ const articleSchemas = buildArticleSchemas({
         <p>Açık sorular ve onları yanıtlayabilecek çalışmalar:</p>
         <ul>
           <li>
-            Perimenopozdaki bellek ve dikkat yakınmaları: 42 kadınla yürütülen, alg kaynaklı omega-3 çalışmasının
-            sonuçları bekleniyor <sup><a href="#kaynak-19">[19]</a></sup>.
+            Peri ve menopozdaki bellek ve dikkat yakınmaları: 40-60 yaş arası, hormon tedavisi kullanmayan 42 kadınla
+            yürütülen, alg kaynaklı omega-3 çalışmasının sonuçları bekleniyor <sup><a href="#kaynak-19">[19]</a></sup>.
           </li>
           <li>
-            Meme kanseri riski yüksek kadınlarda yüksek doz omega-3 ile düşük doz tamoksifenin birlikte kullanımı: faz 2
-            çalışma hasta alıyor, birincil sonuç ölçümünün tamamlanması 2027 için öngörülüyor <sup><a href="#kaynak-26">[26]</a></sup>.
+            Meme kanseri riski yüksek, fazla kilolu menopoz sonrası kadınlarda düşük doz tamoksifene yüksek doz omega-3
+            eklemek: faz 2 çalışma hasta alıyor. Kanser sıklığını değil, altı ayda kandaki adiponektin düzeyini (bir
+            kan belirteci) ölçüyor; birincil ölçümün tamamlanması 2027 için öngörülüyor
+            <sup><a href="#kaynak-26">[26]</a></sup>.
           </li>
           <li>
             Epigenetik saatlerdeki küçük yavaşlamanın kırık, hastalık ya da işlev gibi gerçek sonuçlara yansıyıp yansımadığı
@@ -424,11 +461,13 @@ const articleSchemas = buildArticleSchemas({
           Kapsül soran birine ilk sorum şu olur: Neyi düzeltmek istiyorsunuz?
         </p>
         <p>
-          Yanıt “trigliseridim yüksek çıktı” ise önce değerin ne kadar yüksek olduğuna ve olası nedenlerine bakılır: beslenme, alkol, kan şekeri, tiroid ve ilaçlar. Kalp-damar riski tedavi kararını etkiler. Trigliserit çok yüksekse pankreatit riski nedeniyle kalp riskinden bağımsız olarak da daha hızlı değerlendirme gerekir <sup><a href="#kaynak-27">[27]</a></sup>.
+          Yanıt “trigliseridim yüksek çıktı” ise: tahlilde o satırın kırmızı yazılması insanı korkutur, anlaşılır bir
+          korku. Önce değerin ne kadar yüksek olduğuna ve olası nedenlerine bakılır: beslenme, alkol, kan şekeri, tiroid ve ilaçlar. Kalp-damar riski tedavi kararını etkiler. Trigliserit çok yüksekse pankreatit riski nedeniyle kalp riskinden bağımsız olarak da daha hızlı değerlendirme gerekir <sup><a href="#kaynak-27">[27]</a></sup>.
         </p>
         <p>
           Yanıt “sıcak basmam geçsin” ise omega-3 için beklemeyin. Büyük çalışmada fark çıkmadı
-          <sup><a href="#kaynak-4">[4]</a></sup>; uykunuzu ve gününüzü bozan sıcak basmasının daha etkili tedavileri var.
+          <sup><a href="#kaynak-4">[4]</a></sup>; uykunuzu ve gününüzü bozan sıcak basması için hekiminizle konuşabileceğiniz başka seçenekler var; bu ayrı bir
+          yazının konusu.
         </p>
         <p>
           Yanıt “genel olarak sağlıklı kalmak” ise tabak kapsülden önce gelir. Haftada bir iki öğün balık, kalp sağlığı için
@@ -479,8 +518,8 @@ const articleSchemas = buildArticleSchemas({
           <li id="kaynak-24">Bischoff-Ferrari HA, Gängler S, Wieczorek M ve ark. <em>Individual and additive effects of vitamin D, omega-3 and exercise on DNA methylation clocks of biological aging in older adults from the DO-HEALTH trial.</em> Nat Aging. 2025;5(3):376-385. doi:10.1038/s43587-024-00793-y. <a href="https://pubmed.ncbi.nlm.nih.gov/39900648/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-25">Javaid M, Kadhim K, Bawamia B ve ark. <em>Bleeding risk in patients receiving omega-3 polyunsaturated fatty acids: a systematic review and meta-analysis of randomized clinical trials.</em> J Am Heart Assoc. 2024;13(10):e032390. doi:10.1161/JAHA.123.032390. <a href="https://pubmed.ncbi.nlm.nih.gov/38742535/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
           <li id="kaynak-26">ClinicalTrials.gov. <em>Phase 2 study of low dose tamoxifen +/- high dose omega-3 fatty acids in overweight postmenopausal women at increased risk for breast cancer.</em> NCT06195306. Durum: hasta alıyor; ana sonuç tahmini 1 Ocak 2027; erişim 30 Ekim 2026. <a href="https://clinicaltrials.gov/study/NCT06195306" rel="noopener noreferrer">Kayıt</a>.</li>
-          <li id="kaynak-27">Virani SS ve ark. <em>2021 ACC Expert Consensus Decision Pathway on persistent hypertriglyceridemia.</em> J Am Coll Cardiol. 2021. <a href="https://www.jacc.org/doi/10.1016/j.jacc.2021.06.011" rel="noopener noreferrer">Kılavuz</a>.</li>
-          <li id="kaynak-28">Doma M ve ark. <em>Efficacy of oral versus transdermal estrogen therapy on cardiovascular and lipid parameters among postmenopausal women.</em> Menopause. 2026;33:242–250. <a href="https://pubmed.ncbi.nlm.nih.gov/41186572/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
+          <li id="kaynak-27">Virani SS, Morris PB, Agarwala A ve ark. <em>2021 ACC Expert Consensus Decision Pathway on the management of ASCVD risk reduction in patients with persistent hypertriglyceridemia.</em> J Am Coll Cardiol. 2021;78(9):960-993. doi:10.1016/j.jacc.2021.06.011. <a href="https://www.jacc.org/doi/10.1016/j.jacc.2021.06.011" rel="noopener noreferrer">Kılavuz</a>.</li>
+          <li id="kaynak-28">Doma M ve ark. <em>Efficacy of oral versus transdermal estrogen therapy on cardiovascular and lipid parameters among postmenopausal women: a systematic review and meta-analysis of randomized clinical trials.</em> Menopause. 2026;33(2):242-250. doi:10.1097/GME.0000000000002637. <a href="https://pubmed.ncbi.nlm.nih.gov/41186572/" rel="noopener noreferrer">PubMed kaydı</a>.</li>
         </ol>
       </ArticleProsePanel>
 
