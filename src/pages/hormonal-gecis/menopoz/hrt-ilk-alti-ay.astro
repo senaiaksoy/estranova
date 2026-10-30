@@ -25,9 +25,10 @@ const articleSchemas = buildArticleSchemas({
   title: articleTitle,
   description: articleDescription,
   writerSlug: 'demet-kizilkaya',
+  medicalReviewer: 'Doç. Dr. Senai Aksoy',
   articleType: 'experience-essay',
   publishedDate: '27 Nisan 2026',
-  modifiedDate: '30 Eylül 2026',
+  modifiedDate: '30 Ekim 2026',
   pathname,
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/',
@@ -43,12 +44,13 @@ const articleSchemas = buildArticleSchemas({
     <SubmenuArticleBody>
       <ArticleAuthorBlock
         authorSlug="demet-kizilkaya"
+        medicalReviewer="Doç. Dr. Senai Aksoy"
         articleType="experience-essay"
         publishedDate="27 Nisan 2026"
-        lastUpdated="30 Eylül 2026"
+        lastUpdated="30 Ekim 2026"
         readingMinutes={6}
-        imageSrc="/images/library/editorial/hg-hrt-ilk-alti-ay.webp"
-        imageAlt="Sabah ışığında mutfakta çay hazırlayan bir kadın"
+        imageSrc="/images/library/editorial/hrt-ilk-aylar-20261030-byline.webp"
+        imageAlt="Sabah ışığında mutfakta elindeki fincana bakan bir kadın"
         imagePosition="center center"
       />
       <ArticleSummary title="Bu yazıya başlarken">
@@ -103,7 +105,7 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Birinci ayın sonunda hekimimle kısa bir görüşme yaptık. Henüz belirgin bir değişim
           hissetmediğimi, ama kötü de olmadığımı anlattım. Beklentilerimi konuşmak içimi rahatlattı.
-          İlk haftalarda hiçbir şey hissetmiyorsanız, merak etmeyin diye yazıyorum: bende de öyle oldu.
+          Siz de başlangıçtaki beklentiyi tanıyor olabilirsiniz; bende belirgin fark hemen başlamadı.
         </p>
         <p>
           İkinci ayın sonunda daha somut bir fark vardı: gece terlemelerim azalmıştı.
@@ -123,7 +125,6 @@ const articleSchemas = buildArticleSchemas({
         <p>
           Gün ortası yorgunluğum hafiflemişti. Cildimdeki kuruluk daha az dikkatimi çekiyor,
           cinsel yaşamımda daha rahat hissediyor, kasık bölgesindeki sızıları daha hafif yaşıyordum.
-          Bunları kendi gözlemlerim olarak not ediyorum; hepsinin nedenini bildiğimi söyleyemem.
         </p>
         <p>
           En şaşırtıcı olan, biraz daha sakin hissetmemdi. Sürekli tetikte duran bir yanım
@@ -164,8 +165,8 @@ const articleSchemas = buildArticleSchemas({
 
         <h2 id="aile-es-kiz">Evdekilerin gördüğü</h2>
         <p>
-          Farkı ilk söyleyen ben olmadım. Belki sizin evinizde de öyle olur:
-          eşim ve kızımın söyledikleri, kendi notlarıma başka bir açı ekledi.
+          Evdekilerin söyledikleri de kendi notlarıma başka bir açı ekledi.
+          Belki sizin evinizde de olur: sizdeki bir değişimi birlikte yaşadığınız biri dile getirir.
         </p>
         <p>
           Eşim başlangıçta doğru karar verip vermediğimden endişe ediyordu.
@@ -201,12 +202,13 @@ const articleSchemas = buildArticleSchemas({
         </p>
       </ArticleProsePanel>
 
-      <MedicalContextNote class="mt-10">
+      <MedicalContextNote reviewer="Doç. Dr. Senai Aksoy" class="mt-10">
         <p>
           HRT, menopoza bağlı sıcak basmaları ve gece terlemelerini azaltmak için kullanılan bir tedavi seçeneğidir
           <Evidence level={5} />. Uygunluğu ve risk-fayda dengesi sağlık öyküsüne göre değerlendirilir.
-          Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir; tedavinin bu alanlarda
-          herkeste aynı etkiyi göstereceğine kanıt oluşturmaz.
+          Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir.
+          Bu gözlemler, HRT’nin hafızayı güçlendirmek, cildi gençleştirmek veya eklem ağrısını tedavi etmek
+          amacıyla kullanılmasını destekleyen bilimsel kanıt sayılmaz.
         </p>
         <p>
           Tedavi başlangıcından yaklaşık üç ay sonra ve ardından genellikle yılda bir değerlendirme önerilir;
@@ -215,15 +217,24 @@ const articleSchemas = buildArticleSchemas({
           tarama ve tetkik planı yaşa, risklere ve klinik gereksinime göre belirlenir.
         </p>
         <p>
-          Cilde uygulanan hormon ürünlerinde başka kişilere temas yoluyla geçiş riski vardır.
+          Cilde uygulanan östradiol jel ve spreylerde, uygulama bölgesinden başka kişilere,
+          özellikle çocuklara, temas yoluyla hormon geçişi riski vardır.
           Kuruma, el yıkama, uygulama bölgesini yıkama ve cilt temasıyla ilgili ürünün kendi kullanma talimatına
           uyulmalıdır; bu önlemler riski azaltır. Kullanım ayrıntıları ürünler arasında değişebilir.
         </p>
         <p>
-          Beklenmedik kanama, yeni veya değişen baş ağrısı ve devam eden meme hassasiyeti hekimle görüşülmelidir.
-          Tek bacakta ağrı ve şişlik acil değerlendirme gerektirir. Göğüs ağrısı ile nefes darlığı veya
-          ani konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük olduğunda
-          planlı kontrol beklenmemeli, <strong>112 aranmalıdır</strong>.
+          Rahmi olan kişilerde sistemik HRT’nin ilk altı ayında veya doz ya da ürün değişikliğinden sonraki
+          üç ayda lekelenme görülebilir. Kanamanın miktarı, süresi ve kişisel riskler değerlendirmeyi değiştirir;
+          yoğun veya uzayan kanamada bu sürelerin dolması beklenmemelidir.
+          Bu dönemlerden sonra başlayan ya da süren beklenmedik kanama gecikmeden hekimle görüşülmelidir.
+        </p>
+        <p>
+          Yeni veya değişen baş ağrısı ve devam eden meme hassasiyeti hekimle görüşülmelidir.
+          Tek bacakta ağrı ve şişlik acil değerlendirme gerektirir.
+          Ani veya şiddetli göğüs ağrısı, ani nefes darlığı, aniden başlayan çok şiddetli baş ağrısı,
+          ani görme kaybı, konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük
+          olduğunda planlı kontrol beklenmemeli, <strong>112 aranmalıdır</strong>.
+          Göğüs ağrısı ve nefes darlığının birlikte olması gerekmez.
         </p>
       </MedicalContextNote>
       <RelatedReadings class="mt-10" paths={[
@@ -231,7 +242,10 @@ const articleSchemas = buildArticleSchemas({
         '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
         '/bilimsel-pencere/yeni-arastirmalar/menopozda-hrt-avantajlari/',
       ]} />
-      <ArticleDisclaimer class="mt-10" />
+      <ArticleDisclaimer class="mt-10">
+        <p>Bu yazı bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme, tanı veya tedavinin yerini tutmaz.
+          HRT’ye başlama, tedaviyi değiştirme veya bırakma kararını kendi hekiminizle görüşün.</p>
+      </ArticleDisclaimer>
     </SubmenuArticleBody>
   </main>
   <SiteFooter />

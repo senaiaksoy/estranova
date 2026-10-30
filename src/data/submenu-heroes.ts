@@ -306,8 +306,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Oturma odasında bir pufun üzerinde otururken eliyle belini tutan bir kadın.',
   },
   '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': {
-    src: '/images/library/editorial/hg-hrt-ilk-alti-ay.webp',
-    alt: 'Mutfak masasında elindeki fincana bakan düşünceli bir kadın.',
+    src: '/images/library/editorial/hrt-ilk-aylar-20261030.webp',
+    alt: 'Sabah ışığında mutfak tezgâhının başında düşünceli bir kadın.',
   },
   '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/': {
     src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',

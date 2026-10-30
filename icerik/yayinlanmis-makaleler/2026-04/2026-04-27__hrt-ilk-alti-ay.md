@@ -4,13 +4,14 @@ description: "Demet Kızılkaya, hormon replasman tedavisinin ilk dört ayını 
 writer: demet-kizilkaya
 publishedDate: "27 Nisan 2026"
 publishedDateIso: 2026-04-27
-modifiedDate: "30 Eylül 2026"
+modifiedDate: "30 Ekim 2026"
+medicalReviewer: "Doç. Dr. Senai Aksoy"
 exportScope: local-build
 url: /hormonal-gecis/menopoz/hrt-ilk-alti-ay/
 section: "Hormonal Geçiş"
 sectionPath: /hormonal-gecis/
 keywords: ["HRT", "hormon replasman tedavisi", "menopoz", "menopoz HRT deneyimi", "yaşıt hikâyesi"]
-exportedAt: 2026-10-15
+exportedAt: 2026-10-30
 ---
 
 # HRT — İlk Ayların Notları
@@ -59,7 +60,7 @@ iyileşmeyi bekliyor olmamın da hissettiklerimde payı olabilir diye düşünd�
 
 Birinci ayın sonunda hekimimle kısa bir görüşme yaptık. Henüz belirgin bir değişim
 hissetmediğimi, ama kötü de olmadığımı anlattım. Beklentilerimi konuşmak içimi rahatlattı.
-İlk haftalarda hiçbir şey hissetmiyorsanız, merak etmeyin diye yazıyorum: bende de öyle oldu.
+Siz de başlangıçtaki beklentiyi tanıyor olabilirsiniz; bende belirgin fark hemen başlamadı.
 
 İkinci ayın sonunda daha somut bir fark vardı: gece terlemelerim azalmıştı.
 Önceden haftada üç-dört kez uyanıp kalkarken artık belki bir kez, bazen hiç kalkmıyordum.
@@ -75,7 +76,6 @@ değişimler, liste önünüze konunca birden görünür oluyor.
 
 Gün ortası yorgunluğum hafiflemişti. Cildimdeki kuruluk daha az dikkatimi çekiyor,
 cinsel yaşamımda daha rahat hissediyor, kasık bölgesindeki sızıları daha hafif yaşıyordum.
-Bunları kendi gözlemlerim olarak not ediyorum; hepsinin nedenini bildiğimi söyleyemem.
 
 En şaşırtıcı olan, biraz daha sakin hissetmemdi. Sürekli tetikte duran bir yanım
 dinlenmeye başlamış gibiydi. Kontrolde tedaviyi ve takip planını yeniden değerlendirdik;
@@ -108,8 +108,8 @@ beklemeden hekimimle iletişim kurma konusunda anlaşmıştık. Nasıl ulaşaca�
 
 ## Evdekilerin gördüğü
 
-Farkı ilk söyleyen ben olmadım. Belki sizin evinizde de öyle olur:
-eşim ve kızımın söyledikleri, kendi notlarıma başka bir açı ekledi.
+Evdekilerin söyledikleri de kendi notlarıma başka bir açı ekledi.
+Belki sizin evinizde de olur: sizdeki bir değişimi birlikte yaşadığınız biri dile getirir.
 
 Eşim başlangıçta doğru karar verip vermediğimden endişe ediyordu.
 Üç ayın sonunda daha az yorgun olduğumu söyledi. Bu gözlem benim için değerliydi;
@@ -143,21 +143,33 @@ Tıbbi bilgi kontrolü: Doç. Dr. Senai Aksoy
 
 HRT, menopoza bağlı sıcak basmaları ve gece terlemelerini azaltmak için kullanılan bir tedavi seçeneğidir
 (güçlü kanıt). Uygunluğu ve risk-fayda dengesi sağlık öyküsüne göre değerlendirilir.
-Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir; tedavinin bu alanlarda
-herkeste aynı etkiyi göstereceğine kanıt oluşturmaz.
+Bu yazıdaki hafıza, cilt, ağrı ve sakinlik gözlemleri kişisel deneyimdir.
+Bu gözlemler, HRT’nin hafızayı güçlendirmek, cildi gençleştirmek veya eklem ağrısını tedavi etmek
+amacıyla kullanılmasını destekleyen bilimsel kanıt sayılmaz.
 
 Tedavi başlangıcından yaklaşık üç ay sonra ve ardından genellikle yılda bir değerlendirme önerilir;
 belirtiler, yan etkiler veya başka sağlık sorunları daha erken kontrol gerektirebilir.
 Mamografi, kemik yoğunluğu ölçümü ve kan tetkikleri herkes için aynı yıllık liste değildir;
 tarama ve tetkik planı yaşa, risklere ve klinik gereksinime göre belirlenir.
 
-Cilde uygulanan hormon ürünlerinde başka kişilere temas yoluyla geçiş riski vardır.
+Cilde uygulanan östradiol jel ve spreylerde, uygulama bölgesinden başka kişilere,
+özellikle çocuklara, temas yoluyla hormon geçişi riski vardır.
 Kuruma, el yıkama, uygulama bölgesini yıkama ve cilt temasıyla ilgili ürünün kendi kullanma talimatına
 uyulmalıdır; bu önlemler riski azaltır. Kullanım ayrıntıları ürünler arasında değişebilir.
 
-Beklenmedik kanama, yeni veya değişen baş ağrısı ve devam eden meme hassasiyeti hekimle görüşülmelidir.
-Tek bacakta ağrı ve şişlik acil değerlendirme gerektirir. Göğüs ağrısı ile nefes darlığı veya
-ani konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük olduğunda
-planlı kontrol beklenmemeli, **112 aranmalıdır**.
+Rahmi olan kişilerde sistemik HRT’nin ilk altı ayında veya doz ya da ürün değişikliğinden sonraki
+üç ayda lekelenme görülebilir. Kanamanın miktarı, süresi ve kişisel riskler değerlendirmeyi değiştirir;
+yoğun veya uzayan kanamada bu sürelerin dolması beklenmemelidir.
+Bu dönemlerden sonra başlayan ya da süren beklenmedik kanama gecikmeden hekimle görüşülmelidir.
+
+Yeni veya değişen baş ağrısı ve devam eden meme hassasiyeti hekimle görüşülmelidir.
+Tek bacakta ağrı ve şişlik acil değerlendirme gerektirir.
+Ani veya şiddetli göğüs ağrısı, ani nefes darlığı, aniden başlayan çok şiddetli baş ağrısı,
+ani görme kaybı, konuşma bozukluğu, yüzün bir yanında düşme ya da kol veya bacakta güçsüzlük
+olduğunda planlı kontrol beklenmemeli, **112 aranmalıdır**.
+Göğüs ağrısı ve nefes darlığının birlikte olması gerekmez.
 
 Tıbbi Not
+
+Bu yazı bilgilendirme amaçlıdır; kişisel tıbbi değerlendirme, tanı veya tedavinin yerini tutmaz.
+HRT’ye başlama, tedaviyi değiştirme veya bırakma kararını kendi hekiminizle görüşün.
