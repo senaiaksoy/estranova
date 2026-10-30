@@ -39,3 +39,10 @@ Kaynaklar bu sohbetin geniş audit aşamasında kontrol edildi. Modelin kaynak k
 - Düzeltilen: `og:image` artık makale görseli; kart görseli `articleCardImageByRoute` içinde, alt metinde yapay zekâ notu var; Article şemasında `articleSection` ve `sectionPath` Menopoz bölümüne bağlandı.
 - Gövde: yaşıt bağları ve kapanışlar çeşitlendi, uyarı cümleleri anlatı sesine çevrildi. Tıbbi bilgi notu bilerek değişmedi; kısaltma önerisi hekim kararına bırakıldı.
 - KC yazar onayının (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi; commit istendi. Push, deploy ve canlı doğrulama henüz yapılmadı.
+
+## Üçüncü düzeltme (30 Ekim 2026, onaylandı)
+
+- Cümle ritmi: on üç yerde kısa cümleler birleştirildi; kısa vurgu cümleleri korundu. Olgu ve güvenlik sınırları aynı.
+- Geri bağlantı: `hrt-yan-etkileri-ve-izleme` ve `dokuz-yillik-menopoz-sonunda-hrt-karari` ilgili okumalarına bu yazı eklendi. Bu iki yazının gövdesi ve tarihleri değişmedi.
+- Eklenmeyen: `menopozda-hrt-avantajlari` (yazıda önceki sürüme ait not var; ayrı güncelleme bekliyor).
+- KC yazar (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi; commit istendi. Push, deploy ve canlı doğrulama henüz yapılmadı.
