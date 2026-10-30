@@ -213,6 +213,10 @@ export const submenuHeroByRoute: Record<string, SubmenuHeroImage> = {
 };
 
 export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
+  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': {
+    src: '/images/library/editorial/hrt-ilk-aylar-20261030.webp',
+    alt: 'Sabah ışığında mutfak tezgâhının başında düşünceli bir kadın; HRT deneyim yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
+  },
   '/zamansiz-yasam/deneysel/resveratrol-takviyesi/': {
     src: '/images/library/editorial/resveratrol-takviyesi.webp',
     alt: 'Ege’de bir bağda masadaki üzüm sepetinin başında gülüşen iki kadın; resveratrol yazısı için kart görseli, yapay zekâ ile üretilmiş temsili görsel',
@@ -304,10 +308,6 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
   '/zamansiz-yasam/belden-gelen-agri-kasik-genital-bolge/': {
     src: '/images/library/editorial/ersin-sarac-belden-gelen-agri-byline.jpg',
     alt: 'Oturma odasında bir pufun üzerinde otururken eliyle belini tutan bir kadın.',
-  },
-  '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/': {
-    src: '/images/library/editorial/hrt-ilk-aylar-20261030.webp',
-    alt: 'Sabah ışığında mutfak tezgâhının başında düşünceli bir kadın.',
   },
   '/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/': {
     src: '/images/library/editorial/zy-yuz-mudahalesi-olcu-sorusu.webp',
