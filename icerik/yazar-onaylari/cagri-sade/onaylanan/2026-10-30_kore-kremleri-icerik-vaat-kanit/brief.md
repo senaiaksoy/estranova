@@ -1,6 +1,6 @@
 # Brief: Kore kremleri — içerik, vaat ve kanıt
 
-> Durum: TASLAK YAZILDI, ONAY BEKLİYOR (2026-10-30; commit yok). Taslak: `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit.astro` (canlı rotada değil; yerelde geçici kopyayla derleme ve çizim doğrulandı, kopya silindi). Yazar onaylandı: Op. Dr. Çağrı Sade (KC). Çağrı'nın dört yanıtı alındı (bölüm 7a) ve metne birebir yerleştirildi. Yayın öncesi açık işler: yazar + tıbbi onay (KC'ye sözlü), byline 4:5 ve kart 2.4:1 görselleri, mevzuat satırlarının resmî metinle doğrulanması, finansman beyanları, yüz katmanları için kaynak, manifest/hub/sitemap bağlantıları.
+> Durum: YAYINA HAZIR, ONAYLI (yazar + tıbbi onay: 30 Ekim 2026, sözlü, KC). Sayfa canlı rota ağacında (yerel dal, push yok); manifest, kart görseli, onay kaydı ve karşı bağlantılar uygulandı; `build:ci` temiz. Compliance kapısı gereği iki cümlede "en iyi" → "en doğru" (bölüm 7a'daki Y2 ve Y3). Ayrıntı: `yayin-yamasi.md`, kayıt: Çağrı Sade `article-log.md`.
 > Hazırlanma: 2026-10-30 · Stil rehberi okundu: Dr. Senai Aksoy Makale Stil Rehberi
 
 ## 1. Künye
@@ -272,3 +272,47 @@ Kontroller:
 - Bağlantılar: `static-articles.ts` manifest girdisi (anasayfa carousel), hub listesi, `RelatedReadings` (GHK-Cu, ölçü sorusu, non-invaziv cihazlar) ve karşı yönden geri bağlantılar.
 - Onay: yazar ve tıbbi onay KC'ye sözlü sorulur; `article-approvals.ts` ve `article-log.md` kaydı. Onay kaydı değişince `tsc` + `build:ci`.
 - `llms.txt`: bu yazı Cilt & Görünüm hub'ının ilk ve temsilî yazısı olacağı için öne çıkanlar listesine eklenmesi değerlendirilir.
+
+## 6b-3. Üçüncü tur: mevzuat, çıkar bağlantısı, yüz katmanları (2026-10-30)
+
+**Mevzuat, resmî metinden okundu** (WebFetch, Resmî Gazete ve Kore Mevzuat Araştırma Enstitüsü sayfaları; sayfa özeti araç üzerinden alındı, madde numaraları kaynak sayfadan):
+
+| Konu | Madde | Okunan |
+|---|---|---|
+| Kozmetik tanımı | TR Kozmetik Ürünler Yönetmeliği md. 4/1-ö (RG 8 Mayıs 2023, S. 32184 Mükerrer) | Amaç temizlik, koku verme, görünüm değiştirme, koruma, iyi durumda tutma, vücut kokusunu düzeltme. Hastalık tedavisi bu amaçlar arasında yok. Metinde "hastalığı önleme/tedavi" diye açık bir cümle yok; taslak yalnızca amaç listesine dayanır. |
+| Bildirim | md. 16/1 | Sorumlu kişi, ürün piyasaya arzdan önce Kuruma, ulusal elektronik veri tabanı üzerinden bildirir. |
+| İçerik sırası | md. 22/1-ğ | Ağırlığa göre azalan sıra; %1 altındakiler sonradan herhangi bir sırada. |
+| Türkçe etiket | md. 22/5 | Sorumlu kişi bilgileri, miktar, son kullanma ve özel uyarılar gibi bilgiler Türkçe. Ürün bilgi dosyası Türkçe ya da İngilizce (md. 14/4). |
+| İddialar | md. 23/1 | Ürünün sahip olmadığı özellik ya da işlevi ima eden ifade ve görseller yasak. |
+| Kore | Kozmetik Kanunu md. 2/2 (Act No. 20901, 1 Nisan 2025) | "Fonksiyonel kozmetik": beyazlatma, kırışıklık iyileştirme, UV koruma/hafif bronzlaştırma, saç rengi/bakım, kuruluk-kırılma-dökülme-keratinleşme önleme; ayrıntı başkanlık kararnamesiyle, yetkili makam Gıda ve İlaç Güvenliği Bakanı. |
+
+İlk taslaktaki iki ikincil-kaynak cümlesi bu yüzden değişti: "ruhsatla değil bildirimle" ve "tedavi iddiasıyla satılan ürün kozmetik sayılmaz" çıkarıldı (metinde doğrudan karşılığı yok); Kore'de "iddia bir kuruma bildirilir" cümlesi çıkarıldı (okunmadı). Ceza tutarı ve kılavuz (KÜD-KLVZ-11, -06) kodları yazıya hiç girmedi.
+
+**Çıkar bağlantısı** (PubMed yazar kurumlarından; finansman cümlesi özetlerde yok):
+
+| Çalışma | Yazar kurumu | Taslakta |
+|---|---|---|
+| Niasinamid (Bissett 2005) | Bir tüketici ürünleri şirketinin araştırma laboratuvarı | Tabloda ve metinde belirtildi. |
+| Adenozin film (Legendre 2007) | Bir kozmetik şirketinin araştırma birimi | Metinde belirtildi. |
+| Yaşla seramid (Rogers 1996) | Bir tüketici ürünleri şirketinin araştırma laboratuvarı | Editör notunda. |
+| Güneş koruyucu (Hughes 2013) | Kamu fonu (NHMRC) | Metinde belirtildi. |
+| Retinol (Kikuchi), salyangoz (Fabi), HA (Pavicic), Gold 2024 uzlaşısı | Üniversite ya da klinik; finansman ve çıkar beyanı özette yok | Editör notunda "özette belirtilmiyor". Tam metinler okunmadı. |
+| Centella (Kongkaew), HA yaşlı (Muhammad), Williams 2025 | Üniversite | Ek not gerekmedi. |
+
+**Yüz katmanları** (Y1 cümlesi için kaynak): Coleman ve Grover 2006 (PMID 19338976): hacim kaybı, kemik rezorpsiyonu, doku elastikiyetinin azalması ve subkütan dolgunluğun yeniden dağılımı. Mendelson ve Wong 2012 (PMID 22580543): orta yüz iskeleti, göz çukuru kenarı ve çene önünde öngörülebilir rezorpsiyon. Taslakta [20] ve [21] olarak, Y1 paragrafındaki cümleye bitişik atıfla eklendi (Y1 metni değişmedi).
+
+## 10. Görseller (byline 4:5 + kart 2.4:1) — KARAR: Seçenek A (KC, 2026-10-30)
+
+Kural: makale görseli yalnızca byline (4:5) ve kart (2.4:1); üst hero hub'ınkidir.
+
+**Seçenek A (hazır, arşivden):** Gonca Gökdemir'in 21 Ekim'de yayından kaldırılan cilt yazısının görselleri `public/images/library/editorial/menopozda-cilt-degisimleri-byline.webp` (3712x4608, tam 4:5) ve `menopozda-cilt-degisimleri-card.webp` (2400x1000, tam 2.4:1). İçerik: sokakta vitrine bakan, krem trençkotlu, bordo fularlı 40-55 yaş arası bir kadın; vitrin camında yansıması; altın saat ışığı; ürün, kavanoz, önce-sonra yok. Kore kremi temasıyla çelişmiyor, "yansıma" motifi etiket okumayla kafa karıştırmıyor. Kartta yüz alt kenara yakın, kırpma kabul edilebilir ama sıkı. Şu an `src` içinde hiçbir yere bağlı değil. Karar: Gonca'nın kaldırılan yazısına ait görseli bu yazıda yeniden kullanmak sizin onayınıza bağlı; kullanılırsa `alt` metni yeni yazıya göre yazılmalı.
+
+**Seçenek B (yeni görsel):** Editörden ya da yapay zekâ ile üretim. Yönerge: 40-55 yaş, sakin ve kendinden emin, doğal ışık, editoryal portre; ürün, kavanoz, ambalaj, önce-sonra, mucize/gençlik dili yok; gri saç yasak (Hero brief V2). Önerilen sahne: pencere ışığında, gözlüğünü çıkarmış, elindeki küçük kâğıda ya da telefona dikkatle bakan kadın (etiket okuma motifine göndermeli, ürün göstermeden). Üretilirse IPTC `trainedAlgorithmicMedia` etiketi ve kayıt kuralı geçerli (stil rehberi, AI destekli içerik kuralları). İki ayrı kırpma: byline 1200x1500 (4:5), kart 2400x1000 (2.4:1).
+
+Bağlama: byline `ArticleAuthorBlock imageSrc`; kart `articleCardImageByRoute`. Hiçbiri `submenuHeroByRoute`'a eklenmez.
+
+## 11. Yayın yaması
+
+Manifest, kart görseli, onay kaydı, karşı yönden bağlantılar ve doğrulama komutları onaydan sonra uygulanmak üzere hazır: `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit-yayin-yamasi.md`. Onaysız makale manifeste, hub'a veya RSS'e girmez (CLAUDE.md, yazar ve tıbbi onay yayın kapısı); bu yüzden hiçbiri uygulanmadı.
+
+**Uygulanan (Seçenek A):** Proje betiğiyle (`scripts/make-article-images.mjs`, `--byline-pos=north --card-pos=centre`) arşiv görselinden yeni kırpımlar üretildi; çünkü orijinal byline 4,5 MB (50 byline'ın en ağırı; medyan yaklaşık 131 KB). Yeni dosyalar: `kore-kremleri-icerik-vaat-kanit-byline.webp` (1200x1500, 133 KB) ve `kore-kremleri-icerik-vaat-kanit.webp` (2400x1000, 243 KB). Yeniden boyutlandırma XMP'yi sildiği için `tag-ai-images.mjs` ile IPTC `trainedAlgorithmicMedia` etiketi yeniden eklendi; `--check` iki dosyada da etiketi doğruladı. Orijinal `menopozda-cilt-degisimleri-*` dosyalarına dokunulmadı. Gözle kontrol: byline'da yüz ve eller kadrajda; kartta yüz alt yarıda, çene alt kenara yakın ama kesilmemiş (orijinal kartla aynı kadraj). Byline taslakta `ArticleAuthorBlock`'a bağlandı; kart bağlantısı yayın yamasında (onaydan sonra).

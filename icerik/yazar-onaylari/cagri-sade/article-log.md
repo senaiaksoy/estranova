@@ -178,3 +178,28 @@ Taslak: `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit.astro`; brief: `icerik
 - **Değişiklik:** `src/pages/zamansiz-yasam/yuz-mudahalesi-olcu-sorusu.astro` — cümle "yılda yaklaşık yüzde 1-2, 1987 tarihli eski bir çalışma, herkes için aynı hız değil" olarak yeniden yazıldı (kanıt düzeyi 2 korundu); yeni kaynak [13] Brincat 1987; `modifiedDate` ve `lastUpdated` 30 Ekim 2026; `article-approvals.ts` kaydı güncellendi (approvedAt 2026-10-30); arşiv kopyası `icerik/yayinlanmis-makaleler/2026-05/2026-05-10__yuz-mudahalesi-olcu-sorusu.md` elle eşitlendi (bir sonraki `npm run articles:export` aynı sonucu üretir).
 - **Dokunulmayanlar:** 15 Ekim paketi (`onaylanan/2026-10-15_...`) tarihsel kayıt olarak olduğu gibi duruyor; HIFU yazısının eski sürümü (`onceki-surum.astro`) arşivde. `icerik/cilt-sagligi-kolajen-menopoz.md` eski bir içerik taslağıdır ve aynı rakamı taşıyor; yayında değil, yayına alınırsa düzeltilmeli.
 - Commit/push yapılmadı.
+
+## 30 Ekim 2026 — Kore kremleri taslağı: üçüncü tur (mevzuat, çıkar bağlantısı, yüz katmanları)
+
+- **Mevzuat resmî metinden:** Kozmetik Ürünler Yönetmeliği (RG 8 Mayıs 2023, S. 32184 Mükerrer) md. 4/1-ö, 16/1, 22/1-ğ, 22/5, 23/1; Kore Kozmetik Kanunu md. 2/2 (Act No. 20901, 1 Nisan 2025). Taslaktaki ikincil kaynaklı iki cümle çıkarıldı ("ruhsatla değil bildirimle", "tedavi iddiasıyla satılan ürün kozmetik sayılmaz"); Kore'deki "iddia kuruma bildirilir" cümlesi de çıkarıldı. Kılavuz kodları, madde numaraları gövdeye, ceza tutarları hiçbir yere girmedi.
+- **Çıkar bağlantısı:** Niasinamid ve yaşla seramid çalışmalarının yazarları tüketici ürünleri şirketlerinden, adenozin çalışmasının yazarları bir kozmetik şirketinden; güneş koruyucu çalışması kamu fonlu. Diğerlerinde finansman PubMed özetinde yok. Metin ve editör notu buna göre yazıldı; şirket adı gövdeye girmedi.
+- **Yüz katmanları:** Coleman-Grover 2006 ve Mendelson-Wong 2012 Y1 cümlesine atıf olarak eklendi; Y1 metni değişmedi.
+- **Görsel:** arşivdeki `menopozda-cilt-degisimleri-byline/card.webp` uygun (4:5 ve 2.4:1, ürün yok) ama Gonca'nın kaldırılan yazısına ait; yeniden kullanım KC kararı bekliyor (brief bölüm 10).
+- **Yayın yaması hazır, uygulanmadı:** `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit-yayin-yamasi.md` (manifest, kart görseli, onay kaydı, karşı bağlantılar, doğrulama). Yazar ve tıbbi onay hâlâ KC'den sözlü alınacak.
+
+## 30 Ekim 2026 — Kore kremleri taslağı: görsel kararı (Seçenek A)
+
+- **Karar:** KC "A'yı kullan" dedi: Gonca Gökdemir'in kaldırılan cilt yazısına ait arşiv görseli bu yazıda kullanılacak.
+- **Uygulama:** `make-article-images.mjs` ile hafif kırpımlar üretildi (byline 1200x1500 / 133 KB, kart 2400x1000 / 243 KB; orijinal byline 4,5 MB idi); IPTC `trainedAlgorithmicMedia` etiketi yeniden eklendi ve doğrulandı. Byline taslakta `ArticleAuthorBlock`'a bağlı; kart bağlantısı onay sonrası yayın yamasında. Üst hero hub'ınkidir, makale görseli hero olmadı.
+- **Açık:** yazar + tıbbi onay (KC, sözlü). Commit yapılmadı.
+
+## 30 Ekim 2026 — Kore kremleri: yazar ve tıbbi onay, yayın yaması uygulandı
+
+- **Onay (30 Ekim 2026, sözlü, KC):** "Yazar (Çağrı Sade) ve tıbbi inceleme (Senai Aksoy) onayı tamam." Tür `clinical-guide`; tıbbi inceleyen varsayılan Senai Aksoy.
+- **Uygulanan:** sayfa `src/pages/beden-yakinlik/cilt-gorunum/kore-kremleri-icerik-vaat-kanit.astro`; manifest girdisi (listenin başı, en yeni önce); kart görseli `articleCardImageByRoute`; `article-approvals.ts` kaydı; karşı bağlantılar `yuz-mudahalesi-olcu-sorusu`, `non-invaziv-cihazlar-hifu-rf-mikroakim`, `ghk-cu-menopoz-cilt` sayfalarında. Cilt & Görünüm hub'ı manifestten doldu (hub'ın ilk yazısı).
+- **Kapı:** `npm run build:ci` temiz (lint, compliance, makale denetimleri, 140 sayfa derleme, SEO denetimi 162 sayfa). Derleme çıktısında sayfa, hub, anasayfa, sitemap ve RSS girdisi doğrulandı.
+- **Sözcük değişikliği (compliance kapısı gereği):** Uyumluluk betiği "en iyi" ifadesini yasaklı sözcük olarak yakaladı. Çağrı Sade'nin iki cümlesi anlamı korunarak değiştirildi: Y2 "yapılacak en iyi şey" → "yapılacak en doğru şey"; Y3 "En iyi bakım rutini" → "En doğru bakım rutini". Başka hiçbir yanıt cümlesine dokunulmadı. Üstünlük/vitrin iddiası değil, ama yazar sözü birebir kalmadığı için KC'ye bildirildi.
+- **Paket:** `onaylanan/2026-10-30_kore-kremleri-icerik-vaat-kanit/` (`brief.md`, `yayin-yamasi.md`, `site-kaynak.astro`, `taslak-onceki-surum.astro`). Taslak dosyaları `icerik/taslaklar/` altından bu pakete taşındı.
+- **Atlananlar:** `public/llms.txt` öne çıkan listesi (KC istemedikçe eklenmez); `icerik/yayinlanmis-makaleler/` arşivi (`npm run articles:export` ile bir sonraki dışa aktarımda).
+- Commit/push yapılmadı.
+
