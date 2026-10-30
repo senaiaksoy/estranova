@@ -1,6 +1,6 @@
 # Brief: Kore kremleri — içerik, vaat ve kanıt
 
-> Durum: YAYINA HAZIR, ONAYLI (yazar + tıbbi onay: 30 Ekim 2026, sözlü, KC). Sayfa canlı rota ağacında (yerel dal, push yok); manifest, kart görseli, onay kaydı ve karşı bağlantılar uygulandı; `build:ci` temiz. Compliance kapısı gereği iki cümlede "en iyi" → "en doğru" (bölüm 7a'daki Y2 ve Y3). Ayrıntı: `yayin-yamasi.md`, kayıt: Çağrı Sade `article-log.md`.
+> Durum: YAYINDA (PR #107, 30 Ekim 2026 `main`'e birleşti; canlı doğrulandı). Yazar + tıbbi onay: 30 Ekim 2026, sözlü, KC; Çağrı Sade "en iyi" → "en doğru" değişikliğini dahil onayladı. Ayrıntı: `yayin-yamasi.md`, kayıt: Çağrı Sade `article-log.md`.
 > Hazırlanma: 2026-10-30 · Stil rehberi okundu: Dr. Senai Aksoy Makale Stil Rehberi
 
 ## 1. Künye

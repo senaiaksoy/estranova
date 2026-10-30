@@ -203,3 +203,14 @@ Taslak: `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit.astro`; brief: `icerik
 - **Atlananlar:** `public/llms.txt` öne çıkan listesi (KC istemedikçe eklenmez); `icerik/yayinlanmis-makaleler/` arşivi (`npm run articles:export` ile bir sonraki dışa aktarımda).
 - Commit/push yapılmadı.
 
+## 30 Ekim 2026 — Kore kremleri: yazar onayı ("en doğru" değişikliği dahil), yayın ve canlı doğrulama
+
+- **Çağrı Sade'nin onayı (30 Ekim 2026, KC aracılığıyla):** "Çağrı onaylıyor." Onay, compliance kapısı gereği yapılan iki sözcük değişikliğini de kapsar: Y2 "yapılacak en iyi şey" → "yapılacak en doğru şey"; Y3 "En iyi bakım rutini" → "En doğru bakım rutini". Başka yanıt cümlesi değişmedi.
+- **Yayın:** PR #107, 30 Ekim 2026 06:10 UTC'de `main`'e birleşti (merge commit `73225e8c`). Cloudflare Pages, `e2e` ve `check` kontrolleri başarılı.
+- **Canlı doğrulama (estranova.com, ?nc= önbellek atlatmalı, 30 Ekim 2026 06:12 UTC):**
+  - Yeni yazı açılıyor: başlık, Kısa Klinik Yanıt ilk cümlesi doğru; "en doğru" geçiyor, "en iyi" geçmiyor; kaynak listesi 23 madde; ilgili okumalarda yüz müdahalesi, HIFU ve GHK-Cu yazıları var.
+  - Yüz müdahalesi yazısı güncel: "yüzde 30" ifadesi yok, "yılda yaklaşık yüzde 1-2" var, `dateModified` 30 Ekim 2026, ilgili okumalarda yeni yazı dördüncü sırada.
+  - Cilt & Görünüm hub'ı: yeni yazı "Son yazı" şeridinde (Op. Dr. Çağrı Sade, 30 Ekim 2026).
+  - Doğrulama araç özetiyle yapıldı; ekran görüntüsü alınmadı.
+- **Açık kalanlar:** `icerik/yayinlanmis-makaleler/` arşiv dışa aktarımı (`npm run articles:export`, bir sonraki dışa aktarımda: yeni yazı ve düzeltilen yüz müdahalesi yazısı); `public/llms.txt` öne çıkan listesi (KC istemedikçe eklenmez).
+
