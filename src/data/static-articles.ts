@@ -18,6 +18,26 @@ export interface StaticArticleEntry {
 // — sitemap otomatik Astro'dan gelir, RSS bu manifest'e bağlıdır.
 export const staticArticles: StaticArticleEntry[] = [
   {
+    path: '/beden-yakinlik/cilt-gorunum/kore-kremleri-icerik-vaat-kanit/',
+    title: 'Kore Kremlerinin Kavanozunda Ne Var? İçerik, Vaat ve Kanıt',
+    description:
+      'Kore kremlerindeki içerikler, vaatleri ve insanlarda ölçülen sonuçlar yan yana: güneş koruyucudan seramide, salyangozdan PDRN’ye. Menopozda cilt için etiketten neyi okuyabileceğiniz. Op. Dr. Çağrı Sade anlatıyor.',
+    publishedDate: '30 Ekim 2026',
+    writerSlug: 'cagri-sade',
+    section: 'Beden & Yakınlık',
+    sectionPath: '/beden-yakinlik/',
+    keywords: [
+      'Kore kremleri',
+      'Kore cilt bakımı',
+      'menopozda cilt bakımı',
+      'cilt bakımı içerikleri',
+      'seramid',
+      'niasinamid',
+      'retinol',
+      'krem etiketi nasıl okunur',
+    ],
+  },
+  {
     path: '/zamansiz-yasam/sarkopeni-40-sonrasi-sessiz-kas-kaybi/',
     title: 'Sarkopeni: 40 Sonrası Sessiz Kas Kaybı',
     description:

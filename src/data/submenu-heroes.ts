@@ -257,6 +257,10 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-karin-germe.webp',
     alt: 'Boy aynasının yanında, eli belinde pencereye bakan pembe kazaklı bir kadın.',
   },
+  '/beden-yakinlik/cilt-gorunum/kore-kremleri-icerik-vaat-kanit/': {
+    src: '/images/library/editorial/kore-kremleri-icerik-vaat-kanit.webp',
+    alt: 'Gün batımı ışığında sokakta yan dönmüş bakan, vitrin camında yansıması görünen bir kadının yakın planı; temsili görsel',
+  },
   '/beden-yakinlik/menopoz-sonrasi-genital-estetik/': {
     src: '/images/library/editorial/cagri-sade-menopoz-sonrasi-genital-estetik.webp',
     alt: 'Aydınlık bir odada oval aynanın yanında, eli karnında pencereden dışarı bakan bornozlu bir kadın.',
