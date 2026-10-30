@@ -214,3 +214,21 @@ Taslak: `icerik/taslaklar/kore-kremleri-icerik-vaat-kanit.astro`; brief: `icerik
   - Doğrulama araç özetiyle yapıldı; ekran görüntüsü alınmadı.
 - **Açık kalanlar:** `icerik/yayinlanmis-makaleler/` arşiv dışa aktarımı (`npm run articles:export`, bir sonraki dışa aktarımda: yeni yazı ve düzeltilen yüz müdahalesi yazısı); `public/llms.txt` öne çıkan listesi (KC istemedikçe eklenmez).
 
+## 30 Ekim 2026 — Kore kremleri: denetim sonrası düzeltme turu (yeniden sözlü onay bekliyor)
+
+- **Tetikleyici:** `/makale-denetle` geniş denetimi. En önemli bulgu: onaydan sonra `main`'e giden `4592c6a1` commit'i Çağrı Sade'nin Y2 yanıtından "Bir de güneş korumasını ihmal etmemek önemli. Çünkü" kısmını silmişti ve bu değişiklik log'a yazılmamış, yeniden onaya sunulmamıştı. Cümle **birebir geri getirildi**. Y1–Y4'ün 46 cümlesinin tamamı brief'teki ham yanıtlarla yeniden karşılaştırıldı (tek bilinen fark onaylı "en iyi" → "en doğru").
+- **Aynı commit'in diğer değişikliği:** ginseng satırı "Kanıt yok"tan Evidence 1'e çevrilmiş, [24] ve [25] eklenmişti. Bu da onay kaydında yoktu; şimdi burada kayıtlı. [18] (fare ve hücre çalışması) satırdan çıkarıldı ve doğru yere, tablo sonrası cümleye taşındı; satır yalnız insan çalışması [25]'e dayanıyor.
+- **Hekim yanıtı dışında yapılanlar:** Menopozda Cilt bölümündeki Y2 kopyası paragraf yeniden yazıldı (Y2 yalnız "Menopozda Daha Az Ürün" bölümünde kalıyor). Kısa Klinik Yanıt ~85 → 57 kelime ve dilbilgisi düzeldi. H2 sayısı 11 → 9: "Kore Kremi, Sarkma ve Ülke Etiketi" ile "İçerik Haritası" tek bölümde; "Etikette Beş Soru" ile "Türkiye'de Kozmetik" tek bölümde (id'ler: `kore-etiketi`, `etiket-sorulari`; `icerik-haritasi` ve `turkiye` id'leri kalktı, dışarıdan bağlantı yok). Tablo dışı Evidence 6 → 4 (etiket kaldırıldı, seviye değişmedi: [11] ve [13] cümleleri).
+- **Kaynak düzeltmeleri:** [25] künyesine yazar (Park JJ ve ark.) ve başlık; [13] "Williams SF ve ark." + metne popülasyon (atopik dermatite yatkın yetişkinler). PDRN [17] satırındaki "çoğu enjeksiyon" iddiası PMC tam metninden doğrulandı ve sayıyla yazıldı (7 çalışmanın 6'sında enjeksiyon, mikroiğneleme veya lazer; yalnız biri merhem). Kore yasası cümlesi kapalı liste izlenimi vermeyecek biçimde "…ürünleri de içeren" oldu (md. 2/2'nin diğer sınıfları yeniden sayılmadı). "Kuruma" → "Türkiye İlaç ve Tıbbi Cihaz Kurumu'na".
+- **Çıkar bağlantısı:** Bilimsel Editör Notu'na hassas ciltte seramid ([24], üç yazar bir kimya şirketinden) ve fermente siyah ginseng ([25], yazarlardan biri bir ginseng şirketinin araştırma biriminden) eklendi; şirket adı gövdeye girmedi.
+- **Ses ve ritim:** Editoryal antitez ("X değil, Y") 4 → 0 (kalan 3 "değil," Çağrı'nın kendi kalın cümleleri); "gördüğümüz/aldığımız/rastlamadık" birinci çoğulları tarafsız biçime çevrildi; iki H2 lede'i çeşitlendirildi (kış kuruluğu sorusu; "Bakım rutini, yapılacak işleme göre değişir"); sonuca tek bir gerçek duygu cümlesi eklendi ("hayal kırıklığı"). `modifiedDate` eklendi (30 Ekim 2026); `// yayın gününde güncellenir` yorumu temizlendi.
+- **Dokunulmayanlar:** byline görseli (camdaki yansıma kadının duruşuyla uyuşmuyor; KC kararı bekliyor), `static-articles.ts`, `article-approvals.ts` kaydı (yeniden onay gelene kadar değişmedi), RedFlagBox, JSON-LD yapısı.
+- **Açık:** Yazar (Çağrı) ve tıbbi onay bu düzeltme turu için yeniden KC'den sözlü alınacak; özellikle Y2 cümlesinin geri gelmesi, ginseng satırı, yeni "hayal kırıklığı" cümlesi ve bölüm birleştirmeleri. Commit/push yapılmadı.
+
+## 30 Ekim 2026 — Kore kremleri: düzeltme turu için sözlü onay alındı
+
+- **Onay (30 Ekim 2026, sözlü, KC):** "Onay veriyorum" — yukarıdaki denetim sonrası düzeltme turu için yazar ve tıbbi onay. Kapsam, bir önceki girişte listelenen değişikliklerin tamamıdır (Y2 cümlesinin geri gelmesi, ginseng satırı ve [18]/[25] ayrımı, [24]/[25] çıkar notu, PDRN satırı, bölüm birleştirmeleri, özet kısaltması, "hayal kırıklığı" cümlesi).
+- **Kayıt:** `src/data/article-approvals.ts` girdisinin notuna düzeltme turu onayı eklendi (`approvedAt` 2026-10-30 olarak kaldı).
+- **Kapı:** `build:ci` değişiklikten sonra temiz (exit 0). Onay kaydı değiştiği için `tsc` ve `build:ci` aşağıda yeniden çalıştırılır.
+- **Açık:** commit/push yapılmadı; byline görseli kararı KC'de.
+
