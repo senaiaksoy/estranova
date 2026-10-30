@@ -4,7 +4,7 @@ description: "Op. Dr. Çağrı Sade anlatıyor: 40 sonrası yüz müdahalelerind
 writer: cagri-sade
 publishedDate: "10 Mayıs 2026"
 publishedDateIso: 2026-05-10
-modifiedDate: "15 Ekim 2026"
+modifiedDate: "30 Ekim 2026"
 exportScope: local-build
 url: /zamansiz-yasam/yuz-mudahalesi-olcu-sorusu/
 section: "Zamansız Yaşam"
@@ -66,9 +66,9 @@ dinlenmiş ve ışıltılı ifadenin yerini yorgun bir ifadeye bırakmasıdır. 
 Bunu yalnızca takvim yaşıyla açıklamak eksik kalır. Östrojen, cildin su tutmasına yardım eden
 hyalüronik asidi ve cildi sıkı tutan kolajeni destekler; menopozla bu destek azalır
 (orta kanıt)<sup>[[11]](#kaynak-11)[[12]](#kaynak-12)</sup>.
-Erken dönem çalışmalar, menopozdan sonraki ilk beş yılda cilt kolajeninin yaklaşık yüzde 30
-azalabildiğini bildirmiştir. Bu veriler az sayıda kadınla yapılmış eski çalışmalara dayanır
-(sınırlı kanıt)<sup>[[11]](#kaynak-11)</sup>.
+Menopozdan sonra cilt kolajen içeriğinin yılda yaklaşık yüzde 1-2 azaldığı, 1987 tarihli bir
+çalışmada bildirilmiştir. Bu eski bir çalışmadır ve herkes için aynı hızı göstermez
+(sınırlı kanıt)<sup>[[13]](#kaynak-13)</sup>.
 
 Hastalarıma bunu bir binanın taşıyıcı kolonlarıyla anlatırım. Aynada gördüğünüz değişim en üst
 katta, yani yüzeydeki birkaç çizgide başlamaz. Cildi alttan ayakta tutan kolajen ağı, kemik ve
@@ -218,6 +218,7 @@ Kaynaklar, metindeki numaralı atıflarla eşleşir. Kanıt etiketi bir kişide 
 - NHS. Estetik işlem öncesinde karar ve bilgilendirilmiş onam. [Karar öncesi sorular](https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/advice/before-you-have-a-cosmetic-procedure/).
 - Brincat MP ve ark. Östrojenler ve cilt: menopozun ve hormon tedavisinin cilde etkisi. 2005. [Literatür derlemesi](https://pubmed.ncbi.nlm.nih.gov/16096167/).
 - Viscomi B ve ark. Menopozda cilt kalitesi değişimleri ve hormon tedavisinin gerçek rolü. 2025. [Anlatı derlemesi](https://pubmed.ncbi.nlm.nih.gov/40847905/).
+- Brincat M ve ark. Menopoz sonrası kadında cilt kolajen içeriği, cilt kalınlığı ve kemik kütlesindeki azalma üzerine bir çalışma. 1987. [Klinik çalışma](https://pubmed.ncbi.nlm.nih.gov/3120067/).
 
 Pratik Sorular
 
