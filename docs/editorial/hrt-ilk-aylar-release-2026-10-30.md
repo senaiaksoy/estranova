@@ -44,5 +44,5 @@ Kaynaklar bu sohbetin geniş audit aşamasında kontrol edildi. Modelin kaynak k
 
 - Cümle ritmi: on üç yerde kısa cümleler birleştirildi; kısa vurgu cümleleri korundu. Olgu ve güvenlik sınırları aynı.
 - Geri bağlantı: `hrt-yan-etkileri-ve-izleme` ve `dokuz-yillik-menopoz-sonunda-hrt-karari` ilgili okumalarına bu yazı eklendi. Bu iki yazının gövdesi ve tarihleri değişmedi.
-- Eklenmeyen: `menopozda-hrt-avantajlari` (yazıda önceki sürüme ait not var; ayrı güncelleme bekliyor).
+- `menopozda-hrt-avantajlari` ilgili okumalarına bu yazı sonradan eklendi (30 Ekim 2026, KC talimatı; yalnızca gezinti, o yazının metni ve tarihleri değişmedi).
 - KC yazar (Demet) ve tıbbi onayın tamam olduğunu sözlü bildirdi. Yayın: 019a4471 main'e push edildi ve canlıya yansıdı. Canlı doğrulama (30 Ekim 2026, `?nc=`): yeni ritim yayında; hrt-yan-etkileri-ve-izleme ve dokuz-yillik-menopoz-sonunda-hrt-karari sayfalarında bu yazıya bağlantı var.

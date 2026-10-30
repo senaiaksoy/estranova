@@ -51,7 +51,7 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '6 Mayıs 2026',
-  modifiedDate: '20 Ekim 2026',
+  modifiedDate: '30 Ekim 2026',
   pathname,
   articleSection: 'Bilimsel Pencere',
   sectionPath: '/bilimsel-pencere/',
@@ -102,7 +102,7 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="6 Mayıs 2026"
-        lastUpdated="20 Ekim 2026"
+        lastUpdated="30 Ekim 2026"
         readingMinutes={15}
         medicalReviewer="Dr. Alper Mumcu"
         imageSrc="/images/library/editorial/senai-hrt-avantajlari-window-portrait.webp"
@@ -112,13 +112,13 @@ const articleSchemas = buildArticleSchemas({
 
       <p class="mb-6 text-sm leading-relaxed text-ink/70">
         20 Ekim 2026 revizyonunun bağımsız tıbbi incelemesi Dr. Alper Mumcu tarafından tamamlandı.
+        30 Ekim 2026 güncellemesi kanıt etiketlerini sadeleştirdi; klinik cümleler değişmedi.
       </p>
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Hormon replasman tedavisi (HRT), sıcak basması ve gece terlemesini azaltabilir
-          <Evidence level={5} />.<sup><a href="#kaynak-1">[1]</a></sup>
-          Geceyi bu belirtiler bölüyorsa uyku da düzelebilir <Evidence level={3} />.<sup><a href="#kaynak-3">[3]</a></sup>
+          Hormon replasman tedavisi (HRT), sıcak basması ve gece terlemesini azaltabilir.<sup><a href="#kaynak-1">[1]</a></sup>
+          Geceyi bu belirtiler bölüyorsa uyku da düzelebilir.<sup><a href="#kaynak-3">[3]</a></sup>
           Sistemik tedavi kemik kaybını ve kırık riskini azaltır; yalnızca vajinal kuruluk ve
           ilişkide ağrı içinse düşük doz lokal vajinal östrojen ayrıca değerlendirilir.<sup><a href="#kaynak-2">[2]</a></sup>
         </p>
@@ -187,7 +187,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="urogenital-konfor">Vajinal kuruluk ve ilişkide ağrı için lokal tedavi</h2>
         <p>
           Kuruluk, yanma ve ilişkide ağrı günlük hayatınızı etkiliyorsa, düşük doz vajinal östrojen
-          bu yakınmaları azaltabilen seçeneklerdendir <Evidence level={4} />.<sup><a href="#kaynak-2">[2]</a></sup>
+          bu yakınmaları azaltabilen seçeneklerdendir.<sup><a href="#kaynak-2">[2]</a></sup>
         </p>
         <p>
           Östrojen azalması vajina ve alt idrar yolu dokusunda incelme ve kuruluğa yol açabilir;
@@ -233,7 +233,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Uzun dönem hastalık ve ölüm riskini azaltmaya yönelik öneri güçlüdür; ancak bu sonuçlar
-          için POI'ye özgü kanıtın kesinliği düşüktür <Evidence level={2} />.
+          için POI'ye özgü kanıtın kesinliği düşüktür.
           Sizin için temel amaç, erken başlayan hormon eksikliğinin vücuttaki etkilerini azaltmaktır.<sup><a href="#kaynak-4">[4]</a></sup>
         </p>
 
@@ -258,7 +258,7 @@ const articleSchemas = buildArticleSchemas({
         <h2 id="kilo-ve-vucut-kompozisyonu">Kilo ve yağ dağılımındaki etki sınırlıdır</h2>
         <p>
           HRT kilo verme tedavisi değildir; karın çevresindeki yağ birikimi üzerinde bildirilen
-          etki küçüktür <Evidence level={3} />.<sup><a href="#kaynak-1">[1]</a></sup>
+          etki küçüktür.<sup><a href="#kaynak-1">[1]</a></sup>
         </p>
         <p>
           Kıyafetlerinizin bel kısmı sıkmaya başladığında tartıdaki sayı kadar yağın dağılımı da
@@ -301,7 +301,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <p>
           Rahim varsa sistemik östrojene, rahim iç tabakasını koruyan bir progestojen eklenmesi
-          gerekir <Evidence level={5} />. Düşük doz lokal vajinal östrojen bu açıdan ayrı
+          gerekir. Düşük doz lokal vajinal östrojen bu açıdan ayrı
           değerlendirilir; genellikle progestojen gerektirmez.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-2">[2]</a></sup>
         </p>
         <p>
@@ -385,6 +385,7 @@ const articleSchemas = buildArticleSchemas({
         paths={[
           '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
           '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
+          '/hormonal-gecis/menopoz/hrt-ilk-alti-ay/',
           '/bilimsel-pencere/yeni-arastirmalar/menopoz-hrt-meme-kanseri-riski/',
           '/zamansiz-yasam/kilo-artisi-menopoz/',
         ]}
@@ -392,8 +393,9 @@ const articleSchemas = buildArticleSchemas({
 
       <p class="mt-10 mb-5 text-sm leading-relaxed text-ink/70">
         Aşağıdaki not ve içindeki 3–5/5 kanıt aralığı önceki sürüme aittir. Bu aralık, güncel
-        yazının tamamını değerlendiren bir puan değildir; güncel metindeki kanıt düzeyleri,
-        2/5 olan sınırlı kanıtlar da dahil, ilgili sonuçların yanında ayrı ayrı belirtilmiştir.
+        yazının tamamını değerlendiren bir puan değildir; güncel metinde kanıt düzeyi yalnızca en
+        belirleyici sonuçların yanında etiketle gösterilir, diğer sonuçlarda gücü cümlenin kendi
+        ifadesi belirtir.
       </p>
       <ArticleEditorNote>
         <p class="mb-4 text-lg font-semibold text-ink">
