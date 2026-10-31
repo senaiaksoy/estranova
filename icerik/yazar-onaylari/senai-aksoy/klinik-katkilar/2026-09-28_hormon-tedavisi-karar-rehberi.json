@@ -148,5 +148,23 @@
     "authorization": "Kullanıcı onayı (bu sohbet)",
     "scope": "Dış editoryal değerlendirme üzerine üslup düzeltmesi: Kısa Klinik Yanıt klinisyen birinci tekiline çevrildi; gövdede \"birlikte değerlendirilir\" tekrarı 3→0 (hekim alıntısı hariç) aktif birinci tekil ifadelerle değiştirildi; Görüşmeye Hazırlık girişi doğallaştırıldı.",
     "fidelity": "Yeni tıbbi iddia yok; eşikler (60 yaş, ilk 10 yıl), kanıt düzeyleri, kaynaklar ve SSS yanıtları değişmedi."
+  },
+  "october31Revision": {
+    "date": "2026-10-31",
+    "scope": "Perimenopoz ve gebelikten korunma, NICE/BMS kanama eşikleri, ayrı izlem bölümü, koruyucu kullanım sınırları, kaynak/şema izi, kısa özet ve dil, byline/kart için iki kanonik crop. Beş gerçek SSS yanıtı ve imzalı editör notunun metni değişmedi.",
+    "authorApproval": {
+      "person": "Doç. Dr. Senai Aksoy",
+      "status": "Kullanıcı tarafından tamamlandığı bildirildi",
+      "date": "2026-10-31"
+    },
+    "medicalApproval": {
+      "person": "Dr. Alper Mumcu",
+      "status": "Kullanıcı tarafından tamamlandığı bildirildi",
+      "date": "2026-10-31",
+      "evidence": "Bu sohbetteki kullanıcı bildirimi; ayrı imzalı yazılı inceleme yok."
+    },
+    "userMessage": "evet onaylar tamam commit",
+    "articleSha256": "e15caaaa3201696e5c84ce7b72021bafc3a23e65b2fa20bdc0c6b7e916883f77",
+    "releaseAuthorization": "Yalnız yerel commit. Push ve deploy talimatı yok."
   }
 }

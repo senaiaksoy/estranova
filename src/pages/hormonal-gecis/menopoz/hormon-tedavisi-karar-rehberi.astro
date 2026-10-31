@@ -27,6 +27,7 @@ const tocEntries = [
   { id: 'bilim-ne-diyor', label: 'Yarar, Risk ve Zamanlama' },
   { id: 'turkiye-notlari', label: 'Biyo-özdeş Hormon Ne Demek?' },
   { id: 'karar-plani', label: 'Karar Planı' },
+  { id: 'tedavi-sirasinda-izlem', label: 'Tedavi Sırasında İzlem' },
   { id: 'karari-sakin-birakirken', label: 'Görüşmeye Hazırlık' },
   { id: 'kaynaklar', label: 'Kaynaklar' },
   { id: 'sss', label: "Dr. Aksoy'a Sorular" },
@@ -36,7 +37,7 @@ const siteUrl = resolveSiteUrl(Astro.site);
 const articleTitle = 'Hormon Tedavisi — Karar Vermeden Önce Ne Bilmeliyim?';
 const seoTitle = 'Hormon Tedavisi — Karar Vermeden Önce';
 const articleDescription =
-  'Menopozda hormon tedavisi kararı için sakin bir rehber. Kimler için uygun, mekanizma, kanıt düzeyi ve hekiminizle konuşurken sorabileceğiniz sorular.';
+  'Menopoz ve perimenopozda hormon tedavisi: sistemik ve lokal seçenekler, yararlar, kişisel riskler, gebelikten korunma ve kanamada ne yapılmalı?';
 const faqItems = articleFaqs['/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/'] ?? [];
 const articleSchemas = buildArticleSchemas({
   title: articleTitle,
@@ -44,11 +45,18 @@ const articleSchemas = buildArticleSchemas({
   writerSlug: 'senai-aksoy',
   articleType: 'clinical-guide',
   publishedDate: '20 Nisan 2026',
-  modifiedDate: '30 Eylül 2026',
+  modifiedDate: '31 Ekim 2026',
   medicalReviewer: 'Dr. Alper Mumcu',
   medicalReviewerTitle: 'Kadın Hastalıkları ve Doğum Uzmanı',
-  citation:
-    'Menopozal hormon tedavisinde zamanlama penceresi, vazomotor belirtiler, kemik koruması ve güvenlik dengesi üzerine uluslararası kılavuzlar ve uzun dönem takip çalışmaları',
+  citation: [
+    'https://pubmed.ncbi.nlm.nih.gov/35797481/',
+    'https://www.nice.org.uk/guidance/ng23/chapter/Recommendations',
+    'https://doi.org/10.1093/ejendo/lvaf206',
+    'https://pmc.ncbi.nlm.nih.gov/articles/PMC7388026/',
+    'https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-guideline-contraception-for-women-aged-over-40-years.pdf',
+    'https://thebms.org.uk/publications/bms-guidelines/management-of-unscheduled-bleeding-on-hormone-replacement-therapy-hrt/',
+  ],
+  image: '/images/library/editorial/hormon-tedavisi-karar-rehberi.webp',
   pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
   articleSection: 'Hormonal Geçiş',
   sectionPath: '/hormonal-gecis/menopoz/',
@@ -89,21 +97,19 @@ const articleSchemas = buildArticleSchemas({
         authorSlug="senai-aksoy"
         articleType="clinical-guide"
         publishedDate="20 Nisan 2026"
-        lastUpdated="30 Eylül 2026"
+        lastUpdated="31 Ekim 2026"
         medicalReviewer="Dr. Alper Mumcu"
         readingMinutes={8}
-        imageSrc="/images/library/editorial/hg-hormon-tedavisi-karar.webp"
-        imageAlt="Boğaz sahilinde yürüyerek konuşan iki yaşıt kadın; hormon tedavisi karar rehberi için editoryal görsel"
+        imageSrc="/images/library/editorial/hormon-tedavisi-karar-rehberi-byline.webp"
+        imageAlt="Boğaz kıyısında yürürken sohbet eden iki kadın"
       />
 
       <ArticleSummary title="Kısa Klinik Yanıt">
         <p>
-          Menopozal hormon tedavisi, sıcak basması ve gece terlemesi için kanıtı güçlü bir seçenektir.
-          Ama karar tek bir “kullanmalı mıyım?” sorusuna sığmaz. Ben önce hangi yakınmanın hayatınızı gerçekten
-          zorladığına, tedaviye engel bir sağlık öyküsü olup olmadığına ve sistemik mi lokal mi bir tedavinin
-          gerektiğine bakarım. Engeli olmayan bir kadında 60 yaşından önce ve menopozdan sonraki ilk 10 yıl
-          içinde başlandığında yarar-risk dengesi genellikle daha elverişlidir; bu sınırlar yine de tek başına
-          bir başlama veya bırakma kuralı değildir. Yalnızca vajinal yakınmalar için düşük doz lokal tedavi yeterli olabilir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+          Menopozal hormon tedavisi sıcak basması ve gece terlemesini azaltabilir; sizin için uygunluğu,
+          yakınmalarınıza, yaşınıza ve sağlık geçmişinize göre değerlendirilir. Yalnızca vajinal yakınmalar
+          varsa düşük doz lokal tedavi yeterli olabilir; sistemik tedavinin seçimi ve sürdürülmesi kişisel
+          yarar-risk dengesine dayanır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
       </ArticleSummary>
 
@@ -146,10 +152,25 @@ const articleSchemas = buildArticleSchemas({
         <h3>Rahim iç tabakasının korunması</h3>
         <p>
           Rahminiz varsa sistemik östrojenle birlikte rahim iç tabakasını, yani endometriumu koruyan bir tedavi
-          gerekir. Genellikle progesteron veya aynı koruyucu etkiyi sağlayan başka bir progestojen kullanılır.
+          gerekir. Genellikle progesteron veya rahim iç tabakasında benzer koruma sağlayan, progestojen adı verilen
+          hormon grubundan bir ilaç kullanılır.
           Bu koruma, östrojenin rahim iç tabakasında aşırı kalınlaşma ve kanser riskini artırmasını önlemek içindir
-          <Evidence level={5} />. Rahmi tamamen alınmış kadınlarda ise çoğunlukla yalnız östrojen kullanılır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+          <Evidence level={5} />. Rahmi tamamen alınmış kadınlarda ise çoğunlukla yalnız östrojen kullanılır.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
+        <h3>Adetler devam ederken tedavi ve gebelikten korunma</h3>
+        <p>
+          Adetlerin düzensizleştiği menopoz geçişinde, yani perimenopozda da rahatsız edici sıcak basmaları
+          ve gece terlemeleri için hormon tedavisi değerlendirilebilir. Tedaviyi konuşmak için adetlerin
+          tamamen kesilmesini beklemek gerekmez; yakınmalar, sağlık geçmişi ve kişisel riskler birlikte
+          ele alınır.<sup><a href="#kaynak-11">[11]</a></sup>
+        </p>
+        <p>
+          <strong>Menopozal hormon tedavisi gebelikten korunma sağlamaz.</strong> Yumurtlama hâlâ olabildiği
+          için gebelik ihtimali ve korunma gereksinimi ayrıca değerlendirilir. Korunma yöntemiyle hormon
+          tedavisinin birlikte nasıl kullanılacağı hekimle planlanır; adet durumunuz, hormonların ayın
+          hangi günlerinde verileceğini de etkileyebilir.<sup><a href="#kaynak-2">[2]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+
         <h3>Düşük doz vajinal östrojenin farkı</h3>
         <p>
           Vajinal kuruluk, yanma veya ilişkide ağrı ön plandaysa düşük doz vajinal östrojen farklı bir seçenek sunar.
@@ -181,7 +202,7 @@ const articleSchemas = buildArticleSchemas({
         <h3>Sıcak basması ve kemik</h3>
         <p>
           Hormon tedavisinin sıcak basmalarını ve gece terlemelerini azaltabildiğine ilişkin kanıt güçlüdür
-          <Evidence level={5} />. Ağızdan östrojen veya östrojen-progestojen kullanılan randomize çalışmaların
+          <Evidence level={5} />. Ağızdan östrojen veya östrojen-progestojen kullanılan, katılımcıların tedavi veya plasebo gruplarına rastgele ayrıldığı çalışmaların
           bir derlemesinde, sıcak basması sıklığı plaseboya göre ortalama üçte ikiden fazla azalmıştır.
           Bu, farklı tedavileri birleştiren eski bir derlemenin grup sonucudur; her kadında veya her uygulama
           yolunda aynı azalma beklenmez.<sup><a href="#kaynak-10">[10]</a></sup>
@@ -190,6 +211,11 @@ const articleSchemas = buildArticleSchemas({
           Sistemik tedavi kullanım süresince kemik kaybını yavaşlatıp kırık riskini de azaltabilir.
           Kemik sağlığı bazı kadınlarda kararın bir parçasıdır; tedaviye yalnızca bu bulguya bakarak başlanmaz.
           Karar verirken yakınmalarınızı, kırık riskinizi ve diğer seçenekleri yan yana koyarım.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+        </p>
+        <p>
+          Hormon tedavisinin kullanım amacı da önemlidir. Kalp-damar hastalığını veya demansı, yani günlük
+          yaşamı etkileyen kalıcı bellek ve düşünme bozukluğunu önlemek amacıyla hormon tedavisine
+          başlanması önerilmez.<sup><a href="#kaynak-8">[8]</a></sup>
         </p>
         <h3>Yaş ve menopozdan beri geçen süre</h3>
         <p>
@@ -201,8 +227,8 @@ const articleSchemas = buildArticleSchemas({
           Tedaviye ilk kez 60 yaşından sonra veya menopozdan 10 yıldan fazla zaman geçince başlamak,
           koroner kalp hastalığı, inme ve toplardamar pıhtısı gibi sorunların mutlak riskini artırabilir.
           Böyle bir başvuruda riskleri daha dikkatli tartar, hormon dışı seçenekleri de konuşurum.
-          Başlamak ile sürdürmek ise ayrı kararlardır: Yararını gören bir kadında tedaviyi sürdürürken yaşa değil,
-          belirtilere, yarara ve yeni gelişen risklere bakarım.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
+          Başlamak ile sürdürmek ise ayrı kararlardır: Yararını gören bir kadında devam kararını
+          yalnız yaşa bağlamam; belirtileri, yararı ve yeni gelişen riskleri yeniden değerlendiririm.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
         </p>
         <p>
           Menopoz 40 yaşından önce gelmişse, yani erken yumurtalık yetmezliği söz konusuysa hesap farklıdır.
@@ -211,8 +237,7 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <h3>Meme kanseri riskini ayırarak konuşmak</h3>
         <p>
-          Meme kanseri, muayene odasında en sık duyduğum endişe. Muhtemelen sizin de aklınızdan ilk geçen
-          soru bu. Burada yalnız östrojenle östrojen-progestojen birlikteliğini ayırmak gerekir.
+          Meme kanseri riski sizin de aklınızdaki sorulardan biri olabilir. Burada yalnız östrojenle östrojen-progestojen birlikteliğini ayırmak gerekir.
           İkisinin verisi aynı değil.
         </p>
         <p>
@@ -257,9 +282,9 @@ const articleSchemas = buildArticleSchemas({
         </p>
         <h3>Önce yakınma ve güvenlik</h3>
         <p>
-          Sıcak basmaları uykunuzu mu bölüyor, yoksa tek yakınmanız vajinal kuruluk ve ilişkide ağrı mı?
-          Yalnızca vajinal yakınmalar varsa sistemik tedaviye ihtiyaç olmayabilir. Nemlendirici, kayganlaştırıcı
-          ve gerektiğinde düşük doz vajinal östrojen gibi lokal seçenekler konuşulabilir.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
+          Sıcak basmalarının kaç gece uykunuzu böldüğünü veya vajinal yakınmaların günlük yaşamınızı
+          nasıl etkilediğini not edebilirsiniz. Görüşmede bu notlar, tedaviden beklediğiniz yararı
+          somutlaştırır.
         </p>
         <p>
           Açıklanamayan vajinal kanama, meme kanseri öyküsü, aktif karaciğer hastalığı, geçirilmiş kalp krizi veya
@@ -299,6 +324,24 @@ const articleSchemas = buildArticleSchemas({
           ciltten uygulamayı öne alırım. Kontrolsüz tansiyonda ise önce tansiyonun
           düzenlenmesi gerekir; uygulama yolu seçilirken toplam kalp-damar riski de hesaba katılır.<sup><a href="#kaynak-5">[5]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
         </p>
+        <h3>Hormon kullanmak istemiyorsanız</h3>
+        <p>
+          Hormon kullanmama tercihiniz de görüşmenin bir parçasıdır. Menopoza yönelik bilişsel davranışçı terapi,
+          belirtilerin yarattığı sıkıntıyla ve uyku sorunlarıyla baş etmeyi öğreten yapılandırılmış bir
+          psikolojik destek yaklaşımıdır; bu alanlarda yardımcı olabilir. Sıcak basmaları için kanıtı bulunan
+          hormonsuz ilaç seçenekleri de vardır; uygunlukları, yan etkileri ve Türkiye'deki erişimleri ayrıca
+          değerlendirilir <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-9">[9]</a></sup>
+        </p>
+        <p>
+          Hareket, uyku düzeni ve dengeli beslenme genel sağlık için değerlidir. Sıcak basmalarını azaltmada ise
+          kanıtlı ilaçlar kadar etkili oldukları gösterilmemiştir.<sup><a href="#kaynak-9">[9]</a></sup>
+        </p>
+
+        <h2 id="tedavi-sirasinda-izlem">Tedavi Sırasında İzlem</h2>
+        <p>
+          Tedavinin işe yarayıp yaramadığını ve hangi değişiklikte haber vereceğinizi başlangıçta konuşun.
+          Yeni yakınmalarda bir sonraki yıllık kontrolü beklemek gerekmez.
+        </p>
         <h3>Doz, süre ve ilk kontrol</h3>
         <p>
           Amaç, yakınmayı azaltan en düşük etkili dozu bulmaktır. Başlangıçtan yaklaşık üç ay sonra tedavinin
@@ -310,16 +353,21 @@ const articleSchemas = buildArticleSchemas({
           her yıl yeniden değerlendirilir. Bırakmaya karar verirseniz dozu azaltarak ya da doğrudan
           kesmeyi birlikte planlarız.<sup><a href="#kaynak-1">[1]</a></sup><sup><a href="#kaynak-3">[3]</a></sup>
         </p>
-        <h3>Hormon kullanmak istemiyorsanız</h3>
+        <h3>Kanama olursa ne yapmalı?</h3>
         <p>
-          Hormon kullanmama tercihiniz de görüşmenin bir parçasıdır. Menopoza yönelik bilişsel davranışçı terapi,
-          belirtilerle baş etmeye ve uyku sorunlarına yardımcı olabilir. Sıcak basmaları için kanıtı bulunan
-          hormonsuz ilaç seçenekleri de vardır; uygunlukları, yan etkileri ve Türkiye'deki erişimleri ayrıca
-          değerlendirilir <Evidence level={4} />.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-9">[9]</a></sup>
+          Bazı tedavi düzenlerinde progestojenin belirli günlerde kullanılmasının ardından planlı kanama
+          beklenebilir. Hekiminizden sizin tedavinizde hangi kanamanın beklenebileceğini açıklamasını
+          isteyin; her kanamayı aynı biçimde değerlendirmemek gerekir.<sup><a href="#kaynak-12">[12]</a></sup>
         </p>
         <p>
-          Hareket, uyku düzeni ve dengeli beslenme genel sağlık için değerlidir. Sıcak basmalarını azaltmada ise
-          kanıtlı ilaçlar kadar etkili oldukları gösterilmemiştir.<sup><a href="#kaynak-9">[9]</a></sup>
+          Rahmi olan kadınlarda sistemik tedavinin ilk altı ayında veya doz ya da preparat değişikliğinden
+          sonraki üç ayda plansız kanama görülebilir. Kanamayı üç aylık kontrolde bildirin; bu sürelerin
+          dışında başlayan ya da süren plansız kanama için gecikmeden değerlendirme alın. Kanama yoğun
+          veya uzamışsa bu sürelerin dolmasını beklemeyin.<sup><a href="#kaynak-3">[3]</a></sup><sup><a href="#kaynak-12">[12]</a></sup>
+        </p>
+        <p>
+          Sistemik tedavi kullanmıyorsanız, menopozdan sonra ortaya çıkan kanama için de neden araştırılır;
+          az miktarda olması değerlendirme gereksinimini ortadan kaldırmaz.<sup><a href="#kaynak-3">[3]</a></sup>
         </p>
 
         <h2 id="karari-sakin-birakirken">Görüşmeye Hazırlık</h2>
@@ -353,8 +401,8 @@ const articleSchemas = buildArticleSchemas({
             <a href="https://pubmed.ncbi.nlm.nih.gov/35797481/" target="_blank" rel="noopener noreferrer">Hormon tedavisi: yarar, risk ve lokal kullanım</a>.
           </li>
           <li id="kaynak-2">
-            Baber RJ, Panay N, Fenton A; IMS Writing Group. <em>2016 IMS Recommendations on women's midlife health and menopause hormone therapy.</em> Climacteric. 2016;19(2):109–150.
-            <a href="https://pubmed.ncbi.nlm.nih.gov/26872610/" target="_blank" rel="noopener noreferrer">Hormon tedavisi ve endometriumun korunması</a>.
+            Faculty of Sexual &amp; Reproductive Healthcare (FSRH; güncel kurum adı CoSRH). <em>Contraception for Women Aged Over 40 Years.</em> 2017; güncelleme Mayıs 2025, bölüm 7.
+            <a href="https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-guideline-contraception-for-women-aged-over-40-years.pdf" target="_blank" rel="noopener noreferrer">Menopoz geçişinde hormon tedavisi ve gebelikten korunma</a>.
           </li>
           <li id="kaynak-3">
             National Institute for Health and Care Excellence (NICE). <em>Menopause: identification and management.</em> NG23; son güncelleme 15 Nisan 2026.
@@ -388,6 +436,14 @@ const articleSchemas = buildArticleSchemas({
             MacLennan AH, Broadbent JL, Lester S, Moore V. <em>Oral oestrogen and combined oestrogen/progestogen therapy versus placebo for hot flushes.</em> Cochrane Database Syst Rev. 2004;(4):CD002978.
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7004247/" target="_blank" rel="noopener noreferrer">Ağızdan hormon tedavisinin sıcak basması sıklığına etkisi</a>.
           </li>
+          <li id="kaynak-11">
+            American College of Physicians (ACP). <em>Pharmacologic Treatments for Females with Menopausal Vasomotor Symptoms.</em> Klinik kılavuz; 5 Ekim 2026 tarihli resmî öneri özeti.
+            <a href="https://www.acponline.org/acp-newsroom/acp-recommends-hormonal-therapy-as-a-first-line-treatment-for-menopausal-vasomotor-symptoms" target="_blank" rel="noopener noreferrer">Perimenopoz ve menopoz sonrasında sıcak basması için tedavi seçenekleri</a>.
+          </li>
+          <li id="kaynak-12">
+            British Menopause Society ve ortak kuruluşlar. <em>Management of unscheduled bleeding on hormone replacement therapy.</em> Ortak kılavuz; 2024, gözden geçirme Mayıs 2026.
+            <a href="https://thebms.org.uk/publications/bms-guidelines/management-of-unscheduled-bleeding-on-hormone-replacement-therapy-hrt/" target="_blank" rel="noopener noreferrer">Hormon tedavisi sırasında beklenen ve plansız kanamanın değerlendirilmesi</a>.
+          </li>
         </ol>
       </ArticleProsePanel>
 
@@ -402,6 +458,7 @@ const articleSchemas = buildArticleSchemas({
       <RelatedReadings
         class="mt-14"
         paths={[
+          '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',
           '/zihin-denge/uyku-dinlenme/uyku-bozuklugu-menopoz/',
           '/beden-yakinlik/cinsel-saglik/mahrem-bolge-degisimleri-menopoz/',
           '/zamansiz-yasam/kemik-gucu-kirigi-beklemeden-sorulacak-sorular/',
@@ -426,7 +483,7 @@ const articleSchemas = buildArticleSchemas({
             hormonsuz seçenekler ilgili uzmanlarla birlikte ele alınmalıdır.<sup><a href="#kaynak-6">[6]</a></sup><sup><a href="#kaynak-8">[8]</a></sup>
           </p>
           <p class="mt-4 border-t border-gold/30 pt-3 text-sm italic text-primary">
-            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 30 Eylül 2026
+            — Dr. Alper Mumcu, Kadın Hastalıkları ve Doğum Uzmanı · Bağımsız tıbbi inceleme: 31 Ekim 2026
           </p>
         </div>
       </ArticleEditorNote>

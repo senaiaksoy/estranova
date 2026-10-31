@@ -212,8 +212,8 @@ export const approvedArticles: ArticleApproval[] = [
   {
     pathname: '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/',
     writerSlug: 'senai-aksoy',
-    approvedAt: '2026-05-04',
-    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT karar hattı doktor uzmanlık alanı gerektirdiği için Berna kişisel/yaşıt pasajları temizlendi; URL korundu.',
+    approvedAt: '2026-10-31',
+    note: 'KC onayıyla Berna imzasından Dr. Senai Aksoy klinik yazar imzasına taşındı. HRT karar hattı doktor uzmanlık alanı gerektirdiği için Berna kişisel/yaşıt pasajları temizlendi; URL korundu. YENİDEN ONAY — KC sözlü bildirimi, 31 Ekim 2026: kullanıcı bu sohbette “evet onaylar tamam commit” dedi. Dr. Senai Aksoy yazar onayı ve Dr. Alper Mumcu bağımsız tıbbi inceleme onayı tamamlandı; ayrı imzalı inceleme belgesi alınmış gibi kaydedilmedi. Kapsam: perimenopoz, gebelikten korunma, NICE/BMS kanama eşikleri, izlem, koruyucu kullanım sınırları, kaynak/şema izi, özet ve dil düzenlemesi, iki görsel crop. Beş gerçek SSS yanıtı ve editör notunun metni korundu; inceleme ve güncelleme tarihi 31 Ekim 2026. İlk imza geçişi 4 Mayıs 2026. Yetki yalnız yerel commit; push/deploy yok. Makale SHA-256: e15caaaa3201696e5c84ce7b72021bafc3a23e65b2fa20bdc0c6b7e916883f77.',
   },
   {
     pathname: '/hormonal-gecis/menopoz/hrt-yan-etkileri-ve-izleme/',

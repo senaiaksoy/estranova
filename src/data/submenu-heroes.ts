@@ -434,8 +434,8 @@ export const articleCardImageByRoute: Record<string, ArticleCardImage> = {
     alt: 'Açık not defteri ve sakin el duruşu; menopoza hazırlıkta koruyucu sağlık kayıtları yazısı için kart görseli',
   },
   '/hormonal-gecis/menopoz/hormon-tedavisi-karar-rehberi/': {
-    src: '/images/library/editorial/hg-hormon-tedavisi-karar.webp',
-    alt: 'Boğaz sahilinde yürüyerek konuşan iki yaşıt kadın; hormon tedavisi karar rehberi için kart görseli',
+    src: '/images/library/editorial/hormon-tedavisi-karar-rehberi.webp',
+    alt: 'Boğaz kıyısında yürürken sohbet eden iki kadın',
   },
   '/zamansiz-yasam/deneysel/nad-plus-takviyesi/': {
     src: '/images/library/editorial/nad-plus-takviyesi.webp',
